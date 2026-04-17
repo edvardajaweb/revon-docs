@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact support · Revon theme documentation</title>
+<meta name="description" content="Contact the Revon theme support team. We reply within two business days.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" role="banner" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">Revon</a>
+    <nav class="site-nav" aria-label="Documentation">
+      <a href="index.html">Home</a>
+      <a href="getting-started.html">Getting started</a>
+      <a href="customizing.html">Customizing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-hero">
+    <h1>Contact support</h1>
+    <p class="page-intro">
+      Report a bug, ask a question, or request a clarification. We reply to every message within
+      two business days.
+    </p>
+  </div>
+
+  <div class="callout">
+    <p><strong>Before you reach out:</strong> check the <a href="faq.html">FAQ</a> and the
+    <a href="customizing.html">Customizing guide</a> — most questions are answered there.
+    If you're stuck on a code customization, we can walk you through doing it yourself, but
+    we can't edit your store's code for you. Consider hiring a
+    <a href="https://www.shopify.com/partners/directory">Shopify Partner</a> for custom work.</p>
+  </div>
+
+  <h2>Send us a message</h2>
+
+  <!--
+    Powered by Formsubmit.co — no signup needed.
+    First submission triggers a confirmation email to edvardajaweb@gmail.com.
+    After confirming, all future submissions go straight to your inbox.
+  -->
+
+  <form class="form" id="supportForm" action="https://formsubmit.co/edvardajaweb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Revon theme — support request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="_next" value="https://edvardukas.github.io/revon-docs/support.html?sent=1">
+
+    <div class="form__row">
+      <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="Name" autocomplete="name" required>
+    </div>
+
+    <div class="form__row">
+      <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="Email" autocomplete="email" required>
+      <span class="form__hint">We'll reply to this address within two business days.</span>
+    </div>
+
+    <div class="form__row">
+      <label for="store_url">Store URL <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="store_url" name="Store URL" placeholder="storename.myshopify.com" required>
+    </div>
+
+    <div class="form__row">
+      <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="subject" name="Subject" required>
+    </div>
+
+    <div class="form__row">
+      <label for="message">Description of the problem <span class="required" aria-hidden="true">*</span></label>
+      <textarea id="message" name="Message" rows="8" required></textarea>
+      <span class="form__hint">Please include: what you expected, what actually happened, and the steps to reproduce.</span>
+    </div>
+
+    <button type="submit" class="form__submit">Send message</button>
+  </form>
+
+  <div class="callout" id="formSuccess" style="display:none;">
+    <p><strong>Message sent.</strong> We'll reply to your email within two business days. <a href="support.html">Send another message</a>.</p>
+  </div>
+
+  <h2>Support policy</h2>
+
+  <h3>What's included</h3>
+  <ul>
+    <li>Bug fixes in Revon's code</li>
+    <li>Answers to questions about theme features and settings</li>
+    <li>Guidance on using Shopify features supported by Revon</li>
+    <li>Help interpreting error messages related to Revon</li>
+  </ul>
+
+  <h3>What's not included</h3>
+  <ul>
+    <li>Custom code modifications to your theme</li>
+    <li>App integrations that don't ship with an app block</li>
+    <li>Help with third-party apps or services</li>
+    <li>Content creation, SEO consulting, or marketing advice</li>
+    <li>Help with theme updates when you've modified code</li>
+  </ul>
+
+  <h3>Response times</h3>
+  <p>
+    We reply to every support request within two business days (Monday–Friday,
+    excluding public holidays). Critical bugs that affect multiple merchants are
+    prioritized and usually patched within 24 hours.
+  </p>
+
+  <h3>Before editing code</h3>
+  <div class="callout callout--warning">
+    <p><strong>Always duplicate your theme before editing code.</strong> Go to <em>Online Store → Themes</em>, click the three-dot menu on your theme, and choose <strong>Duplicate</strong>. This gives you a rollback if something breaks. If you're not comfortable with Liquid, hire a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a> — support requests that require us to modify merchant-owned code are outside the scope of free support.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>Revon theme documentation · <a href="index.html">Back to home</a></p>
+</footer>
+
+<script>
+const progress = document.getElementById('scrollProgress');
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  if (height > 0) progress.style.width = (scrolled / height * 100) + '%';
+  header.classList.toggle('site-header--scrolled', scrolled > 20);
+}, { passive: true });
+
+// Show success message after form submission redirect
+if (window.location.search.includes('sent=1')) {
+  document.getElementById('supportForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = '';
+  document.querySelector('h2').textContent = 'Message sent';
+}
+</script>
+</body>
+</html>

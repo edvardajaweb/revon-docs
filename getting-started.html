@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting started · Revon theme documentation</title>
+<meta name="description" content="How to install and set up the Revon Shopify theme.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" role="banner" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">Revon</a>
+    <nav class="site-nav" aria-label="Documentation">
+      <a href="index.html">Home</a>
+      <a href="getting-started.html" aria-current="page">Getting started</a>
+      <a href="customizing.html">Customizing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout-sidebar" id="main">
+
+  <nav class="sidebar-nav" aria-label="On this page">
+    <div class="sidebar-nav__title">On this page</div>
+    <ol>
+      <li><a href="#install">Install the theme</a></li>
+      <li><a href="#essentials">Set up essentials</a></li>
+      <li><a href="#home-page">Build your home page</a></li>
+      <li><a href="#product-pages">Configure product pages</a></li>
+      <li><a href="#cart-checkout">Cart and checkout</a></li>
+      <li><a href="#go-live">Go live</a></li>
+    </ol>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>Getting started</h1>
+      <p class="page-intro">
+        This guide walks you through installing Revon and configuring it for the first time.
+        Plan on about 15 minutes from install to a fully customized home page.
+      </p>
+    </div>
+
+    <h2 id="install">1. Install the theme</h2>
+    <ol>
+      <li>Buy Revon from the Shopify Theme Store. It will be added to your store library automatically.</li>
+      <li>Go to <strong>Online Store → Themes</strong> in your Shopify admin.</li>
+      <li>In the <em>Theme library</em> section, find Revon and click <strong>Add</strong>.</li>
+      <li>Click <strong>Customize</strong> to open the theme editor.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Before you go live:</strong> Always <strong>duplicate your current published theme</strong> first. Go to <em>Themes</em>, click the three-dot menu on your live theme, and choose <strong>Duplicate</strong>. This gives you a rollback if anything goes wrong.</p>
+    </div>
+
+    <h2 id="essentials">2. Set up essentials</h2>
+
+    <h3>Logo and favicon</h3>
+    <ol>
+      <li>Open <strong>Theme settings → Logo</strong>.</li>
+      <li>Upload your main logo. SVG is preferred; PNG works well if transparent.</li>
+      <li>Upload a favicon under <strong>Theme settings → Favicon</strong>. Recommended 64×64px PNG.</li>
+    </ol>
+
+    <h3>Colors and typography</h3>
+    <ol>
+      <li>Open <strong>Theme settings → Colors</strong>. Revon ships with a warm editorial palette you can override.</li>
+      <li>Open <strong>Theme settings → Typography</strong> to change heading and body fonts. All Google Fonts and Shopify-hosted fonts are supported.</li>
+    </ol>
+
+    <h3>Navigation menus</h3>
+    <ol>
+      <li>Go to <strong>Online Store → Navigation</strong>.</li>
+      <li>Make sure a menu called <strong>Main menu</strong> exists — Revon uses it by default.</li>
+      <li>For multi-level dropdowns, drop sub-items onto a parent item to nest them. Revon renders up to two levels.</li>
+      <li>Create a <strong>Footer</strong> menu the same way; the footer section pulls from it by default.</li>
+    </ol>
+
+    <h2 id="home-page">3. Build your home page</h2>
+    <p>
+      In the theme editor, open the home page template. You'll see a stack of sections that come
+      with the preset. Click any section to open its settings, click <strong>Add section</strong>
+      to add a new one, or drag to reorder.
+    </p>
+
+    <h3>Recommended home-page structure</h3>
+    <ol>
+      <li>Announcement bar (top) — shipping message or promo</li>
+      <li>Header</li>
+      <li>Cinematic hero or slideshow — primary above-the-fold moment</li>
+      <li>Featured collections — 2–3 tile grid</li>
+      <li>Featured products — a hand-picked row</li>
+      <li>Image with text — brand story</li>
+      <li>Editorial scroll or key ingredients — deeper product story</li>
+      <li>Testimonials</li>
+      <li>Newsletter</li>
+      <li>Footer</li>
+    </ol>
+
+    <h2 id="product-pages">4. Configure product pages</h2>
+    <ol>
+      <li>Open a product in the theme editor via <strong>Product pages</strong> in the template picker.</li>
+      <li>Each piece of the product info column is a block — drag to reorder, or remove anything you don't need.</li>
+      <li>To display product variants as colored swatches, add a <strong>color</strong> metafield definition on the variant and pick either a hex or an image for each option value.</li>
+      <li>To show a 3D model, upload a <code>.glb</code> file to your product's media. Revon will render it with the Shopify model viewer automatically.</li>
+    </ol>
+
+    <h2 id="cart-checkout">5. Cart and checkout</h2>
+    <p>
+      Revon supports both cart drawer and cart page modes. Choose which under
+      <strong>Theme settings → Cart</strong>. Both modes include:
+    </p>
+    <ul>
+      <li>Automatic discount code display</li>
+      <li>Order notes</li>
+      <li>Free-shipping progress bar</li>
+      <li>Unit price display for regulated regions</li>
+      <li>Accelerated checkout buttons (Shop Pay, Apple Pay, Google Pay)</li>
+    </ul>
+
+    <h2 id="go-live">6. Go live</h2>
+    <ol>
+      <li>Preview your theme thoroughly on desktop and mobile.</li>
+      <li>Click <strong>Publish</strong> from the theme editor or the Themes page.</li>
+      <li>Check the live site in an incognito window to confirm everything renders without your admin session.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Stuck?</strong> Head to the <a href="faq.html">FAQ</a> or <a href="support.html">contact support</a>. We reply within two business days.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>Revon theme documentation · <a href="index.html">Back to home</a></p>
+</footer>
+
+<script>
+// Scroll progress + header
+const progress = document.getElementById('scrollProgress');
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  if (height > 0) progress.style.width = (scrolled / height * 100) + '%';
+  header.classList.toggle('site-header--scrolled', scrolled > 20);
+}, { passive: true });
+
+// Scroll spy — highlight active sidebar link
+(function() {
+  const links = document.querySelectorAll('.sidebar-nav a');
+  const sections = [];
+  links.forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) sections.push({ el, link });
+  });
+
+  function update() {
+    let active = sections[0];
+    const offset = 100;
+    for (const s of sections) {
+      if (s.el.getBoundingClientRect().top <= offset) active = s;
+    }
+    links.forEach(l => l.classList.remove('is-active'));
+    if (active) active.link.classList.add('is-active');
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>

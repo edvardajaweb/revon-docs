@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revon — Theme documentation</title>
+<meta name="description" content="Documentation, setup guide, FAQs and support for the Revon Shopify theme.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" role="banner" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">Revon</a>
+    <nav class="site-nav" aria-label="Documentation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="getting-started.html">Getting started</a>
+      <a href="customizing.html">Customizing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-hero">
+    <h1>Revon theme documentation</h1>
+    <p class="page-intro">
+      Everything you need to install, set up, and get the most out of Revon — a Shopify
+      theme designed for brands that want a confident, editorial storefront with deep
+      customization and clean performance.
+    </p>
+  </div>
+
+  <div class="callout">
+    <p><strong>New to Revon?</strong> Start with the <a href="getting-started.html">Getting started</a> guide for installation and first-run setup. It takes about 15 minutes from install to a fully configured home page.</p>
+  </div>
+
+  <h2>Browse the docs</h2>
+  <div class="card-grid">
+    <a href="getting-started.html" class="card">
+      <h3>Getting started</h3>
+      <p>Install the theme, configure the essentials, and launch your demo content.</p>
+      <span class="card__arrow">Read guide →</span>
+    </a>
+    <a href="customizing.html" class="card">
+      <h3>Customizing Revon</h3>
+      <p>Sections, blocks, colors, typography, and advanced layout options.</p>
+      <span class="card__arrow">Explore →</span>
+    </a>
+    <a href="faq.html" class="card">
+      <h3>FAQ</h3>
+      <p>Answers to the most common questions about Revon.</p>
+      <span class="card__arrow">View FAQ →</span>
+    </a>
+    <a href="support.html" class="card">
+      <h3>Contact support</h3>
+      <p>Report a bug or ask a question. We reply within two business days.</p>
+      <span class="card__arrow">Get help →</span>
+    </a>
+  </div>
+
+  <h2>Theme features at a glance</h2>
+  <ul class="feature-list">
+    <li>Online Store 2.0 — sections and blocks work on every page</li>
+    <li>60+ purpose-built sections including editorial, lookbook, clinical results, and gradient showcase layouts</li>
+    <li>Native variant swatches with image and color support</li>
+    <li>Product pages with 3D model, video, and external video media</li>
+    <li>Subscriptions via Shopify selling plans</li>
+    <li>Multi-currency, multi-language with country and language selectors</li>
+    <li>Shop Pay Installments, accelerated checkout, Follow on Shop</li>
+    <li>Cart discounts, cart notes, and line-level discount display</li>
+    <li>Unit pricing for EU and Swiss merchants</li>
+    <li>Multi-level header navigation and collapsible mobile menu</li>
+  </ul>
+
+  <h2>Support policy</h2>
+  <p>
+    All Revon license holders get free bug fixes and help with theme questions. We reply to every
+    support request within two business days. Customization work, app integrations, and help with
+    merchant-owned code are outside the scope of free support — we can either walk you through
+    doing it yourself or refer you to a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.
+  </p>
+
+  <h2>Updates</h2>
+  <p>
+    Revon receives regular updates for bug fixes and new features. Before editing code, always
+    <strong>duplicate your theme</strong> from the Shopify admin so you have a backup. When a new
+    version ships, you can install it side-by-side and migrate your settings at your own pace.
+  </p>
+</main>
+
+<footer class="site-footer">
+  <p>Revon theme documentation · Last updated 2026</p>
+</footer>
+
+<script>
+// Scroll progress bar
+const progress = document.getElementById('scrollProgress');
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  if (height > 0) progress.style.width = (scrolled / height * 100) + '%';
+  header.classList.toggle('site-header--scrolled', scrolled > 20);
+}, { passive: true });
+</script>
+</body>
+</html>
