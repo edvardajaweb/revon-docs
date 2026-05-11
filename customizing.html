@@ -78,7 +78,7 @@
 
       <p class="eyebrow">Sections &amp; settings</p>
       <h1 class="h1" style="margin-top:var(--space-md)">Customizing Revon</h1>
-      <p class="lead">Revon comes with 62 sections and three ready-made <a href="presets.html">styles</a>, all built on Shopify's Online Store 2.0. Everything on this page can be added, removed, or changed from the theme editor — no code needed.</p>
+      <p class="lead">Revon comes with 62 sections and three ready-made <a href="presets.html">styles</a>, all built on Shopify's Online Store 2.0. Most of this page is for merchants — everything below can be done from the theme editor without writing code. The last section, <a href="#custom-code">Custom code</a>, is for developers (or merchants working with one) who want to go further.</p>
 
       <h2 class="h2" id="settings">Theme settings</h2>
       <p>Click <strong>Theme settings</strong> in the top-right of the theme editor to control site-wide options. When you apply a <a href="presets.html">preset</a>, Revon fills in these settings for you. You can change anything afterwards.</p>
@@ -99,7 +99,7 @@
       <h3 class="h3">Animations &amp; effects</h3>
       <ul>
         <li><strong>Loading effect</strong> — fade, fade-up, slide, or none for scroll reveals</li>
-        <li><strong>Page transitions</strong> — smooth transitions between pages (Lenis-driven)</li>
+        <li><strong>Page transitions</strong> — pages fade in instead of flashing white when a customer clicks a link</li>
         <li><strong>Image hover</strong> — subtle zoom/swap on product cards</li>
         <li><strong>Loading bar</strong> — slim progress indicator at the top of the page</li>
         <li><strong>Scroll progress</strong> — vertical progress meter on long pages</li>
@@ -115,9 +115,9 @@
 
       <h3 class="h3">SEO &amp; social sharing</h3>
       <ul>
-        <li><strong>Default social share image</strong> — 1200×630 OG fallback for pages without their own image</li>
-        <li><strong>Default meta description</strong> — used on pages without one</li>
-        <li><strong>Twitter handle</strong> — populates <code>twitter:site</code></li>
+        <li><strong>Default social share image</strong> — 1200×630 image used as the preview when someone shares your store on social media (pages with their own image keep their own)</li>
+        <li><strong>Default meta description</strong> — the short text that shows under your store name in Google search results, used on pages that don't have their own</li>
+        <li><strong>Twitter handle</strong> — your @username, so Twitter credits your store when people share your pages</li>
       </ul>
 
       <h2 class="h2" id="heroes">Hero sections</h2>
@@ -136,7 +136,7 @@
         <li><strong>Product showcase</strong> — single-product editorial layout with sprite animation and feature blocks.</li>
         <li><strong>Product editorial</strong> — long-form product story with imagery, copy, and inline buying.</li>
         <li><strong>Product marquee</strong> — infinite-scroll product ticker.</li>
-        <li><strong>Product recommendations</strong> — automated cross-sell row via Shopify's recommendations API.</li>
+        <li><strong>Product recommendations</strong> — a row of "you might also like" products that Shopify picks automatically.</li>
         <li><strong>Recently viewed</strong> — customer's recent browse history.</li>
         <li><strong>Shop the look</strong> — clickable hotspots on a lifestyle image. Up to 8 hotspots per image.</li>
         <li><strong>Collection list</strong> — featured collection tiles with image, name, and CTA.</li>
@@ -169,7 +169,7 @@
       <ul>
         <li><strong>Testimonials</strong> — customer quotes with optional photo and star rating, auto-rotating slider.</li>
         <li><strong>Brand logos</strong> — press, partner, or stockist logos in a uniform grid.</li>
-        <li><strong>Social feed</strong> — curated grid of lifestyle images with external links (manual, not API-driven).</li>
+        <li><strong>Social feed</strong> — a grid of lifestyle photos with links (you choose the photos and links — it doesn't auto-pull from Instagram).</li>
       </ul>
 
       <h2 class="h2" id="engagement">Engagement &amp; conversion</h2>
@@ -206,7 +206,7 @@
       </ul>
 
       <h2 class="h2" id="main-sections">Main page sections</h2>
-      <p>One per page type. These are the JSON-driven main bodies of each template.</p>
+      <p>One section per page type. These are the main content bodies of each page and are configured from the theme editor.</p>
       <ul>
         <li><strong>main-product</strong> — the product page (gallery + info column with blocks).</li>
         <li><strong>main-collection</strong> — collection grid with filters, sort, and pagination.</li>
