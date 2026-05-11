@@ -3,235 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customizing · Revon theme documentation</title>
-<meta name="description" content="How to customize sections, blocks, colors, typography, and layout in the Revon Shopify theme.">
+<title>Customizing · Revon documentation</title>
+<meta name="description" content="A complete catalog of every section, block, and theme setting in the Revon Shopify theme — 62 sections, three presets, full Online Store 2.0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-<div class="scroll-progress" id="scrollProgress"></div>
 
-<header class="site-header" role="banner" id="siteHeader">
+<header class="site-header" role="banner">
   <div class="site-header__inner">
-    <a href="index.html" class="site-header__brand">Revon</a>
+    <a href="index.html" class="site-header__brand">
+      <span class="site-header__brand-mark">R</span>
+      Revon
+      <span class="site-header__brand-tag">Docs</span>
+    </a>
     <nav class="site-nav" aria-label="Documentation">
-      <a href="index.html">Home</a>
+      <a href="index.html">Overview</a>
       <a href="getting-started.html">Getting started</a>
+      <a href="presets.html">Presets</a>
       <a href="customizing.html" aria-current="page">Customizing</a>
       <a href="faq.html">FAQ</a>
-      <a href="support.html">Support</a>
     </nav>
+    <a href="support.html" class="site-header__cta">Contact support</a>
+    <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+    </button>
   </div>
 </header>
 
-<div class="layout-sidebar" id="main">
-
-  <nav class="sidebar-nav" aria-label="On this page">
-    <div class="sidebar-nav__title">On this page</div>
-    <ol>
-      <li><a href="#theme-settings">Theme settings</a></li>
-      <li><a href="#sections">Sections</a></li>
-      <li><a href="#product-blocks">Product page blocks</a></li>
-      <li><a href="#swatches">Variant swatches</a></li>
-      <li><a href="#custom-code">Custom code</a></li>
-    </ol>
-  </nav>
-
-  <div class="page-content">
-    <div class="page-hero">
-      <h1>Customizing Revon</h1>
-      <p class="page-intro">
-        Revon is built on Online Store 2.0, so you can customize nearly every page visually — no
-        code required. This page covers sections, blocks, and theme settings.
-      </p>
-    </div>
-
-    <h2 id="theme-settings">Theme settings</h2>
-    <p>
-      Open <strong>Theme settings</strong> from the top-right of the theme editor to control
-      site-wide options. Highlights:
-    </p>
-
-    <h3>Colors</h3>
-    <p>
-      Revon exposes a full color system — background, text, accent, border, muted, surface, and
-      badge colors. Change any value and the whole theme updates. All colors meet the WCAG 2.1 AA
-      contrast ratio in the default palette.
-    </p>
-
-    <h3>Typography</h3>
-    <p>
-      Pick a heading font and a body font. Revon loads bold, italic, and bold-italic variants
-      automatically, so you don't need to upload any custom files. Every font Shopify supports is
-      compatible, including the full Google Fonts library.
-    </p>
-
-    <h3>Layout</h3>
-    <ul>
-      <li><strong>Container width</strong> — narrow, medium, or wide</li>
-      <li><strong>Section spacing</strong> — adjust top and bottom padding globally</li>
-      <li><strong>Border radius</strong> — sharpen or soften corners on buttons, cards, and images</li>
-    </ul>
-
-    <h3>Cart</h3>
-    <ul>
-      <li><strong>Cart type</strong> — drawer, page, or modal</li>
-      <li><strong>Free shipping threshold</strong> — shows a progress bar in the drawer</li>
-      <li><strong>Cart notes</strong> — let customers leave a note on their order</li>
-      <li><strong>Gift wrapping</strong> — optional paid add-on that appears as a checkbox</li>
-    </ul>
-
-    <h2 id="sections">Sections</h2>
-    <p>
-      Revon ships with 60+ sections, each purpose-built for a real merchandising scenario. You can
-      add, remove, and reorder sections on any template. Here are some highlights:
-    </p>
-
-    <h3>Hero sections</h3>
-    <ul>
-      <li><strong>Cinematic hero</strong> — full-viewport hero with parallax and overlay text</li>
-      <li><strong>Slideshow</strong> — multi-slide carousel with autoplay and dots</li>
-      <li><strong>Split hero</strong> — image + text, 50/50 or 60/40 split</li>
-      <li><strong>Video banner</strong> — full-bleed looping video</li>
-    </ul>
-
-    <h3>Product display</h3>
-    <ul>
-      <li><strong>Featured products</strong> — hand-picked product row or slider</li>
-      <li><strong>Featured collection</strong> — grid of products from a single collection</li>
-      <li><strong>Product showcase</strong> — single-product editorial layout</li>
-      <li><strong>Product marquee</strong> — infinite-scroll product row</li>
-      <li><strong>Shop the look</strong> — hotspots on a lifestyle image</li>
-      <li><strong>Lookbook grid</strong> — masonry grid of lifestyle photography</li>
-    </ul>
-
-    <h3>Brand storytelling</h3>
-    <ul>
-      <li><strong>Image with text</strong> — classic side-by-side</li>
-      <li><strong>Editorial scroll</strong> — long-form article layout</li>
-      <li><strong>Key ingredients</strong> — annotated ingredient breakdown</li>
-      <li><strong>Clinical results</strong> — chart and statistics display</li>
-      <li><strong>Timeline</strong> — brand history timeline</li>
-      <li><strong>Stats</strong> — animated number counters</li>
-      <li><strong>Text reveal</strong> — scroll-triggered text animation</li>
-    </ul>
-
-    <h3>Social proof</h3>
-    <ul>
-      <li><strong>Testimonials</strong> — customer quotes with optional photo</li>
-      <li><strong>Brand logos</strong> — press and partner logos</li>
-      <li><strong>Social feed</strong> — curated grid of lifestyle images with links</li>
-    </ul>
-
-    <h3>Supporting content</h3>
-    <ul>
-      <li><strong>FAQ</strong> — collapsible question and answer list</li>
-      <li><strong>Comparison table</strong> — feature comparison grid</li>
-      <li><strong>Features grid</strong> — icon-and-text grid</li>
-      <li><strong>Countdown</strong> — tied to a real merchant-chosen date (no fake urgency)</li>
-      <li><strong>Map</strong> — embedded location map</li>
-      <li><strong>Newsletter</strong> — email signup form</li>
-      <li><strong>Contact form</strong> — standard Shopify contact form</li>
-    </ul>
-
-    <h2 id="product-blocks">Product page blocks</h2>
-    <p>
-      On the product page, every element in the info column is a block you can reorder or remove:
-    </p>
-    <ul>
-      <li>Vendor</li>
-      <li>Title</li>
-      <li>Price (with unit price and tax-included note)</li>
-      <li>Inventory status</li>
-      <li>Description</li>
-      <li>Benefits list</li>
-      <li>Variant picker (with swatches)</li>
-      <li>Buy buttons (quantity, add-to-cart, accelerated checkout)</li>
-      <li>Complementary products</li>
-      <li>Trust badges</li>
-      <li>Delivery estimate</li>
-      <li>Size guide</li>
-      <li>Share</li>
-      <li>Popup (materials, care, shipping info)</li>
-      <li>Custom liquid blocks for app integrations</li>
-      <li>App blocks — drop in any compatible Shopify app</li>
-    </ul>
-
-    <h2 id="swatches">Variant swatches</h2>
-    <p>
-      Revon uses Shopify's native swatch object. To set a swatch color or image for a variant
-      option value:
-    </p>
-    <ol>
-      <li>Go to <strong>Settings → Metafields → Products</strong>.</li>
-      <li>Create or edit the product option value to add a swatch definition (color or image).</li>
-      <li>Revon will pick it up automatically on the product and collection pages.</li>
-    </ol>
-    <p>
-      If no swatch is configured, Revon falls back to a built-in color-name-to-hex map for common
-      names like <code>Black</code>, <code>Navy</code>, <code>Cream</code>, etc.
-    </p>
-
-    <h2 id="custom-code">Custom code</h2>
-    <div class="callout callout--warning">
-      <p><strong>Warning:</strong> Before editing code, always <strong>duplicate your theme</strong> from the Shopify admin so you have a backup. Code customizations may not carry over when you update Revon to a new version. Consider hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a> if you're not comfortable editing Liquid.</p>
-    </div>
-
-    <h3>Adding custom CSS</h3>
-    <ol>
-      <li>Open <strong>Online Store → Themes → Actions → Edit code</strong>.</li>
-      <li>Navigate to <code>assets/base.css</code>.</li>
-      <li>Add your custom rules at the bottom of the file.</li>
-      <li>Save — changes go live immediately.</li>
-    </ol>
-
-    <h3>Adding custom Liquid</h3>
-    <p>
-      You don't need to edit section files to add custom snippets. Use the <strong>Custom liquid</strong>
-      block available in most sections (including product and featured products), or add a
-      <strong>Custom liquid</strong> section anywhere on a template.
-    </p>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+  <div class="mobile-drawer__head">
+    <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
   </div>
-
+  <nav class="mobile-drawer__nav" aria-label="Mobile">
+    <a href="index.html">Overview</a>
+    <a href="getting-started.html">Getting started</a>
+    <a href="presets.html">Presets</a>
+    <a href="customizing.html">Customizing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="support.html">Contact support</a>
+  </nav>
 </div>
 
+<main id="main">
+  <div class="doc-layout">
+
+    <aside class="doc-sidebar" aria-label="On this page">
+      <span class="doc-sidebar__label">On this page</span>
+      <nav class="doc-sidebar__list">
+        <a href="#settings">Theme settings</a>
+        <a href="#heroes">Hero sections</a>
+        <a href="#product-display">Product display</a>
+        <a href="#storytelling">Brand storytelling</a>
+        <a href="#galleries">Galleries</a>
+        <a href="#social-proof">Social proof</a>
+        <a href="#engagement">Engagement &amp; conversion</a>
+        <a href="#motion">Motion &amp; dividers</a>
+        <a href="#site-wide">Site-wide controls</a>
+        <a href="#main-sections">Main page sections</a>
+        <a href="#blocks">Product page blocks</a>
+        <a href="#swatches">Variant swatches</a>
+        <a href="#custom-code">Custom code</a>
+      </nav>
+    </aside>
+
+    <article class="doc-content prose reveal">
+      <nav class="doc-content__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Docs</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Customizing</span>
+      </nav>
+
+      <p class="eyebrow">Sections &amp; settings</p>
+      <h1 class="h1" style="margin-top:var(--space-md)">Customizing Revon</h1>
+      <p class="lead">Revon ships with 62 sections, three industry-tuned <a href="presets.html">presets</a>, and full Online Store 2.0 architecture. Everything below can be added, removed, and configured visually from the theme editor — no code required.</p>
+
+      <h2 class="h2" id="settings">Theme settings</h2>
+      <p>Open <strong>Theme settings</strong> from the top-right of the theme editor to control site-wide options. When you apply a <a href="presets.html">preset</a>, Revon writes preset-tuned values into these settings; you can override any of them afterwards.</p>
+
+      <h3 class="h3">Colors</h3>
+      <p>Revon uses color schemes — each scheme is a named bundle of seven colors (background, surface, text, secondary text, border, button bg, button text). Every section can pick its scheme, so you can alternate light and dark blocks down a page. All defaults meet WCAG 2.1 AA contrast.</p>
+
+      <h3 class="h3">Typography</h3>
+      <p>Four global font pickers control the entire theme: <code>heading</code>, <code>body</code>, <code>editorial</code>, and <code>handwritten</code>. Bold and italic variants load automatically. The full Shopify font picker is supported (system fonts, Google Fonts, and uploaded fonts via Shopify Admin).</p>
+
+      <h3 class="h3">Layout</h3>
+      <ul>
+        <li><strong>Page width</strong> — 1200, 1400, or 1450px container</li>
+        <li><strong>Section spacing</strong> — global top/bottom padding (desktop and mobile values, in px)</li>
+        <li><strong>Border radius</strong> — sharpen or soften corners on buttons, cards, media, and inputs independently</li>
+      </ul>
+
+      <h3 class="h3">Animations &amp; effects</h3>
+      <ul>
+        <li><strong>Loading effect</strong> — fade, fade-up, slide, or none for scroll reveals</li>
+        <li><strong>Page transitions</strong> — smooth transitions between pages (Lenis-driven)</li>
+        <li><strong>Image hover</strong> — subtle zoom/swap on product cards</li>
+        <li><strong>Loading bar</strong> — slim progress indicator at the top of the page</li>
+        <li><strong>Scroll progress</strong> — vertical progress meter on long pages</li>
+      </ul>
+
+      <h3 class="h3">Cart</h3>
+      <ul>
+        <li><strong>Cart type</strong> — drawer or page</li>
+        <li><strong>Free shipping threshold</strong> — shows a progress bar</li>
+        <li><strong>Cart notes</strong> — let customers leave a note on their order</li>
+        <li><strong>Gift wrapping</strong> — optional paid add-on as a checkbox</li>
+      </ul>
+
+      <h3 class="h3">SEO &amp; social sharing</h3>
+      <ul>
+        <li><strong>Default social share image</strong> — 1200×630 OG fallback for pages without their own image</li>
+        <li><strong>Default meta description</strong> — used on pages without one</li>
+        <li><strong>Twitter handle</strong> — populates <code>twitter:site</code></li>
+      </ul>
+
+      <h2 class="h2" id="heroes">Hero sections</h2>
+      <p>Full-bleed sections designed for the top of the page.</p>
+      <ul>
+        <li><strong>Cinematic hero</strong> — full-viewport video or image with morph text and a scroll indicator. The signature opening for Skincare and Maison homepages.</li>
+        <li><strong>Editorial hero</strong> — magazine-style hero with eyebrow, bold heading, italic serif accent, and a content block stack. The Atelier preset's default opener.</li>
+        <li><strong>Hero slider</strong> — multi-slide carousel with autoplay, dots, and per-slide content.</li>
+        <li><strong>Split banner</strong> — image + text in a 50/50 or 60/40 split. Good for category pages.</li>
+        <li><strong>Video feature</strong> — full-bleed looping video with overlaid text.</li>
+      </ul>
+
+      <h2 class="h2" id="product-display">Product display</h2>
+      <ul>
+        <li><strong>Featured products</strong> — hand-picked product row or grid. Choose a collection or a fixed list.</li>
+        <li><strong>Product showcase</strong> — single-product editorial layout with sprite animation and feature blocks.</li>
+        <li><strong>Product editorial</strong> — long-form product story with imagery, copy, and inline buying.</li>
+        <li><strong>Product marquee</strong> — infinite-scroll product ticker.</li>
+        <li><strong>Product recommendations</strong> — automated cross-sell row via Shopify's recommendations API.</li>
+        <li><strong>Recently viewed</strong> — customer's recent browse history.</li>
+        <li><strong>Shop the look</strong> — clickable hotspots on a lifestyle image. Up to 8 hotspots per image.</li>
+        <li><strong>Collection list</strong> — featured collection tiles with image, name, and CTA.</li>
+      </ul>
+
+      <h2 class="h2" id="storytelling">Brand storytelling</h2>
+      <ul>
+        <li><strong>Rich text</strong> — heading + body content. The all-purpose copy block.</li>
+        <li><strong>Image with text</strong> — classic side-by-side image and copy.</li>
+        <li><strong>Editorial scroll</strong> — long-form article layout for deeper storytelling.</li>
+        <li><strong>Editorial mosaic</strong> — magazine-style multi-image grid with text annotations.</li>
+        <li><strong>Editorial statement</strong> — large quote or manifesto display.</li>
+        <li><strong>Key ingredients</strong> — annotated ingredient cards with imagery (skincare / wellness).</li>
+        <li><strong>Clinical results</strong> — stat-driven proof points (e.g. "97% reported smoother skin").</li>
+        <li><strong>Before / after</strong> — drag-slider image comparison.</li>
+        <li><strong>Mood routines</strong> — multi-step routine builder with product callouts.</li>
+        <li><strong>Timeline</strong> — chronological brand history rendered as a vertical column.</li>
+        <li><strong>Stats</strong> — animated number counters with labels.</li>
+      </ul>
+
+      <h2 class="h2" id="galleries">Galleries</h2>
+      <ul>
+        <li><strong>Image gallery</strong> — multi-image grid with configurable columns.</li>
+        <li><strong>Lookbook grid</strong> — masonry-style lifestyle photography.</li>
+        <li><strong>Rhythm board</strong> — Pinterest-style moodboard layout.</li>
+        <li><strong>Room plan</strong> — interior layout / floorplan with product callouts (Maison-flavored).</li>
+      </ul>
+
+      <h2 class="h2" id="social-proof">Social proof</h2>
+      <ul>
+        <li><strong>Testimonials</strong> — customer quotes with optional photo and star rating, auto-rotating slider.</li>
+        <li><strong>Brand logos</strong> — press, partner, or stockist logos in a uniform grid.</li>
+        <li><strong>Social feed</strong> — curated grid of lifestyle images with external links (manual, not API-driven).</li>
+      </ul>
+
+      <h2 class="h2" id="engagement">Engagement &amp; conversion</h2>
+      <ul>
+        <li><strong>Newsletter</strong> — email signup using Shopify's native customer subscription.</li>
+        <li><strong>Contact form</strong> — standard Shopify contact form with name, email, message, and optional fields.</li>
+        <li><strong>FAQ</strong> — collapsible question and answer list with smooth expand animation.</li>
+        <li><strong>Comparison table</strong> — feature comparison grid (e.g. Revon vs. competitors).</li>
+        <li><strong>Features grid</strong> — icon-and-text grid for shipping, returns, guarantees.</li>
+        <li><strong>Countdown</strong> — tied to a real merchant-chosen date. No fake urgency — when the date expires, the section disappears.</li>
+        <li><strong>Blog carousel</strong> — recent blog posts in a horizontal carousel.</li>
+      </ul>
+
+      <h2 class="h2" id="motion">Motion &amp; dividers</h2>
+      <ul>
+        <li><strong>Marquee</strong> — infinite horizontal text ticker.</li>
+        <li><strong>Horizontal scroll</strong> — horizontally-scrolling cards with snap points.</li>
+        <li><strong>Parallax image</strong> — full-width image with scroll-driven parallax depth.</li>
+        <li><strong>Scroll text</strong> — large scroll-triggered text reveal (one word at a time).</li>
+        <li><strong>Gradient divider</strong> — colored separator block to break up sections.</li>
+      </ul>
+
+      <h2 class="h2" id="site-wide">Site-wide controls</h2>
+      <p>Sections that live in the header or footer section groups, or render globally.</p>
+      <ul>
+        <li><strong>Announcement bar</strong> — top promo banner. Up to three rotating messages with optional links.</li>
+        <li><strong>Header</strong> — logo, menu (up to two levels), search, account, cart. Sticky on scroll.</li>
+        <li><strong>Footer</strong> — multi-column footer with menus, newsletter, social, payment icons, locale selector.</li>
+        <li><strong>Age verifier</strong> — 18+/21+ gate for alcohol, supplements, etc. Stores acceptance in a cookie.</li>
+        <li><strong>Maison promo popup</strong> — themed popup tuned to the Maison preset (timed offer, mood image).</li>
+        <li><strong>Popup</strong> — generic newsletter or discount popup with configurable triggers.</li>
+        <li><strong>Cart notification</strong> — toast that fires after add-to-cart, with the added product.</li>
+        <li><strong>Custom section</strong> — empty section accepting custom Liquid for app integrations or one-off layouts.</li>
+      </ul>
+
+      <h2 class="h2" id="main-sections">Main page sections</h2>
+      <p>One per page type. These are the JSON-driven main bodies of each template.</p>
+      <ul>
+        <li><strong>main-product</strong> — the product page (gallery + info column with blocks).</li>
+        <li><strong>main-collection</strong> — collection grid with filters, sort, and pagination.</li>
+        <li><strong>main-cart</strong> — full-page cart with line items, discounts, accelerated checkout.</li>
+        <li><strong>main-blog</strong> — blog index with article cards.</li>
+        <li><strong>main-article</strong> — single article with author, date, content, and comments.</li>
+        <li><strong>main-page</strong> — generic CMS page wrapper.</li>
+        <li><strong>main-search</strong> — search results page (products + articles).</li>
+        <li><strong>main-404</strong> — 404 error page with helpful return links.</li>
+        <li><strong>main-password</strong> — coming-soon / password-protected store page.</li>
+      </ul>
+
+      <h2 class="h2" id="blocks">Product page blocks</h2>
+      <p>On the product page, every element in the info column is a block you can reorder or remove:</p>
+      <ul>
+        <li>Vendor</li>
+        <li>Title</li>
+        <li>Price (with unit price and tax-included note)</li>
+        <li>Inventory status</li>
+        <li>Description</li>
+        <li>Benefits list</li>
+        <li>Variant picker (with swatches)</li>
+        <li>Quantity selector</li>
+        <li>Buy buttons (add-to-cart, dynamic checkout, accelerated checkout)</li>
+        <li>Follow on Shop</li>
+        <li>Shop Pay Installments banner</li>
+        <li>Complementary products</li>
+        <li>Trust badges / feature icons</li>
+        <li>Delivery estimate</li>
+        <li>Size guide modal</li>
+        <li>Share buttons</li>
+        <li>Popup blocks (materials, care, shipping info)</li>
+        <li>Tabs (description, materials, shipping, etc. — used on <code>product.with-tabs</code>)</li>
+        <li>Custom Liquid block — paste in any app snippet</li>
+        <li>App blocks — drop in any compatible Shopify app block</li>
+      </ul>
+
+      <h2 class="h2" id="swatches">Variant swatches</h2>
+      <p>Revon uses Shopify's native swatch object. To set a swatch color or image for a variant option value:</p>
+      <ol>
+        <li>In Shopify admin, go to <strong>Settings → Custom data → Products → Variant options</strong>.</li>
+        <li>Add or edit the option value to attach a <strong>color</strong> or <strong>image</strong> swatch definition.</li>
+        <li>Revon picks it up automatically on product cards and product pages.</li>
+      </ol>
+      <p>If no swatch is configured, Revon falls back to a built-in color-name-to-hex map for common names like <code>Black</code>, <code>Cream</code>, <code>Navy</code>, <code>Sage</code>, etc. Names it doesn't recognize render as a neutral grey circle with the name beside it.</p>
+
+      <h2 class="h2" id="custom-code">Custom code</h2>
+
+      <div class="callout callout--warn">
+        <span class="callout__label">Before editing code</span>
+        <p>Always <strong>duplicate your theme</strong> from the Shopify admin so you have a rollback. Code customizations may not carry over to a future Revon update. If you're not comfortable editing Liquid or CSS, consider hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.</p>
+      </div>
+
+      <h3 class="h3">Adding custom CSS</h3>
+      <ol>
+        <li>Open <strong>Online Store → Themes → Edit code</strong>.</li>
+        <li>Open <code>assets/critical.css</code> (or <code>modern.css</code> for non-critical styles).</li>
+        <li>Add your rules at the bottom of the file.</li>
+        <li>Save — changes go live immediately.</li>
+      </ol>
+
+      <h3 class="h3">Adding custom Liquid</h3>
+      <p>You don't need to edit section files to add custom snippets. Use the <strong>Custom Liquid</strong> block available in the product section and most content sections, or add a <strong>Custom section</strong> anywhere on a template.</p>
+
+      <h3 class="h3">Saving a custom preset</h3>
+      <p>If you've configured the theme to a state you want to reuse on another store:</p>
+      <ol>
+        <li>Open <code>config/settings_data.json</code> via the code editor.</li>
+        <li>Find the <code>presets</code> object and copy one of the existing entries (Skincare, Atelier, or Maison) as a starting point.</li>
+        <li>Rename the key and adjust the values to match your customization.</li>
+        <li>Save. Your preset shows up in the theme editor's preset picker.</li>
+      </ol>
+
+      <div class="pager">
+        <a href="presets.html" class="pager--prev">
+          <span class="pager__label">← Previous</span>
+          <span class="pager__title">Presets</span>
+        </a>
+        <a href="faq.html" class="pager--next">
+          <span class="pager__label">Next →</span>
+          <span class="pager__title">FAQ</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</main>
+
 <footer class="site-footer">
-  <p>Revon theme documentation · <a href="index.html">Back to home</a></p>
+  <div class="site-footer__inner">
+    <div>
+      <div class="site-footer__brand">Revon</div>
+      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Documentation</div>
+      <ul class="site-footer__list">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="presets.html">Presets</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Support</div>
+      <ul class="site-footer__list">
+        <li><a href="support.html">Contact form</a></li>
+        <li><a href="support.html#support-policy">Support policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Edvardaja Studio</span>
+    <span>Revon v1.0.0</span>
+  </div>
 </footer>
 
-<script>
-const progress = document.getElementById('scrollProgress');
-const header = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  if (height > 0) progress.style.width = (scrolled / height * 100) + '%';
-  header.classList.toggle('site-header--scrolled', scrolled > 20);
-}, { passive: true });
-
-// Scroll spy
-(function() {
-  const links = document.querySelectorAll('.sidebar-nav a');
-  const sections = [];
-  links.forEach(link => {
-    const id = link.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if (el) sections.push({ el, link });
-  });
-
-  function update() {
-    let active = sections[0];
-    const offset = 100;
-    for (const s of sections) {
-      if (s.el.getBoundingClientRect().top <= offset) active = s;
-    }
-    links.forEach(l => l.classList.remove('is-active'));
-    if (active) active.link.classList.add('is-active');
-  }
-
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>
+<script src="scripts.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presets · Revon documentation</title>
+<meta name="description" content="Revon ships with three named presets — Skincare, Atelier, and Maison — each with its own typography, color palette, and homepage layout.">
+<meta property="og:title" content="Three presets, one theme">
+<meta property="og:description" content="Skincare, Atelier, and Maison — three industry-tuned configurations of the Revon Shopify theme.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">
+      <span class="site-header__brand-mark">R</span>
+      Revon
+      <span class="site-header__brand-tag">Docs</span>
+    </a>
+    <nav class="site-nav" aria-label="Documentation">
+      <a href="index.html">Overview</a>
+      <a href="getting-started.html">Getting started</a>
+      <a href="presets.html" aria-current="page">Presets</a>
+      <a href="customizing.html">Customizing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <a href="support.html" class="site-header__cta">Contact support</a>
+    <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+  <div class="mobile-drawer__head">
+    <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-drawer__nav" aria-label="Mobile">
+    <a href="index.html">Overview</a>
+    <a href="getting-started.html">Getting started</a>
+    <a href="presets.html">Presets</a>
+    <a href="customizing.html">Customizing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="support.html">Contact support</a>
+  </nav>
+</div>
+
+<main id="main">
+  <div class="doc-layout">
+
+    <aside class="doc-sidebar" aria-label="On this page">
+      <span class="doc-sidebar__label">On this page</span>
+      <nav class="doc-sidebar__list">
+        <a href="#what">What is a preset?</a>
+        <a href="#skincare">Skincare</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#maison">Maison</a>
+        <a href="#choosing">Which one to choose</a>
+        <a href="#applying">Applying a preset</a>
+        <a href="#mixing">Mixing &amp; customizing</a>
+        <a href="#comparison">Side-by-side comparison</a>
+      </nav>
+    </aside>
+
+    <article class="doc-content reveal">
+      <nav class="doc-content__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Docs</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Presets</span>
+      </nav>
+
+      <p class="eyebrow">Three voices, one theme</p>
+      <h1 class="h1" style="margin-top:var(--space-md)">Presets.</h1>
+      <p class="lead">Revon ships with three named presets — <strong>Skincare</strong>, <strong>Atelier</strong>, and <strong>Maison</strong>. Each preset is a complete configuration: typography, color palette, spacing rhythm, animation style, and a curated homepage. Pick one and you have an industry-tuned storefront; the rest of the theme adapts.</p>
+
+      <h2 class="h2" id="what">What is a preset?</h2>
+      <p class="prose">A preset is a named bundle of theme settings stored under <code>config/settings_data.json</code>. When you apply a preset, Shopify swaps every <em>theme setting</em> (fonts, colors, spacing, animation, cart type) to that preset's values, and Revon swaps in the matching <em>homepage layout</em> from <code>listings/&lt;preset&gt;/</code>. Sections, snippets, and code stay shared across all three.</p>
+
+      <div class="callout">
+        <span class="callout__label">Why three?</span>
+        <p>Because a beauty brand, an indie fashion house, and a homewares boutique each speak in a different visual language — and most theme libraries make merchants do that translation themselves. Revon's presets are pre-translated.</p>
+      </div>
+
+      <h2 class="h2" id="skincare">Skincare</h2>
+      <p class="prose"><strong>Vertical:</strong> Beauty, wellness, supplements, fragrance.</p>
+      <p class="prose"><strong>Aesthetic:</strong> Confident, clinical, optimistic. Big bold sans-serif headings, warm cream background, decisive uppercase tracking. Designed to make ingredient stories and clinical results feel earned rather than over-promised.</p>
+
+      <h3 class="h3">Typography</h3>
+      <ul class="prose">
+        <li><strong>Headings:</strong> Manrope extrabold (800), uppercase, tight letter-spacing (−3)</li>
+        <li><strong>Body:</strong> Manrope regular, 16px, generous line-height</li>
+        <li><strong>Display size:</strong> 48px base, scales up to 96px on the hero</li>
+      </ul>
+
+      <h3 class="h3">Color palette</h3>
+      <div class="stat-strip" style="margin-top:var(--space-md)">
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#f7f3ee; border:1px solid var(--color-border)" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#f7f3ee</div><div class="stat-strip__label">Cream base</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#393834" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#393834</div><div class="stat-strip__label">Ink</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#ebe8e2" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#ebe8e2</div><div class="stat-strip__label">Surface</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#1c1b18" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#1c1b18</div><div class="stat-strip__label">Dark scheme</div></div>
+        </div>
+      </div>
+
+      <h3 class="h3">Motion &amp; UI</h3>
+      <ul class="prose">
+        <li>Loading bar enabled (subtle progress indicator on page transitions)</li>
+        <li>Scroll progress indicator on long pages</li>
+        <li>Fade-up reveal animation on scroll</li>
+        <li>Cart drawer (not page) by default</li>
+      </ul>
+
+      <h3 class="h3">Signature sections</h3>
+      <ul class="prose">
+        <li><strong>Clinical results</strong> — stat-driven proof points (97% / 89% / 92%)</li>
+        <li><strong>Key ingredients</strong> — annotated ingredient cards with imagery</li>
+        <li><strong>Before/after</strong> — drag-slider for transformation imagery</li>
+        <li><strong>Mood routines</strong> — multi-step routine builder</li>
+      </ul>
+
+      <p class="prose"><strong>Built for:</strong> Indie skincare lines, cosmeceutical brands, supplement merchants, fragrance houses launching with strong clinical or ingredient storytelling.</p>
+
+      <h2 class="h2" id="atelier">Atelier</h2>
+      <p class="prose"><strong>Vertical:</strong> Slow fashion, capsule wardrobes, leather goods, jewelry.</p>
+      <p class="prose"><strong>Aesthetic:</strong> Quiet, considered, made-to-last. Light Cormorant serif, paper-grey background, generous whitespace. Less shouting, more breathing — the opposite of fast fashion's saturation.</p>
+
+      <h3 class="h3">Typography</h3>
+      <ul class="prose">
+        <li><strong>Headings:</strong> Cormorant Garamond regular (400), uppercase, looser tracking (−1)</li>
+        <li><strong>Body:</strong> Manrope regular, 16px</li>
+        <li><strong>Display size:</strong> 64px base — bigger but lighter than Skincare</li>
+      </ul>
+
+      <h3 class="h3">Color palette</h3>
+      <div class="stat-strip" style="margin-top:var(--space-md)">
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#f7f9fb; border:1px solid var(--color-border)" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#f7f9fb</div><div class="stat-strip__label">Paper</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#191c1e" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#191c1e</div><div class="stat-strip__label">Graphite</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#eceef0" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#eceef0</div><div class="stat-strip__label">Pale grey</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#c6c6ce" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#c6c6ce</div><div class="stat-strip__label">Border</div></div>
+        </div>
+      </div>
+
+      <h3 class="h3">Motion &amp; UI</h3>
+      <ul class="prose">
+        <li>Loading bar &amp; scroll progress turned off — quieter UX</li>
+        <li>Crossfade reveal (not slide-up) on scroll</li>
+        <li>Wider page (1450px) and deeper section spacing (120px desktop, 72px mobile)</li>
+        <li>Cart drawer</li>
+      </ul>
+
+      <h3 class="h3">Signature sections</h3>
+      <ul class="prose">
+        <li><strong>Editorial mosaic</strong> — multi-image magazine grid</li>
+        <li><strong>Editorial statement</strong> — large manifesto / quote display</li>
+        <li><strong>Lookbook grid</strong> — masonry lifestyle photography</li>
+        <li><strong>Shop the look</strong> — clickable hotspots on outfit imagery</li>
+        <li><strong>Timeline</strong> — brand history rendered as a single column</li>
+      </ul>
+
+      <p class="prose"><strong>Built for:</strong> Independent fashion labels, capsule-wardrobe brands, leather and tailoring studios, fine jewelry, accessories sold on craft.</p>
+
+      <h2 class="h2" id="maison">Maison</h2>
+      <p class="prose"><strong>Vertical:</strong> Home, interiors, ceramics, scent, lifestyle.</p>
+      <p class="prose"><strong>Aesthetic:</strong> Warm, lived-in, refined. Noto Serif body that reads like a print monograph, sage-cream palette, gently rounded corners. Designed for tactile products where the object's surface and the room around it both matter.</p>
+
+      <h3 class="h3">Typography</h3>
+      <ul class="prose">
+        <li><strong>Headings:</strong> Noto Serif regular (400), mixed case (not uppercase)</li>
+        <li><strong>Body:</strong> Manrope regular, 16px, 160% line-height</li>
+        <li><strong>Editorial:</strong> Noto Serif italic for pull-quotes and asides</li>
+        <li><strong>Display size:</strong> 56px base</li>
+      </ul>
+
+      <h3 class="h3">Color palette</h3>
+      <div class="stat-strip" style="margin-top:var(--space-md)">
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#e8ece8" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#e8ece8</div><div class="stat-strip__label">Sage cream</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#0e1011" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#0e1011</div><div class="stat-strip__label">Charcoal</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#f7f8f4; border:1px solid var(--color-border)" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#f7f8f4</div><div class="stat-strip__label">Bone</div></div>
+        </div>
+        <div class="stat-strip__item" style="display:flex; align-items:center; gap:12px; flex:none">
+          <span style="display:block; width:36px; height:36px; background:#bfc8c4" aria-hidden="true"></span>
+          <div><div class="stat-strip__value" style="font-size:14px">#bfc8c4</div><div class="stat-strip__label">Stone</div></div>
+        </div>
+      </div>
+
+      <h3 class="h3">Motion &amp; UI</h3>
+      <ul class="prose">
+        <li>Soft fade reveal — no aggressive slide-ins</li>
+        <li>Gently rounded corners on buttons (2px), media (4px), inputs (2px)</li>
+        <li>Tighter button text (11px, +5 letter-spacing, uppercase)</li>
+        <li>Loading bar and scroll progress off — print-magazine pacing</li>
+        <li>Cart drawer</li>
+      </ul>
+
+      <h3 class="h3">Signature sections</h3>
+      <ul class="prose">
+        <li><strong>Room plan</strong> — interior layout annotations with product callouts</li>
+        <li><strong>Rhythm board</strong> — Pinterest-style image board for moodboarding</li>
+        <li><strong>Editorial scroll</strong> — long-form article-style storytelling</li>
+        <li><strong>Maison promo popup</strong> — themed popup tuned to this preset</li>
+        <li><strong>Parallax image</strong> — full-bleed image with scroll-driven parallax</li>
+      </ul>
+
+      <p class="prose"><strong>Built for:</strong> Home goods boutiques, ceramics studios, scented candle and fragrance houses, interior accessories, slow-lifestyle brands.</p>
+
+      <h2 class="h2" id="choosing">Which one to choose</h2>
+      <p class="prose">If you're not sure, this is a quick decision tree:</p>
+      <ul class="prose">
+        <li><strong>You sell things people put on or in their body</strong> (skincare, cosmetics, supplements, fragrance) — start with <strong>Skincare</strong>.</li>
+        <li><strong>You sell things people wear</strong> (clothing, jewelry, accessories) — start with <strong>Atelier</strong>.</li>
+        <li><strong>You sell things people put in their home</strong> (homewares, ceramics, candles, interiors) — start with <strong>Maison</strong>.</li>
+      </ul>
+      <p class="prose">All three presets share the same 62 sections under the hood — so you can move sections across presets, mix and match, or evolve from one starting point into something entirely your own. The preset is a starting line, not a cage.</p>
+
+      <h2 class="h2" id="applying">Applying a preset</h2>
+
+      <h3 class="h3">From the theme editor (recommended)</h3>
+      <ol>
+        <li>Open <strong>Online Store → Themes → Customize</strong>.</li>
+        <li>Click <strong>Theme settings</strong> in the top-left of the editor.</li>
+        <li>Open the <strong>Theme styles</strong> picker at the top.</li>
+        <li>Choose <strong>Skincare</strong>, <strong>Atelier</strong>, or <strong>Maison</strong>.</li>
+        <li>Save. The theme settings switch immediately; the homepage may take a refresh.</li>
+      </ol>
+
+      <div class="callout callout--warn">
+        <span class="callout__label">Heads up</span>
+        <p>Applying a preset overwrites your current theme settings (colors, fonts, spacing, etc.). It does <strong>not</strong> overwrite section content you've added or edited. Always duplicate your theme first if you've already done customization work.</p>
+      </div>
+
+      <h3 class="h3">From the Shopify CLI (developers)</h3>
+      <p class="prose">If you're working with the theme locally and want to push a specific preset's homepage layout to a demo store:</p>
+      <pre><code># Skincare — uses the base templates
+shopify theme push --store=your-store.myshopify.com
+
+# Atelier — applies listings/atelier/ overrides
+shopify theme push --store=your-store.myshopify.com --listing=atelier
+
+# Maison — applies listings/maison/ overrides
+shopify theme push --store=your-store.myshopify.com --listing=maison</code></pre>
+
+      <h2 class="h2" id="mixing">Mixing &amp; customizing</h2>
+      <p class="prose">A preset is the start of your design, not the end. After applying one you can:</p>
+      <ul class="prose">
+        <li>Swap the heading or body font to anything in the Shopify font picker.</li>
+        <li>Override colors via the theme editor — your changes win over preset defaults.</li>
+        <li>Add sections from any preset's signature list — they all work on any preset.</li>
+        <li>Use both color schemes (light + dark) on the same page via per-section settings.</li>
+        <li>Save your changes as a custom preset by adding a new entry under <code>config/settings_data.json → presets</code>.</li>
+      </ul>
+
+      <h2 class="h2" id="comparison">Side-by-side</h2>
+      <div style="overflow-x:auto; margin-top:var(--space-lg)">
+        <table style="width:100%; min-width:680px; border-collapse:collapse; font-size:14px">
+          <thead>
+            <tr style="text-align:left; border-bottom:1.5px solid var(--color-dark)">
+              <th style="padding:14px 16px 14px 0; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">&nbsp;</th>
+              <th style="padding:14px 16px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">Skincare</th>
+              <th style="padding:14px 16px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">Atelier</th>
+              <th style="padding:14px 16px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">Maison</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Vertical</td><td style="padding:14px 16px">Beauty, wellness</td><td style="padding:14px 16px">Slow fashion</td><td style="padding:14px 16px">Home, lifestyle</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Heading font</td><td style="padding:14px 16px">Manrope 800</td><td style="padding:14px 16px">Cormorant 400</td><td style="padding:14px 16px">Noto Serif 400</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Heading case</td><td style="padding:14px 16px">Uppercase</td><td style="padding:14px 16px">Uppercase</td><td style="padding:14px 16px">Mixed case</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Display size</td><td style="padding:14px 16px">48px base</td><td style="padding:14px 16px">64px base</td><td style="padding:14px 16px">56px base</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Base color</td><td style="padding:14px 16px">Warm cream</td><td style="padding:14px 16px">Paper grey</td><td style="padding:14px 16px">Sage cream</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Page width</td><td style="padding:14px 16px">1400px</td><td style="padding:14px 16px">1450px</td><td style="padding:14px 16px">1450px</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Section spacing</td><td style="padding:14px 16px">96 / 60px</td><td style="padding:14px 16px">120 / 72px</td><td style="padding:14px 16px">120 / 72px</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Reveal style</td><td style="padding:14px 16px">Fade-up</td><td style="padding:14px 16px">Fade</td><td style="padding:14px 16px">Fade</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Loading bar</td><td style="padding:14px 16px">On</td><td style="padding:14px 16px">Off</td><td style="padding:14px 16px">Off</td></tr>
+            <tr style="border-bottom:1px solid var(--color-border)"><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Scroll progress</td><td style="padding:14px 16px">On</td><td style="padding:14px 16px">Off</td><td style="padding:14px 16px">Off</td></tr>
+            <tr><td style="padding:14px 16px 14px 0; font-weight:600; color:var(--color-muted)">Corner style</td><td style="padding:14px 16px">Sharp</td><td style="padding:14px 16px">Sharp</td><td style="padding:14px 16px">Softly rounded</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <span class="callout__label">Default preset</span>
+        <p>Out of the box, Revon ships with <strong>Maison</strong> selected as the active preset. Switch to Skincare or Atelier from the theme editor at any time without losing data.</p>
+      </div>
+
+      <div class="pager">
+        <a href="getting-started.html" class="pager--prev">
+          <span class="pager__label">← Previous</span>
+          <span class="pager__title">Getting started</span>
+        </a>
+        <a href="customizing.html" class="pager--next">
+          <span class="pager__label">Next →</span>
+          <span class="pager__title">Customizing</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <div class="site-footer__brand">Revon</div>
+      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Documentation</div>
+      <ul class="site-footer__list">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="presets.html">Presets</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Support</div>
+      <ul class="site-footer__list">
+        <li><a href="support.html">Contact form</a></li>
+        <li><a href="support.html#support-policy">Support policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Edvardaja Studio</span>
+    <span>Revon v1.0.0</span>
+  </div>
+</footer>
+
+<script src="scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Revon docs — small client-side behaviors */
+(function () {
+  'use strict';
+
+  /* -----------------------------------------------------------------
+   * Mobile nav drawer
+   * ----------------------------------------------------------------- */
+  var openBtn = document.querySelector('[data-mobile-open]');
+  var closeBtn = document.querySelector('[data-mobile-close]');
+  var drawer = document.querySelector('[data-mobile-drawer]');
+
+  function setDrawer(open) {
+    if (!drawer) return;
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  if (openBtn) openBtn.addEventListener('click', function () { setDrawer(true); });
+  if (closeBtn) closeBtn.addEventListener('click', function () { setDrawer(false); });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer && drawer.getAttribute('aria-hidden') === 'false') {
+      setDrawer(false);
+    }
+  });
+
+  // Close when clicking a link inside the drawer
+  if (drawer) {
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setDrawer(false); });
+    });
+  }
+
+  /* -----------------------------------------------------------------
+   * Scroll reveal — reveal .reveal elements as they enter the viewport
+   * ----------------------------------------------------------------- */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.05 });
+
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* -----------------------------------------------------------------
+   * Doc sidebar — scroll-spy to highlight the active heading
+   * ----------------------------------------------------------------- */
+  var sidebarLinks = Array.prototype.slice.call(document.querySelectorAll('.doc-sidebar__list a[href^="#"]'));
+  if (sidebarLinks.length && 'IntersectionObserver' in window) {
+    var headingIds = sidebarLinks
+      .map(function (a) { return a.getAttribute('href').slice(1); })
+      .filter(Boolean);
+    var headings = headingIds
+      .map(function (id) { return document.getElementById(id); })
+      .filter(Boolean);
+
+    var activeMap = {};
+    headings.forEach(function (h) { activeMap[h.id] = false; });
+
+    function setActive(id) {
+      sidebarLinks.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + id) a.classList.add('is-active');
+        else a.classList.remove('is-active');
+      });
+    }
+
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { activeMap[entry.target.id] = entry.isIntersecting; });
+      // Pick the first currently-visible heading
+      for (var i = 0; i < headings.length; i++) {
+        if (activeMap[headings[i].id]) { setActive(headings[i].id); return; }
+      }
+    }, { rootMargin: '-88px 0px -70% 0px', threshold: [0, 1] });
+
+    headings.forEach(function (h) { spy.observe(h); });
+
+    // Initial highlight
+    if (headings[0]) setActive(headings[0].id);
+  }
+
+  /* -----------------------------------------------------------------
+   * Contact form — submit to backend, show success/error inline
+   * ----------------------------------------------------------------- */
+  var form = document.querySelector('[data-support-form]');
+  if (form) {
+    var successEl = form.querySelector('[data-form-success]');
+    var errorEl = form.querySelector('[data-form-error]');
+    var submitBtn = form.querySelector('[type="submit"]');
+    var submitLabel = submitBtn ? submitBtn.textContent : '';
+
+    form.addEventListener('submit', function (e) {
+      var action = form.getAttribute('action') || '';
+      // If the endpoint hasn't been set, fall back to normal form submission
+      // (which will error) rather than silently no-op.
+      if (action.indexOf('YOUR_FORM_ID') !== -1) return;
+
+      e.preventDefault();
+      if (successEl) successEl.hidden = true;
+      if (errorEl) errorEl.hidden = true;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      var data = new FormData(form);
+      fetch(action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          if (successEl) successEl.hidden = false;
+          form.reset();
+        } else {
+          response.json().then(function (body) {
+            var msg = 'Something went wrong. Please email us directly or try again.';
+            if (body && body.errors && body.errors.length) {
+              msg = body.errors.map(function (x) { return x.message; }).join(' ');
+            }
+            if (errorEl) {
+              errorEl.textContent = msg;
+              errorEl.hidden = false;
+            }
+          }).catch(function () {
+            if (errorEl) {
+              errorEl.textContent = 'Something went wrong. Please try again.';
+              errorEl.hidden = false;
+            }
+          });
+        }
+      }).catch(function () {
+        if (errorEl) {
+          errorEl.textContent = 'Network error. Check your connection and try again.';
+          errorEl.hidden = false;
+        }
+      }).then(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      });
+    });
+  }
+
+  /* -----------------------------------------------------------------
+   * Header subtle elevate-on-scroll
+   * ----------------------------------------------------------------- */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var lastY = window.scrollY;
+    function onScroll() {
+      var y = window.scrollY;
+      if (y > 4) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+      lastY = y;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+})();

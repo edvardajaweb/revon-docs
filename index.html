@@ -5,107 +5,261 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Revon — Theme documentation</title>
 <meta name="description" content="Documentation, setup guide, FAQs and support for the Revon Shopify theme.">
+<meta property="og:title" content="Revon — Theme documentation">
+<meta property="og:description" content="The complete guide to installing, customizing, and getting the most out of the Revon Shopify theme.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-<div class="scroll-progress" id="scrollProgress"></div>
 
-<header class="site-header" role="banner" id="siteHeader">
+<header class="site-header" role="banner">
   <div class="site-header__inner">
-    <a href="index.html" class="site-header__brand">Revon</a>
+    <a href="index.html" class="site-header__brand">
+      <span class="site-header__brand-mark">R</span>
+      Revon
+      <span class="site-header__brand-tag">Docs</span>
+    </a>
     <nav class="site-nav" aria-label="Documentation">
-      <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html" aria-current="page">Overview</a>
       <a href="getting-started.html">Getting started</a>
+      <a href="presets.html">Presets</a>
       <a href="customizing.html">Customizing</a>
       <a href="faq.html">FAQ</a>
-      <a href="support.html">Support</a>
     </nav>
+    <a href="support.html" class="site-header__cta">Contact support</a>
+    <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+    </button>
   </div>
 </header>
 
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+  <div class="mobile-drawer__head">
+    <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-drawer__nav" aria-label="Mobile">
+    <a href="index.html">Overview</a>
+    <a href="getting-started.html">Getting started</a>
+    <a href="presets.html">Presets</a>
+    <a href="customizing.html">Customizing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="support.html">Contact support</a>
+  </nav>
+</div>
+
 <main id="main">
-  <div class="page-hero">
-    <h1>Revon theme documentation</h1>
-    <p class="page-intro">
-      Everything you need to install, set up, and get the most out of Revon — a Shopify
-      theme designed for brands that want a confident, editorial storefront with deep
-      customization and clean performance.
-    </p>
-  </div>
 
-  <div class="callout">
-    <p><strong>New to Revon?</strong> Start with the <a href="getting-started.html">Getting started</a> guide for installation and first-run setup. It takes about 15 minutes from install to a fully configured home page.</p>
-  </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__inner reveal">
+      <p class="eyebrow hero__eyebrow"><span class="hero__eyebrow-dot"></span>Shopify theme · documentation · v1.0</p>
+      <h1 class="display hero__heading">Build a storefront <span class="outline">worth remembering.</span></h1>
+      <p class="lead hero__lead">
+        Revon is an editorial Shopify theme for brands that want confident typography,
+        deep customization, and a shopping experience customers actually notice. This is
+        the complete guide — from install to launch.
+      </p>
+      <div class="hero__actions">
+        <a href="getting-started.html" class="btn btn--primary btn--arrow">Get started</a>
+        <a href="customizing.html" class="btn btn--secondary">Explore sections</a>
+      </div>
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <span class="hero__meta-value">3</span>
+          <span class="hero__meta-label">Presets</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-value">62</span>
+          <span class="hero__meta-label">Sections</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-value">4</span>
+          <span class="hero__meta-label">Languages</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-value">&lt; 2 days</span>
+          <span class="hero__meta-label">Support reply</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Browse the docs</h2>
-  <div class="card-grid">
-    <a href="getting-started.html" class="card">
-      <h3>Getting started</h3>
-      <p>Install the theme, configure the essentials, and launch your demo content.</p>
-      <span class="card__arrow">Read guide →</span>
-    </a>
-    <a href="customizing.html" class="card">
-      <h3>Customizing Revon</h3>
-      <p>Sections, blocks, colors, typography, and advanced layout options.</p>
-      <span class="card__arrow">Explore →</span>
-    </a>
-    <a href="faq.html" class="card">
-      <h3>FAQ</h3>
-      <p>Answers to the most common questions about Revon.</p>
-      <span class="card__arrow">View FAQ →</span>
-    </a>
-    <a href="support.html" class="card">
-      <h3>Contact support</h3>
-      <p>Report a bug or ask a question. We reply within two business days.</p>
-      <span class="card__arrow">Get help →</span>
-    </a>
-  </div>
+  <!-- Three presets showcase -->
+  <section class="section">
+    <div class="section-head reveal">
+      <div class="section-head__title">
+        <p class="eyebrow">Three voices, one theme</p>
+        <h2 class="h2">Pick a preset, get a storefront.</h2>
+      </div>
+      <a href="presets.html" class="btn btn--secondary">Compare presets</a>
+    </div>
 
-  <h2>Theme features at a glance</h2>
-  <ul class="feature-list">
-    <li>Online Store 2.0 — sections and blocks work on every page</li>
-    <li>60+ purpose-built sections including editorial, lookbook, clinical results, and gradient showcase layouts</li>
-    <li>Native variant swatches with image and color support</li>
-    <li>Product pages with 3D model, video, and external video media</li>
-    <li>Subscriptions via Shopify selling plans</li>
-    <li>Multi-currency, multi-language with country and language selectors</li>
-    <li>Shop Pay Installments, accelerated checkout, Follow on Shop</li>
-    <li>Cart discounts, cart notes, and line-level discount display</li>
-    <li>Unit pricing for EU and Swiss merchants</li>
-    <li>Multi-level header navigation and collapsible mobile menu</li>
-  </ul>
+    <div class="feature-grid">
+      <a href="presets.html#skincare" class="feature-card reveal">
+        <span class="feature-card__num">Preset 01</span>
+        <h3 class="feature-card__title">Skincare</h3>
+        <p class="feature-card__body">Bold uppercase sans, warm cream palette, clinical results, key ingredients, before/after. Built for beauty, wellness, fragrance, and supplement merchants.</p>
+        <span class="feature-card__link">See preset</span>
+      </a>
+      <a href="presets.html#atelier" class="feature-card reveal">
+        <span class="feature-card__num">Preset 02</span>
+        <h3 class="feature-card__title">Atelier</h3>
+        <p class="feature-card__body">Light Cormorant serif, paper-grey palette, lookbook grids, editorial mosaic, shop-the-look. Built for slow fashion, capsule labels, and considered jewelry.</p>
+        <span class="feature-card__link">See preset</span>
+      </a>
+      <a href="presets.html#maison" class="feature-card reveal">
+        <span class="feature-card__num">Preset 03</span>
+        <h3 class="feature-card__title">Maison</h3>
+        <p class="feature-card__body">Noto Serif body, sage-cream palette, room plans, rhythm board, editorial scroll. Built for home goods, ceramics, scent, and lifestyle boutiques.</p>
+        <span class="feature-card__link">See preset</span>
+      </a>
+    </div>
+  </section>
 
-  <h2>Support policy</h2>
-  <p>
-    All Revon license holders get free bug fixes and help with theme questions. We reply to every
-    support request within two business days. Customization work, app integrations, and help with
-    merchant-owned code are outside the scope of free support — we can either walk you through
-    doing it yourself or refer you to a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.
-  </p>
+  <!-- Feature grid -->
+  <section class="section">
+    <div class="section-head reveal">
+      <div class="section-head__title">
+        <p class="eyebrow">The guide</p>
+        <h2 class="h2">Everything you need, nothing you don't.</h2>
+      </div>
+    </div>
 
-  <h2>Updates</h2>
-  <p>
-    Revon receives regular updates for bug fixes and new features. Before editing code, always
-    <strong>duplicate your theme</strong> from the Shopify admin so you have a backup. When a new
-    version ships, you can install it side-by-side and migrate your settings at your own pace.
-  </p>
+    <div class="feature-grid">
+      <a href="getting-started.html" class="feature-card reveal">
+        <span class="feature-card__num">01 · Setup</span>
+        <h3 class="feature-card__title">Getting started</h3>
+        <p class="feature-card__body">Install Revon, pick a preset, configure the essentials, and go live. Fifteen focused minutes from empty store to a styled home page.</p>
+        <span class="feature-card__link">Read guide</span>
+      </a>
+      <a href="presets.html" class="feature-card reveal">
+        <span class="feature-card__num">02 · Style</span>
+        <h3 class="feature-card__title">Presets</h3>
+        <p class="feature-card__body">Three industry-tuned configurations — Skincare, Atelier, Maison. Typography, color, motion, and homepage layout all bundled.</p>
+        <span class="feature-card__link">Browse presets</span>
+      </a>
+      <a href="customizing.html" class="feature-card reveal">
+        <span class="feature-card__num">03 · Design</span>
+        <h3 class="feature-card__title">Customizing</h3>
+        <p class="feature-card__body">Sections, blocks, colors, typography, and layout. A full tour of all 62 sections and the building blocks behind them.</p>
+        <span class="feature-card__link">Explore options</span>
+      </a>
+      <a href="faq.html" class="feature-card reveal">
+        <span class="feature-card__num">04 · Answers</span>
+        <h3 class="feature-card__title">FAQ</h3>
+        <p class="feature-card__body">Common questions answered — installation, presets, premium sections, performance, app integrations.</p>
+        <span class="feature-card__link">Browse Q&amp;A</span>
+      </a>
+      <a href="changelog.html" class="feature-card reveal">
+        <span class="feature-card__num">05 · Updates</span>
+        <h3 class="feature-card__title">Changelog</h3>
+        <p class="feature-card__body">What's new, what's fixed, and what's coming next. Version notes for every Revon release.</p>
+        <span class="feature-card__link">See releases</span>
+      </a>
+      <a href="support.html" class="feature-card reveal">
+        <span class="feature-card__num">06 · Help</span>
+        <h3 class="feature-card__title">Contact support</h3>
+        <p class="feature-card__body">Report a bug, ask a question, or request a clarification. We reply within two business days.</p>
+        <span class="feature-card__link">Get in touch</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Highlights strip -->
+  <section class="section">
+    <div class="container-narrow reveal">
+      <p class="eyebrow">Built in</p>
+      <h2 class="h2" style="margin-top:var(--space-md)">Every feature a modern Shopify theme needs.</h2>
+      <p class="lead" style="margin-top:var(--space-md)">No app required, no hidden dependencies. Revon ships on Online Store 2.0 with the full Theme Store feature set — and three preset configurations so you don't start from scratch.</p>
+
+      <div class="stat-strip">
+        <div class="stat-strip__item">
+          <div class="stat-strip__value">OS 2.0</div>
+          <div class="stat-strip__label">Section everywhere</div>
+        </div>
+        <div class="stat-strip__item">
+          <div class="stat-strip__value">3D</div>
+          <div class="stat-strip__label">Product media</div>
+        </div>
+        <div class="stat-strip__item">
+          <div class="stat-strip__value">A11Y</div>
+          <div class="stat-strip__label">WCAG 2.1 AA</div>
+        </div>
+        <div class="stat-strip__item">
+          <div class="stat-strip__value">JSON-LD</div>
+          <div class="stat-strip__label">Rich snippets</div>
+        </div>
+      </div>
+
+      <ul class="prose" style="max-width:none; display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; padding-top:var(--space-md)">
+        <li>Three industry-tuned presets (Skincare, Atelier, Maison)</li>
+        <li>62 hand-built sections — heroes, editorial, social proof, conversion</li>
+        <li>Native variant swatches with image and color</li>
+        <li>3D model, video, and external video in the product gallery</li>
+        <li>Subscriptions via Shopify selling plans</li>
+        <li>Multi-currency and multi-language with selectors (EN, DE, ES, FR)</li>
+        <li>Shop Pay Installments and Follow on Shop</li>
+        <li>Line-level and cart-level discount display</li>
+        <li>Unit pricing for regulated regions</li>
+        <li>Focal-point aware responsive imagery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container-narrow reveal" style="text-align:center; padding:var(--space-4xl) var(--space-lg); background:var(--color-card)">
+      <p class="eyebrow">Ready to launch</p>
+      <h2 class="h2" style="margin-top:var(--space-md)">Start with the setup guide.</h2>
+      <p class="lead" style="margin:var(--space-md) auto 0">Fifteen focused minutes from install to a fully configured home page.</p>
+      <div style="margin-top:var(--space-xl); display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap">
+        <a href="getting-started.html" class="btn btn--primary btn--arrow">Getting started</a>
+        <a href="support.html" class="btn btn--secondary">Contact support</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
-  <p>Revon theme documentation · Last updated 2026</p>
+  <div class="site-footer__inner">
+    <div>
+      <div class="site-footer__brand">Revon</div>
+      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Documentation</div>
+      <ul class="site-footer__list">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="presets.html">Presets</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Support</div>
+      <ul class="site-footer__list">
+        <li><a href="support.html">Contact form</a></li>
+        <li><a href="support.html#support-policy">Support policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Edvardaja Studio</span>
+    <span>Revon v1.0.0</span>
+  </div>
 </footer>
 
-<script>
-// Scroll progress bar
-const progress = document.getElementById('scrollProgress');
-const header = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  if (height > 0) progress.style.width = (scrolled / height * 100) + '%';
-  header.classList.toggle('site-header--scrolled', scrolled > 20);
-}, { passive: true });
-</script>
+<script src="scripts.js" defer></script>
 </body>
 </html>

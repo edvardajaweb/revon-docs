@@ -9,48 +9,48 @@ Static HTML docs site + public contact form for the Revon Shopify theme, built t
 ## What's in this folder
 
 ```
-Revon-docs/
-├── index.html          landing page
-├── getting-started.html install guide
-├── customizing.html    sections, blocks, theme settings overview
-├── faq.html            frequently asked questions
-├── support.html        contact form + support policy
-├── styles.css          shared styles (pure CSS, no build step)
-└── README.md           this file
+docs/
+├── index.html             landing page
+├── getting-started.html   install + setup guide
+├── presets.html           Skincare / Atelier / Maison preset reference
+├── customizing.html       62-section catalog, blocks, theme settings
+├── faq.html               frequently asked questions
+├── changelog.html         version history
+├── support.html           contact form + support policy
+├── styles.css             shared styles
+├── scripts.js             small client-side behaviors (mobile drawer, scroll-spy, form handling)
+└── README.md              this file
 ```
 
-No JavaScript, no build step, no dependencies. Drop it on any static host.
+Minimal JavaScript (~5 KB, all in `scripts.js`), no build step, no dependencies. Drop it on any static host.
 
 ## Before publishing — you MUST do these two things
 
-### 1. Wire up the contact form
+### 1. Wire up the contact form ✅ done
 
-The form on [support.html](support.html) is currently pointing at a placeholder
-Formspree URL (`https://formspree.io/f/YOUR_FORM_ID`). You need a real form backend.
+The form on [support.html](support.html) is wired to Formspree
+(`https://formspree.io/f/xjgljokn`). To finish setup, log in to the Formspree dashboard
+for this form and:
 
-**Recommended: Formspree free tier**
+- Enable **Auto-response** (required by Theme Store Rule 21) — write a short message
+  confirming you received the request and that you reply within two business days
+- Enable **File uploads** (Rule 21 requires allowing screenshot attachments)
+- Set **Notifications** to `edvardajaweb@gmail.com` (already the support email on file)
+- Optionally add **reCAPTCHA** for spam
 
-1. Sign up at <https://formspree.io/> (free tier allows 50 submissions / month)
-2. Click **New form**, pick a name, click **Create form**
-3. Copy the endpoint — it looks like `https://formspree.io/f/abc123xyz`
-4. Open `support.html`, find `YOUR_FORM_ID`, replace the whole URL with yours
-5. In the Formspree dashboard for this form:
-   - Enable **Auto-response** (required by Rule 21) — write a short message confirming
-     you received the request and that you reply within two business days
-   - Enable **File uploads** (Rule 21 requires allowing screenshot attachments)
-   - Set **Notifications** to the email you actually check
-   - Optionally add **reCAPTCHA** for spam
+The first form submission also acts as the activation step — submit one test message
+after deploying to confirm the endpoint is live.
 
-**Alternatives** (all free, all work with the existing HTML):
+**If you switch backends**, supported alternatives are:
 - [Web3Forms](https://web3forms.com/) — unlimited submissions, no account required
 - [Formsubmit.co](https://formsubmit.co/) — no signup, add `https://formsubmit.co/your@email.com` as the action
 - [Tally](https://tally.so/) — nicer UI but requires building the form in their editor
 - [Netlify Forms](https://docs.netlify.com/forms/setup/) — free if you deploy via Netlify
 
-### 2. Update the Shopify theme `theme_info` URLs
+### 2. Update the Shopify theme `theme_info` URLs ✅ done
 
-Once the docs site is live, open the Revon theme repo and edit
-`config/settings_schema.json`. Find the `theme_info` block at the top:
+The `theme_info` block in `theme/config/settings_schema.json` already points at this
+docs site:
 
 ```json
 {
@@ -58,20 +58,13 @@ Once the docs site is live, open the Revon theme repo and edit
   "theme_name": "Revon",
   "theme_version": "1.0.0",
   "theme_author": "Edvardaja Studio",
-  "theme_documentation_url": "https://help.shopify.com/en/manual/online-store/themes",
-  "theme_support_url": "https://help.shopify.com/en/manual/online-store/themes"
+  "theme_documentation_url": "https://edvardajaweb.github.io/revon-docs/",
+  "theme_support_url": "https://edvardajaweb.github.io/revon-docs/support.html",
+  "theme_support_email": "edvardajaweb@gmail.com"
 }
 ```
 
-Replace both URLs with your live docs site:
-
-```json
-  "theme_documentation_url": "https://your-docs-site.com/index.html",
-  "theme_support_url": "https://your-docs-site.com/support.html"
-```
-
-These URLs are also what you paste into the Theme Store submission form when listing
-your theme. They MUST be live and public before you submit.
+Paste the same URLs into the Theme Store submission form when listing the theme.
 
 ## Deployment options (ranked by ease)
 
@@ -150,13 +143,14 @@ studio's voice — they don't need to be literal copies of what's here.
 
 ## Checklist before you submit to the Theme Store
 
-- [ ] Replaced `YOUR_FORM_ID` in `support.html` with a real Formspree (or alternative) endpoint
-- [ ] Enabled auto-responder in the form backend
-- [ ] Enabled file uploads in the form backend
+- [x] ~~Replaced `YOUR_FORM_ID` in `support.html` with a real Formspree endpoint~~ — done (`xjgljokn`).
+- [ ] Enabled auto-responder in the Formspree dashboard
+- [ ] Enabled file uploads in the Formspree dashboard
 - [ ] Tested the form end-to-end — submitted a test message and received both the notification and the auto-response
-- [ ] Deployed to a public URL
-- [ ] Tested every page loads over HTTPS (theme store requires this)
+- [x] ~~Deployed to a public URL~~ — live at <https://edvardajaweb.github.io/revon-docs/>
+- [ ] Re-deployed after the latest docs rewrite (presets.html added, customizing/getting-started/faq/changelog rewritten — push `docs/` to its remote)
+- [ ] Tested every page loads over HTTPS
 - [ ] Ran Lighthouse — Performance and Accessibility both ≥ 95
-- [ ] Updated `theme_documentation_url` and `theme_support_url` in the theme's `config/settings_schema.json`
+- [x] ~~Updated `theme_documentation_url` and `theme_support_url` in the theme's `config/settings_schema.json`~~ — done.
 - [ ] Walked through each page as a merchant who's never seen Revon — is anything confusing?
-- [ ] Pasted the docs URL and support URL into your Theme Store submission form
+- [ ] Pasted the docs URL and support URL into the Theme Store submission form
