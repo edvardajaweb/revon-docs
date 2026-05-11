@@ -1,10 +1,6 @@
-/* Revon docs — small client-side behaviors */
 (function () {
   'use strict';
 
-  /* -----------------------------------------------------------------
-   * Mobile nav drawer
-   * ----------------------------------------------------------------- */
   var openBtn = document.querySelector('[data-mobile-open]');
   var closeBtn = document.querySelector('[data-mobile-close]');
   var drawer = document.querySelector('[data-mobile-drawer]');
@@ -19,23 +15,18 @@
   if (openBtn) openBtn.addEventListener('click', function () { setDrawer(true); });
   if (closeBtn) closeBtn.addEventListener('click', function () { setDrawer(false); });
 
-  // Close on Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && drawer && drawer.getAttribute('aria-hidden') === 'false') {
       setDrawer(false);
     }
   });
 
-  // Close when clicking a link inside the drawer
   if (drawer) {
     drawer.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { setDrawer(false); });
     });
   }
 
-  /* -----------------------------------------------------------------
-   * Scroll reveal — reveal .reveal elements as they enter the viewport
-   * ----------------------------------------------------------------- */
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -51,9 +42,6 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* -----------------------------------------------------------------
-   * Doc sidebar — scroll-spy to highlight the active heading
-   * ----------------------------------------------------------------- */
   var sidebarLinks = Array.prototype.slice.call(document.querySelectorAll('.doc-sidebar__list a[href^="#"]'));
   if (sidebarLinks.length && 'IntersectionObserver' in window) {
     var headingIds = sidebarLinks
@@ -75,7 +63,6 @@
 
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) { activeMap[entry.target.id] = entry.isIntersecting; });
-      // Pick the first currently-visible heading
       for (var i = 0; i < headings.length; i++) {
         if (activeMap[headings[i].id]) { setActive(headings[i].id); return; }
       }
@@ -83,13 +70,9 @@
 
     headings.forEach(function (h) { spy.observe(h); });
 
-    // Initial highlight
     if (headings[0]) setActive(headings[0].id);
   }
 
-  /* -----------------------------------------------------------------
-   * Contact form — submit to backend, show success/error inline
-   * ----------------------------------------------------------------- */
   var form = document.querySelector('[data-support-form]');
   if (form) {
     var successEl = form.querySelector('[data-form-success]');
@@ -99,8 +82,6 @@
 
     form.addEventListener('submit', function (e) {
       var action = form.getAttribute('action') || '';
-      // If the endpoint hasn't been set, fall back to normal form submission
-      // (which will error) rather than silently no-op.
       if (action.indexOf('YOUR_FORM_ID') !== -1) return;
 
       e.preventDefault();
@@ -152,9 +133,6 @@
     });
   }
 
-  /* -----------------------------------------------------------------
-   * Header subtle elevate-on-scroll
-   * ----------------------------------------------------------------- */
   var header = document.querySelector('.site-header');
   if (header) {
     var lastY = window.scrollY;

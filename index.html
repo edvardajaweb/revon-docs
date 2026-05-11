@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -57,7 +57,6 @@
 
 <main id="main">
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero__inner reveal">
       <p class="eyebrow hero__eyebrow"><span class="hero__eyebrow-dot"></span>Shopify theme · documentation · v1.0</p>
@@ -92,7 +91,6 @@
     </div>
   </section>
 
-  <!-- Three presets showcase -->
   <section class="section">
     <div class="section-head reveal">
       <div class="section-head__title">
@@ -102,29 +100,49 @@
       <a href="presets.html" class="btn btn--secondary">Compare presets</a>
     </div>
 
-    <div class="feature-grid">
-      <a href="presets.html#skincare" class="feature-card reveal">
-        <span class="feature-card__num">Preset 01</span>
-        <h3 class="feature-card__title">Skincare</h3>
-        <p class="feature-card__body">Bold uppercase sans, warm cream palette, clinical results, key ingredients, before/after. Built for beauty, wellness, fragrance, and supplement merchants.</p>
-        <span class="feature-card__link">See preset</span>
+    <div class="preset-grid">
+      <a href="presets.html#skincare" class="preset-card reveal">
+        <span class="preset-card__num">Preset 01</span>
+        <span class="preset-card__name">Skincare</span>
+        <span class="preset-card__vertical">Beauty · Wellness · Fragrance</span>
+        <div class="preset-card__swatches" aria-hidden="true">
+          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#f7f3ee"></span>
+          <span class="preset-card__swatch" style="background:#ebe8e2"></span>
+          <span class="preset-card__swatch" style="background:#393834"></span>
+          <span class="preset-card__swatch" style="background:#1c1b18"></span>
+        </div>
+        <p class="preset-card__body">Bold uppercase Manrope, warm cream palette, clinical results, key ingredients, before/after slider. Optimistic, confident, clinical.</p>
+        <span class="preset-card__link">See preset</span>
       </a>
-      <a href="presets.html#atelier" class="feature-card reveal">
-        <span class="feature-card__num">Preset 02</span>
-        <h3 class="feature-card__title">Atelier</h3>
-        <p class="feature-card__body">Light Cormorant serif, paper-grey palette, lookbook grids, editorial mosaic, shop-the-look. Built for slow fashion, capsule labels, and considered jewelry.</p>
-        <span class="feature-card__link">See preset</span>
+      <a href="presets.html#atelier" class="preset-card reveal">
+        <span class="preset-card__num">Preset 02</span>
+        <span class="preset-card__name preset-card__name--atelier">Atelier</span>
+        <span class="preset-card__vertical">Slow fashion · Jewelry · Leather</span>
+        <div class="preset-card__swatches" aria-hidden="true">
+          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#f7f9fb"></span>
+          <span class="preset-card__swatch" style="background:#eceef0"></span>
+          <span class="preset-card__swatch" style="background:#c6c6ce"></span>
+          <span class="preset-card__swatch" style="background:#191c1e"></span>
+        </div>
+        <p class="preset-card__body">Light Cormorant serif, paper-grey palette, lookbook grid, editorial mosaic, shop the look. Quiet, considered, made to last.</p>
+        <span class="preset-card__link">See preset</span>
       </a>
-      <a href="presets.html#maison" class="feature-card reveal">
-        <span class="feature-card__num">Preset 03</span>
-        <h3 class="feature-card__title">Maison</h3>
-        <p class="feature-card__body">Noto Serif body, sage-cream palette, room plans, rhythm board, editorial scroll. Built for home goods, ceramics, scent, and lifestyle boutiques.</p>
-        <span class="feature-card__link">See preset</span>
+      <a href="presets.html#maison" class="preset-card reveal">
+        <span class="preset-card__num">Preset 03</span>
+        <span class="preset-card__name preset-card__name--maison">Maison</span>
+        <span class="preset-card__vertical">Home · Ceramics · Scent · Interiors</span>
+        <div class="preset-card__swatches" aria-hidden="true">
+          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#f7f8f4"></span>
+          <span class="preset-card__swatch" style="background:#e8ece8"></span>
+          <span class="preset-card__swatch" style="background:#bfc8c4"></span>
+          <span class="preset-card__swatch" style="background:#0e1011"></span>
+        </div>
+        <p class="preset-card__body">Noto Serif body, sage-cream palette, room plan, rhythm board, editorial scroll. Warm, lived-in, refined. (Default preset.)</p>
+        <span class="preset-card__link">See preset</span>
       </a>
     </div>
   </section>
 
-  <!-- Feature grid -->
   <section class="section">
     <div class="section-head reveal">
       <div class="section-head__title">
@@ -173,7 +191,6 @@
     </div>
   </section>
 
-  <!-- Highlights strip -->
   <section class="section">
     <div class="container-narrow reveal">
       <p class="eyebrow">Built in</p>
@@ -214,7 +231,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="section" style="padding-top:0">
     <div class="container-narrow reveal" style="text-align:center; padding:var(--space-4xl) var(--space-lg); background:var(--color-card)">
       <p class="eyebrow">Ready to launch</p>
