@@ -145,4 +145,20 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
+
+  var backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.type = 'button';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><polyline points="6 14 12 8 18 14"/></svg>';
+  document.body.appendChild(backToTop);
+
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 600) backToTop.classList.add('is-visible');
+    else backToTop.classList.remove('is-visible');
+  }, { passive: true });
 })();

@@ -35,7 +35,7 @@ for this form and:
 - Enable **Auto-response** (required by Theme Store Rule 21) — write a short message
   confirming you received the request and that you reply within two business days
 - Enable **File uploads** (Rule 21 requires allowing screenshot attachments)
-- Set **Notifications** to `edvardajaweb@gmail.com` (already the support email on file)
+- Set **Notifications** to the email address you actually check (where you want support requests delivered)
 - Optionally add **reCAPTCHA** for spam
 
 The first form submission also acts as the activation step — submit one test message
@@ -59,8 +59,7 @@ docs site:
   "theme_version": "1.0.0",
   "theme_author": "Edvardaja Studio",
   "theme_documentation_url": "https://edvardajaweb.github.io/revon-docs/",
-  "theme_support_url": "https://edvardajaweb.github.io/revon-docs/support.html",
-  "theme_support_email": "edvardajaweb@gmail.com"
+  "theme_support_url": "https://edvardajaweb.github.io/revon-docs/support.html"
 }
 ```
 
