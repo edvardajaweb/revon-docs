@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheat sheet · Revon documentation</title>
+<meta name="description" content="Quick recipes for the most common tasks in the Revon Shopify theme — change the logo, switch a preset, set up swatches, and more.">
+<meta property="og:title" content="Revon cheat sheet">
+<meta property="og:description" content="The most common Revon tasks, each as a 2- or 3-step recipe.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">Revon</a>
+    <nav class="site-nav" aria-label="Documentation">
+      <a href="index.html">Overview</a>
+      <a href="getting-started.html">Getting started</a>
+      <a href="presets.html">Presets</a>
+      <a href="customizing.html">Customizing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <a href="support.html" class="site-header__cta">Contact support</a>
+    <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+  <div class="mobile-drawer__head">
+    <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-drawer__nav" aria-label="Mobile">
+    <a href="index.html">Overview</a>
+    <a href="getting-started.html">Getting started</a>
+    <a href="presets.html">Presets</a>
+    <a href="customizing.html">Customizing</a>
+    <a href="cheatsheet.html">Cheat sheet</a>
+    <a href="apps.html">App integrations</a>
+    <a href="faq.html">FAQ</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="support.html">Contact support</a>
+  </nav>
+</div>
+
+<main id="main">
+  <div class="doc-layout">
+
+    <aside class="doc-sidebar" aria-label="On this page">
+      <span class="doc-sidebar__label">Categories</span>
+      <nav class="doc-sidebar__list">
+        <a href="#basics">Basics</a>
+        <a href="#homepage">Homepage</a>
+        <a href="#product">Product page</a>
+        <a href="#cart">Cart &amp; checkout</a>
+        <a href="#navigation">Navigation</a>
+        <a href="#style">Style &amp; brand</a>
+      </nav>
+    </aside>
+
+    <article class="doc-content prose reveal">
+      <nav class="doc-content__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Docs</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Cheat sheet</span>
+      </nav>
+
+      <p class="eyebrow">Quick recipes</p>
+      <h1 class="h1" style="margin-top:var(--space-md)">Cheat sheet</h1>
+      <p class="lead">The most common tasks in Revon, each as a short recipe. Save this page or print it — most things you'll want to do are two or three clicks away.</p>
+
+      <h2 class="h2" id="basics">Basics</h2>
+
+      <h3 class="h3">Change your logo</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Logo and branding</strong>.</li>
+        <li>Click the <strong>Logo image</strong> picker and upload your logo. SVG works best; PNG is fine if transparent.</li>
+        <li>Save. The logo updates in the header, footer, and mobile menu.</li>
+      </ol>
+
+      <h3 class="h3">Change your favicon</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Logo and branding → Favicon</strong>.</li>
+        <li>Upload a square image, at least 32×32 (PNG recommended).</li>
+        <li>Save. Browsers will show it in the tab.</li>
+      </ol>
+
+      <h3 class="h3">Change the colors of the whole theme</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Colors</strong>.</li>
+        <li>Edit any color in the scheme — background, text, button background, button text, border, etc. Every section that uses this scheme updates automatically.</li>
+        <li>Save.</li>
+      </ol>
+
+      <h3 class="h3">Change the heading or body font</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Typography</strong>.</li>
+        <li>Click <strong>Heading font</strong> or <strong>Body font</strong> and pick from Shopify's font picker. Any system font, Google Font, or font you've uploaded works.</li>
+        <li>Save. Bold and italic variants load automatically.</li>
+      </ol>
+
+      <h2 class="h2" id="homepage">Homepage</h2>
+
+      <h3 class="h3">Add a section to the homepage</h3>
+      <ol>
+        <li>Open the home page in the theme editor.</li>
+        <li>Click <strong>Add section</strong> wherever you want it to appear in the stack.</li>
+        <li>Pick the section type, fill in its settings, and save.</li>
+      </ol>
+
+      <h3 class="h3">Hide a section temporarily</h3>
+      <ol>
+        <li>Click the section in the theme editor.</li>
+        <li>Click the eye icon at the top-right of its settings panel to hide it.</li>
+        <li>Save. The section stays in the template but won't appear on the live site until you toggle it back on.</li>
+      </ol>
+
+      <h3 class="h3">Reorder sections</h3>
+      <ol>
+        <li>In the theme editor, click and hold the drag handle (six dots) next to any section in the left panel.</li>
+        <li>Drag it up or down to its new spot.</li>
+        <li>Save.</li>
+      </ol>
+
+      <h3 class="h3">Change the announcement bar text</h3>
+      <ol>
+        <li>In the theme editor, scroll to the top of the section list and click the <strong>Announcement bar</strong> section.</li>
+        <li>Edit each block's message. You can rotate up to three.</li>
+        <li>Save.</li>
+      </ol>
+
+      <h2 class="h2" id="product">Product page</h2>
+
+      <h3 class="h3">Set up variant color swatches</h3>
+      <ol>
+        <li>In Shopify admin, go to <strong>Settings → Custom data → Products → Variant options</strong>.</li>
+        <li>Add a swatch (color or image) to each option value (e.g. Black, Sage, Cream).</li>
+        <li>Save. The swatches appear automatically on product cards and product pages — no theme settings to change.</li>
+      </ol>
+
+      <h3 class="h3">Set the focal point on a product image</h3>
+      <ol>
+        <li>In Shopify admin, open any product and click an image.</li>
+        <li>Click <strong>Edit</strong>, then drag the focal-point indicator to the part of the image you want kept in view when cropped.</li>
+        <li>Save. Revon respects this on every responsive image.</li>
+      </ol>
+
+      <h3 class="h3">Add a 3D model or video to a product</h3>
+      <ol>
+        <li>Open the product in Shopify admin.</li>
+        <li>Click <strong>Add media</strong> and upload a <code>.glb</code> file (3D model), a <code>.mp4</code> video, or paste a YouTube/Vimeo URL.</li>
+        <li>Save. Revon shows it in the product gallery alongside images.</li>
+      </ol>
+
+      <h2 class="h2" id="cart">Cart &amp; checkout</h2>
+
+      <h3 class="h3">Switch the cart between drawer and full page</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Cart</strong>.</li>
+        <li>Pick <strong>Drawer</strong> (slides in from the side) or <strong>Page</strong> (full <code>/cart</code> page).</li>
+        <li>Save.</li>
+      </ol>
+
+      <h3 class="h3">Set a free-shipping threshold</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Cart → Free shipping threshold</strong>.</li>
+        <li>Enter the order total above which shipping is free (in your store currency, before tax).</li>
+        <li>Save. The cart shows a progress bar towards the threshold.</li>
+      </ol>
+
+      <div class="callout">
+        <span class="callout__label">Heads up</span>
+        <p>The progress bar is just visual. Actual free shipping is set in <strong>Shopify Admin → Settings → Shipping and delivery</strong> as a rate.</p>
+      </div>
+
+      <h2 class="h2" id="navigation">Navigation</h2>
+
+      <h3 class="h3">Edit the main menu and dropdowns</h3>
+      <ol>
+        <li>In Shopify admin, go to <strong>Online Store → Navigation</strong>.</li>
+        <li>Click <strong>Main menu</strong> and add or edit items.</li>
+        <li>To create a dropdown, drop a sub-item onto a parent item. Revon supports up to two levels.</li>
+      </ol>
+
+      <h3 class="h3">Show a language or country selector</h3>
+      <ol>
+        <li>Enable extra languages or currencies under <strong>Shopify Admin → Settings → Languages</strong> or <strong>Settings → Markets</strong>.</li>
+        <li>Open the <strong>Footer</strong> section in the theme editor.</li>
+        <li>Toggle on <strong>Show language selector</strong> or <strong>Show country selector</strong>. Save.</li>
+      </ol>
+
+      <h2 class="h2" id="style">Style &amp; brand</h2>
+
+      <h3 class="h3">Switch to a different preset</h3>
+      <ol>
+        <li>In the theme editor, click <strong>Theme settings</strong> (top-left).</li>
+        <li>Open the <strong>Theme styles</strong> picker at the top.</li>
+        <li>Pick <strong>Skincare</strong>, <strong>Atelier</strong>, or <strong>Maison</strong>. Save. See the <a href="presets.html">Presets page</a> for a comparison.</li>
+      </ol>
+
+      <h3 class="h3">Add social media links to the footer</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Social media</strong>.</li>
+        <li>Paste the full URL of each profile (Instagram, Facebook, TikTok, Pinterest, X, YouTube).</li>
+        <li>Save. Icons appear in the footer for any field you filled in.</li>
+      </ol>
+
+      <h3 class="h3">Turn off the cookie banner</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Advanced</strong>.</li>
+        <li>Toggle off <strong>Show cookie banner</strong>. Save.</li>
+      </ol>
+
+      <div class="callout callout--warn">
+        <span class="callout__label">If you sell in the EU</span>
+        <p>You may still be legally required to show a cookie/consent banner under GDPR. Shopify's built-in <strong>Customer privacy</strong> banner (Settings → Customer privacy) is often a better fit than Revon's own banner.</p>
+      </div>
+
+      <h3 class="h3">Turn off all scroll animations</h3>
+      <ol>
+        <li>Open <strong>Theme settings → Animations and effects</strong>.</li>
+        <li>Toggle off <strong>Enable animations</strong>.</li>
+        <li>Save. The theme also respects <em>prefers-reduced-motion</em> automatically for individual visitors.</li>
+      </ol>
+
+      <div class="pager">
+        <a href="customizing.html" class="pager--prev">
+          <span class="pager__label">← Previous</span>
+          <span class="pager__title">Customizing</span>
+        </a>
+        <a href="faq.html" class="pager--next">
+          <span class="pager__label">Next →</span>
+          <span class="pager__title">FAQ</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <div class="site-footer__brand">Revon</div>
+      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Documentation</div>
+      <ul class="site-footer__list">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="presets.html">Presets</a></li>
+        <li><a href="customizing.html">Customizing</a></li>
+        <li><a href="cheatsheet.html" aria-current="page">Cheat sheet</a></li>
+        <li><a href="apps.html">App integrations</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Support</div>
+      <ul class="site-footer__list">
+        <li><a href="support.html">Contact form</a></li>
+        <li><a href="support.html#support-policy">Support policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Edvardaja Studio</span>
+    <span>Revon v1.0.0</span>
+  </div>
+</footer>
+
+<script src="scripts.js" defer></script>
+</body>
+</html>
