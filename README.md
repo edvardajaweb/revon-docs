@@ -12,8 +12,8 @@ Static HTML docs site + public contact form for the Revon Shopify theme, built t
 docs/
 ├── index.html             landing page
 ├── getting-started.html   install + setup guide
-├── presets.html           Skincare / Atelier / Maison preset reference
-├── customizing.html       62-section catalog, blocks, theme settings
+├── presets.html           Pure / Atelier / Maison preset reference
+├── customizing.html       Section catalog, blocks, theme settings
 ├── faq.html               frequently asked questions
 ├── changelog.html         version history
 ├── support.html           contact form + support policy

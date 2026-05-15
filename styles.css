@@ -1511,7 +1511,7 @@ main { flex: 1; }
   color: var(--color-muted);
 }
 
-.font-sample--skincare {
+.font-sample--pure {
   font-family: var(--font-body);
   font-weight: 800;
   text-transform: uppercase;
