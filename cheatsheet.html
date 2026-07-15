@@ -152,11 +152,19 @@
         <li>Save and preview the product page's Variant picker. Revon reads Shopify's native swatch data automatically.</li>
       </ol>
 
-      <h3 class="h3">Configure product-card badges</h3>
+      <h3 class="h3">Create custom product-card badges</h3>
+      <ol>
+        <li>Create a Products metafield named <strong>Custom badge</strong> with namespace and key <code>custom.badge</code> and type <strong>Single line text</strong>. A list is supported when you need two labels.</li>
+        <li>Enter a value on each product. For a quick fallback, use a product tag such as <code>badge:Limited edition</code>.</li>
+        <li>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong> to enable custom badges and choose their background and text colors.</li>
+        <li>Preview collection, search, recommendation, and featured-product cards on desktop and mobile.</li>
+      </ol>
+
+      <h3 class="h3">Configure automatic product-card badges</h3>
       <ol>
         <li>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong>.</li>
         <li>Enable Sale for products with a real compare-at price and New for products tagged exactly <code>new</code> or <code>New</code>.</li>
-        <li>Save and preview available, discounted, new, and sold-out products. A card shows one badge with Sold out, Sale, then New priority.</li>
+        <li>Preview discounted, new, and sold-out products. Revon shows custom labels plus one automatic status, prioritized as Sold out, Sale, then New.</li>
       </ol>
 
       <h3 class="h3">Add a product-page image or trust badge</h3>
@@ -165,7 +173,7 @@
         <li>Use <strong>Image badge text</strong> for a label on the main gallery image, or add the <strong>Trust badges</strong> block for up to three icon-and-text statements.</li>
         <li>Save and check every product assigned to that template because these badge settings are shared by the template.</li>
       </ol>
-      <p>See <a href="customizing.html#badges">Product badges</a> for priority, scope, and custom-label limitations.</p>
+      <p>See <a href="customizing.html#badges">Product badges</a> for the complete metafield, tag fallback, styling, priority, and template-scope guide.</p>
 
       <h3 class="h3">Set the focal point on a product image</h3>
       <ol>

@@ -143,6 +143,7 @@
         <li><strong>None:</strong> keeps product-card media static.</li>
         <li>Show or hide vendor and product type.</li>
         <li>Enable the quick-view button, which appears on hover or keyboard focus.</li>
+        <li>Show or hide custom badges and choose their background and text colors.</li>
         <li>Show or hide automatic Sale and New product-card badges.</li>
       </ul>
       <p>Set these options under <strong>Theme settings &gt; Product cards</strong>. The global <strong>Animations and effects &gt; Enable image hover zoom</strong> control can suppress image movement and image swapping across the storefront. Hover-only presentation is not required to understand or purchase a product on touch devices.</p>
@@ -248,10 +249,26 @@
       <p>The product form supports native selling plans, quantity rules, volume pricing, unit pricing, accelerated checkout, local pickup, product video, external video, and 3D product models when the store data provides them.</p>
 
       <h2 class="h2" id="badges">Product badges</h2>
-      <p>Revon uses three separate badge systems. They are edited in different places and serve different purposes.</p>
+      <p>Revon supports merchant-created product-card badges, automatic status badges, a product-gallery image badge, and product-page trust badges. Each system has a different source and scope.</p>
+
+      <h3 class="h3">Custom product-card badges</h3>
+      <p>The recommended setup uses Shopify product metafields, which keep each badge attached to its product and make bulk editing easier.</p>
+      <ol>
+        <li>In Shopify admin, open <strong>Settings &gt; Metafields and metaobjects &gt; Products</strong>.</li>
+        <li>Select <strong>Add definition</strong> and name it <strong>Custom badge</strong>.</li>
+        <li>Set the namespace and key to <code>custom.badge</code>.</li>
+        <li>Select <strong>Single line text</strong>. Use one value for one badge, or enable <strong>List of values</strong> when products can have two badges.</li>
+        <li>Set a recommended maximum-length validation of 32 characters, enable Storefronts access when that option is shown, pin the definition, and save.</li>
+        <li>Open a product, find <strong>Custom badge</strong> in its Metafields area, enter wording such as “Vegan,” “Limited edition,” or “Made to order,” and save.</li>
+      </ol>
+      <p>Revon displays the first two non-empty metafield values. Text is escaped and limited to 32 displayed characters so a label cannot break the card layout. See Shopify's guide to <a href="https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions">creating custom metafield definitions</a> when the admin labels differ from the steps above.</p>
+
+      <h3 class="h3">Quick product-tag fallback</h3>
+      <p>For a quick setup without a metafield definition, add a product tag in the format <code>badge:Limited edition</code>. Revon reads up to two <code>badge:</code> tags. If the product has a non-empty <code>custom.badge</code> metafield, metafield values take priority and badge tags are ignored.</p>
+      <p>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong> to enable or disable custom badges and choose their shared background and text colors. Custom badges appear on collection, search, featured-product, recommendation, and other cards that use Revon's shared product-card component.</p>
 
       <h3 class="h3">Automatic product-card badges</h3>
-      <p>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong>. Product cards show at most one automatic badge, using this priority:</p>
+      <p>Product cards can show custom labels plus one automatic status badge. The automatic status uses this priority:</p>
       <ol>
         <li><strong>Sold out:</strong> shown whenever the product is unavailable. This state takes priority and cannot be hidden by the Sale or New controls.</li>
         <li><strong>Sale:</strong> shown as a calculated percentage when a valid compare-at price is higher than the selling price and <strong>Show sale badge</strong> is enabled.</li>
@@ -276,9 +293,9 @@
       </ol>
       <p>Trust badges are also template-level content. Keep each statement short, accurate, and consistent with the store's shipping, returns, security, sustainability, and product policies.</p>
 
-      <div class="callout callout--warn">
-        <span class="callout__label">Custom product-card labels</span>
-        <p>Revon v1.0 does not expose arbitrary per-product badge text on collection and featured-product cards. The built-in card badges are Sold out, Sale, and New. A different per-product card label requires a supported metafield implementation or custom code.</p>
+      <div class="callout">
+        <span class="callout__label">Keep badges useful</span>
+        <p>Use short factual labels and avoid creating urgency, certification, sustainability, discount, or availability claims that the product data cannot support.</p>
       </div>
 
       <h2 class="h2" id="swatches">Variant swatches</h2>
