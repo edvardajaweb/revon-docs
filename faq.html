@@ -26,6 +26,7 @@
     </nav>
     <button class="site-header__search-btn" type="button" data-search-open aria-label="Search documentation" title="Search documentation">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      <span class="site-header__search-label">Search</span>
     </button>
     <a href="support.html" class="site-header__cta">Contact support</a>
     <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -193,6 +194,11 @@
       <details class="faq-item">
         <summary>How do native color swatches work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
         <div class="faq-item__body"><p>Assign a Shopify product category, connect the relevant category metafield to the variant option, and use entries that provide a color or image swatch. Revon reads Shopify's swatch object. Common color names have a fallback, and unknown names use the global fallback swatch color.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Where do I configure product badges?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Automatic product-card badges are controlled under <strong>Theme settings &gt; Product cards &gt; Badges</strong>. Sold out has first priority, Sale uses a real compare-at price, and New requires the exact product tag <code>new</code> or <code>New</code>. For the product page, use <strong>Product information &gt; Image badge text</strong> for one label on the main gallery image, or add a <strong>Trust badges</strong> block for up to three icon-and-text statements. Image and trust badges are product-template settings, so they apply to every product assigned to that template. Revon v1.0 does not include arbitrary per-product badge text on product cards. See the <a href="customizing.html#badges">complete product badge guide</a>.</p></div>
       </details>
 
       <details class="faq-item">

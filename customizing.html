@@ -26,6 +26,7 @@
     </nav>
     <button class="site-header__search-btn" type="button" data-search-open aria-label="Search documentation" title="Search documentation">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      <span class="site-header__search-label">Search</span>
     </button>
     <a href="support.html" class="site-header__cta">Contact support</a>
     <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -66,6 +67,7 @@
         <a href="#engagement">Engagement sections</a>
         <a href="#site-sections">Site sections</a>
         <a href="#product-blocks">Product blocks</a>
+        <a href="#badges">Product badges</a>
         <a href="#swatches">Variant swatches</a>
         <a href="#apps">App blocks</a>
         <a href="#advanced">Advanced changes</a>
@@ -134,11 +136,16 @@
 
       <h3 class="h3">Product cards</h3>
       <ul>
-        <li>Choose swap, brighten, zoom, lift, or no hover effect.</li>
+        <li><strong>Swap to second image:</strong> fades from the featured image to image two. Products with one image keep the featured image.</li>
+        <li><strong>Brighten:</strong> increases image brightness and saturation slightly.</li>
+        <li><strong>Zoom image:</strong> enlarges the featured image inside its frame.</li>
+        <li><strong>Lift card:</strong> moves the complete card upward by 4px without adding a rounded surface or shadow.</li>
+        <li><strong>None:</strong> keeps product-card media static.</li>
         <li>Show or hide vendor and product type.</li>
-        <li>Enable quick view.</li>
-        <li>Show or hide sale and new-product badges.</li>
+        <li>Enable the quick-view button, which appears on hover or keyboard focus.</li>
+        <li>Show or hide automatic Sale and New product-card badges.</li>
       </ul>
+      <p>Set these options under <strong>Theme settings &gt; Product cards</strong>. The global <strong>Animations and effects &gt; Enable image hover zoom</strong> control can suppress image movement and image swapping across the storefront. Hover-only presentation is not required to understand or purchase a product on touch devices.</p>
 
       <h3 class="h3">Animations and effects</h3>
       <ul>
@@ -239,6 +246,40 @@
         <li>Custom text, Custom Liquid, and app blocks.</li>
       </ul>
       <p>The product form supports native selling plans, quantity rules, volume pricing, unit pricing, accelerated checkout, local pickup, product video, external video, and 3D product models when the store data provides them.</p>
+
+      <h2 class="h2" id="badges">Product badges</h2>
+      <p>Revon uses three separate badge systems. They are edited in different places and serve different purposes.</p>
+
+      <h3 class="h3">Automatic product-card badges</h3>
+      <p>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong>. Product cards show at most one automatic badge, using this priority:</p>
+      <ol>
+        <li><strong>Sold out:</strong> shown whenever the product is unavailable. This state takes priority and cannot be hidden by the Sale or New controls.</li>
+        <li><strong>Sale:</strong> shown as a calculated percentage when a valid compare-at price is higher than the selling price and <strong>Show sale badge</strong> is enabled.</li>
+        <li><strong>New:</strong> shown when <strong>Show new badge</strong> is enabled and the product has the exact tag <code>new</code> or <code>New</code>.</li>
+      </ol>
+      <p>Sale wording and percentages come from real product pricing. Do not add a compare-at price only to create a visual badge.</p>
+
+      <h3 class="h3">Product gallery image badge</h3>
+      <ol>
+        <li>Open the required product template in the theme editor.</li>
+        <li>Select <strong>Product information</strong>.</li>
+        <li>Enter text in <strong>Image badge text</strong>. The label appears on the corner of the main gallery image; leave it blank to hide it.</li>
+      </ol>
+      <p>This is a template setting. Every product assigned to that product template receives the same image badge. Use an alternate product template when only a group of products should share wording such as “Limited edition” or “Made to order.”</p>
+
+      <h3 class="h3">Trust badges</h3>
+      <ol>
+        <li>Open the product template and select <strong>Product information</strong>.</li>
+        <li>Add or select the <strong>Trust badges</strong> block.</li>
+        <li>Edit up to three text labels and choose an icon for each: lock, shield, truck, refresh, heart, star, check, or leaf.</li>
+        <li>Clear a badge's text to hide that item, then drag the block to the required position.</li>
+      </ol>
+      <p>Trust badges are also template-level content. Keep each statement short, accurate, and consistent with the store's shipping, returns, security, sustainability, and product policies.</p>
+
+      <div class="callout callout--warn">
+        <span class="callout__label">Custom product-card labels</span>
+        <p>Revon v1.0 does not expose arbitrary per-product badge text on collection and featured-product cards. The built-in card badges are Sold out, Sale, and New. A different per-product card label requires a supported metafield implementation or custom code.</p>
+      </div>
 
       <h2 class="h2" id="swatches">Variant swatches</h2>
       <ol>

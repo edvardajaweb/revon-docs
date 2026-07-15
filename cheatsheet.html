@@ -29,6 +29,7 @@
     </nav>
     <button class="site-header__search-btn" type="button" data-search-open aria-label="Search documentation" title="Search documentation">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      <span class="site-header__search-label">Search</span>
     </button>
     <a href="support.html" class="site-header__cta">Contact support</a>
     <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -148,8 +149,23 @@
       <ol>
         <li>Assign the product's category and connect the relevant category metafield to the variant option.</li>
         <li>Choose category entries that provide a color or image swatch for each option value.</li>
-        <li>Save. The swatches appear automatically on product cards and product pages — no theme settings to change.</li>
+        <li>Save and preview the product page's Variant picker. Revon reads Shopify's native swatch data automatically.</li>
       </ol>
+
+      <h3 class="h3">Configure product-card badges</h3>
+      <ol>
+        <li>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong>.</li>
+        <li>Enable Sale for products with a real compare-at price and New for products tagged exactly <code>new</code> or <code>New</code>.</li>
+        <li>Save and preview available, discounted, new, and sold-out products. A card shows one badge with Sold out, Sale, then New priority.</li>
+      </ol>
+
+      <h3 class="h3">Add a product-page image or trust badge</h3>
+      <ol>
+        <li>Open the product template and select <strong>Product information</strong>.</li>
+        <li>Use <strong>Image badge text</strong> for a label on the main gallery image, or add the <strong>Trust badges</strong> block for up to three icon-and-text statements.</li>
+        <li>Save and check every product assigned to that template because these badge settings are shared by the template.</li>
+      </ol>
+      <p>See <a href="customizing.html#badges">Product badges</a> for priority, scope, and custom-label limitations.</p>
 
       <h3 class="h3">Set the focal point on a product image</h3>
       <ol>

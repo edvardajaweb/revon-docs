@@ -64,10 +64,10 @@
     { url: 'index.html', title: 'Overview', summary: 'Revon theme overview, key features, presets, commerce tools, and documentation links.' },
     { url: 'getting-started.html', title: 'Getting started', summary: 'Install Revon, choose a preset, connect store content, configure navigation, test, and publish.' },
     { url: 'presets.html', title: 'Presets', summary: 'Compare Pure, Atelier, and Maison typography, colors, spacing, templates, and homepage sections.' },
-    { url: 'customizing.html', title: 'Customizing', summary: 'Global theme settings, all addable sections, product blocks, cart behavior, and app placements.' },
+    { url: 'customizing.html', title: 'Customizing', summary: 'Global theme settings, sections, product blocks, card hover effects, product badges, trust badges, cart behavior, and app placements.' },
     { url: 'cheatsheet.html', title: 'Cheat sheet', summary: 'Quick paths and practical recipes for common Shopify and Revon configuration tasks.' },
     { url: 'apps.html', title: 'App integrations', summary: 'App blocks, app embeds, selling plans, compatibility testing, and integration troubleshooting.' },
-    { url: 'faq.html', title: 'FAQ', summary: 'Answers about installation, presets, images, products, cart, apps, markets, performance, and accessibility.' },
+    { url: 'faq.html', title: 'FAQ', summary: 'Answers about installation, presets, images, product badges, products, cart, apps, markets, performance, and accessibility.' },
     { url: 'support.html', title: 'Support', summary: 'Contact support, prepare a useful request, understand support scope, and troubleshoot safely.' },
     { url: 'changelog.html', title: 'Changelog', summary: 'Revon release history, documentation revisions, fixes, and feature changes.' }
   ];
