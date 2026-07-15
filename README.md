@@ -14,7 +14,7 @@ Static merchant documentation and public support pages for Revon v1.0.0.
 - `changelog.html`: release history
 - `support.html`: public contact form and support policy
 - `styles.css`: shared documentation design
-- `scripts.js`: mobile navigation, scroll behavior, and form enhancements
+- `scripts.js`: documentation search, mobile navigation, scroll behavior, and form enhancements
 - `sitemap.xml` and `robots.txt`: crawler configuration
 
 There is no build step. The site uses static HTML, CSS, a small shared JavaScript file,
@@ -75,7 +75,7 @@ finished deploying before submitting or updating the Theme Store listing.
 3. Search for obsolete controls and unsupported claims.
 4. Compare preset typography, colors, spacing, and template order with theme JSON.
 5. Check desktop and mobile layouts.
-6. Test keyboard navigation, focus, mobile drawer, FAQ controls, and support form.
+6. Test keyboard navigation, focus, site search, mobile drawer, FAQ controls, and support form.
 7. Validate HTML and run Lighthouse after deployment.
 8. Update `sitemap.xml` dates when publishing material changes.
 9. Push the docs repository and verify the public HTTPS URLs.
