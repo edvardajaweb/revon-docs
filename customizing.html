@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customizing · Revon documentation</title>
-<meta name="description" content="A complete catalog of every section, block, and theme setting in the Revon Shopify theme — three presets, full Online Store 2.0.">
+<title>Customizing | Revon documentation</title>
+<meta name="description" content="Complete merchant guide to Revon theme settings, sections, product blocks, swatches, apps, and advanced customization.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,23 +52,20 @@
 
 <main id="main">
   <div class="doc-layout">
-
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">On this page</span>
       <nav class="doc-sidebar__list">
+        <a href="#editor">Using the editor</a>
         <a href="#settings">Theme settings</a>
-        <a href="#heroes">Hero sections</a>
-        <a href="#product-display">Product display</a>
-        <a href="#storytelling">Brand storytelling</a>
-        <a href="#galleries">Galleries</a>
-        <a href="#social-proof">Social proof</a>
-        <a href="#engagement">Engagement &amp; conversion</a>
-        <a href="#motion">Motion &amp; dividers</a>
-        <a href="#site-wide">Site-wide controls</a>
-        <a href="#main-sections">Main page sections</a>
-        <a href="#blocks">Product page blocks</a>
+        <a href="#sections">Section library</a>
+        <a href="#commerce">Commerce sections</a>
+        <a href="#storytelling">Storytelling sections</a>
+        <a href="#engagement">Engagement sections</a>
+        <a href="#site-sections">Site sections</a>
+        <a href="#product-blocks">Product blocks</a>
         <a href="#swatches">Variant swatches</a>
-        <a href="#custom-code">Custom code</a>
+        <a href="#apps">App blocks</a>
+        <a href="#advanced">Advanced changes</a>
       </nav>
     </aside>
 
@@ -79,204 +76,197 @@
         <span>Customizing</span>
       </nav>
 
-      <p class="eyebrow">Sections &amp; settings</p>
+      <p class="eyebrow">Settings and sections</p>
       <h1 class="h1" style="margin-top:var(--space-md)">Customizing Revon</h1>
-      <p class="lead">Revon comes with a curated section library and three ready-made <a href="presets.html">styles</a>, all built on Shopify's Online Store 2.0. Most of this page is for merchants — everything below can be done from the theme editor without writing code. The last section, <a href="#custom-code">Custom code</a>, is for developers (or merchants working with one) who want to go further.</p>
+      <p class="lead">Revon is configured in Shopify's theme editor. This guide follows the labels you see there, explains what each group controls, and shows where to place the theme's 39 addable section types. No code is required for normal store setup.</p>
+
+      <div class="callout">
+        <span class="callout__label">Design system</span>
+        <p>All three presets use Revon's clinical minimalist and brutalist foundation: sharp corners, direct typography, visible structure, generous whitespace, and high contrast. The presets change type, color, spacing, content order, and pacing without adding rounded cards or decorative shadows.</p>
+      </div>
+
+      <h2 class="h2" id="editor">Using the theme editor</h2>
+      <ol>
+        <li>From Shopify admin, open <strong>Online Store &gt; Themes</strong>.</li>
+        <li>Find the draft copy of Revon you want to edit and select <strong>Customize</strong>.</li>
+        <li>Use the template picker at the top to switch between home, product, collection, page, blog, cart, search, and other templates.</li>
+        <li>Select a section in the left panel to edit it. Drag sections or blocks to reorder them.</li>
+        <li>Use <strong>Theme settings</strong> for controls shared across the whole storefront.</li>
+        <li>Use the desktop and mobile preview buttons before saving.</li>
+      </ol>
+      <p>Duplicate the theme before a large visual change. A duplicate gives you a quick rollback without affecting products, collections, pages, menus, or orders.</p>
 
       <h2 class="h2" id="settings">Theme settings</h2>
-      <p>Click <strong>Theme settings</strong> in the top-right of the theme editor to control site-wide options. When you apply a <a href="presets.html">preset</a>, Revon fills in these settings for you. You can change anything afterwards.</p>
+
+      <h3 class="h3">Logo and branding</h3>
+      <ul>
+        <li><strong>Logo:</strong> upload a transparent SVG or PNG. Test both a wide and a compact logo.</li>
+        <li><strong>Favicon:</strong> upload a square image. Shopify serves it at the small browser-tab size.</li>
+      </ul>
 
       <h3 class="h3">Colors</h3>
-      <p>Revon uses color schemes — each scheme is a named bundle of seven colors (background, surface, text, secondary text, border, button bg, button text). Every section can pick its scheme, so you can alternate light and dark blocks down a page. All defaults meet WCAG 2.1 AA contrast.</p>
+      <p>Each preset includes a light and a dark color scheme. A scheme contains background, surface, primary text, secondary text, border, button background, and button text colors. Select a scheme inside a section instead of entering the same colors repeatedly.</p>
+      <p>Utility colors control sale, success, warning, error, and fallback swatch states. After changing a scheme, check body text, links, buttons, disabled controls, and form errors for readable contrast.</p>
 
       <h3 class="h3">Typography</h3>
-      <p>Four global font pickers control the entire theme: <code>heading</code>, <code>body</code>, <code>editorial</code>, and <code>handwritten</code>. Bold and italic variants load automatically. The full Shopify font picker is supported (system fonts, Google Fonts, and uploaded fonts via Shopify Admin).</p>
+      <ul>
+        <li><strong>Heading font:</strong> used for display headings.</li>
+        <li><strong>Body font:</strong> used for paragraphs, labels, forms, and navigation.</li>
+        <li><strong>Editorial font:</strong> used for italic accents and editorial moments.</li>
+        <li><strong>Handwritten font:</strong> available to sections that support a handwritten accent.</li>
+        <li><strong>Heading controls:</strong> weight, size, text transform, and letter spacing.</li>
+        <li><strong>Body controls:</strong> 14-20px size and 120-190% line height.</li>
+        <li><strong>UI controls:</strong> subheading and button size, tracking, and text transform.</li>
+      </ul>
+      <p>Fonts are selected through Shopify's font picker and hosted by Shopify. Use one heading family and one body family unless the brand has a clear reason for extra type styles.</p>
 
       <h3 class="h3">Layout</h3>
       <ul>
-        <li><strong>Page width</strong> — 1200, 1400, or 1450px container</li>
-        <li><strong>Section spacing</strong> — global top/bottom padding (desktop and mobile values, in px)</li>
-        <li><strong>Border radius</strong> — sharpen or soften corners on buttons, cards, media, and inputs independently</li>
+        <li><strong>Page width:</strong> adjustable from 1000px to 1600px. Every preset starts at 1440px.</li>
+        <li><strong>Desktop section spacing:</strong> adjustable from 40px to 120px.</li>
+        <li><strong>Mobile section spacing:</strong> adjustable from 32px to 80px.</li>
+        <li><strong>Container padding:</strong> separate desktop and mobile edge spacing.</li>
+      </ul>
+      <p>For a dense catalog, reduce section spacing before reducing font size. For an editorial store, keep the 1440px width and increase spacing between major story sections.</p>
+
+      <h3 class="h3">Product cards</h3>
+      <ul>
+        <li>Choose swap, brighten, zoom, lift, or no hover effect.</li>
+        <li>Show or hide vendor and product type.</li>
+        <li>Enable quick view.</li>
+        <li>Show or hide sale and new-product badges.</li>
       </ul>
 
-      <h3 class="h3">Animations &amp; effects</h3>
+      <h3 class="h3">Animations and effects</h3>
       <ul>
-        <li><strong>Loading effect</strong> — fade, fade-up, slide, or none for scroll reveals</li>
-        <li><strong>Page transitions</strong> — pages fade in instead of flashing white when a customer clicks a link</li>
-        <li><strong>Image hover</strong> — subtle zoom/swap on product cards</li>
-        <li><strong>Loading bar</strong> — slim progress indicator at the top of the page</li>
-        <li><strong>Scroll progress</strong> — vertical progress meter on long pages</li>
+        <li>Disable reveal effects globally when you want a fully static presentation.</li>
+        <li>Enable or disable smooth scrolling.</li>
+        <li>Choose none, fade, fade-up, or blur for section reveals.</li>
+        <li>Enable page transitions and choose fade, fade-up, or blur.</li>
+        <li>Enable or disable image hover motion.</li>
       </ul>
+      <p>Customers who request reduced motion receive a reduced experience automatically. Keep movement restrained on product and checkout-related screens.</p>
 
       <h3 class="h3">Cart</h3>
       <ul>
-        <li><strong>Cart type</strong> — drawer or page</li>
-        <li><strong>Free shipping threshold</strong> — shows a progress bar</li>
-        <li><strong>Cart notes</strong> — let customers leave a note on their order</li>
-        <li><strong>Gift wrapping</strong> — optional paid add-on as a checkbox</li>
+        <li><strong>Cart type:</strong> drawer, notification, or cart page.</li>
+        <li><strong>Shipping progress:</strong> optional informational bar with an adjustable threshold and editable messages.</li>
+        <li><strong>Gift wrapping:</strong> optional cart attribute with a gift-message field on the cart page. It does not add a product or fee automatically.</li>
       </ul>
-
-      <h3 class="h3">SEO &amp; social sharing</h3>
-      <ul>
-        <li><strong>Default social share image</strong> — 1200×630 image used as the preview when someone shares your store on social media (pages with their own image keep their own)</li>
-        <li><strong>Default meta description</strong> — the short text that shows under your store name in Google search results, used on pages that don't have their own</li>
-        <li><strong>Twitter handle</strong> — your @username, so Twitter credits your store when people share your pages</li>
-      </ul>
-
-      <h2 class="h2" id="heroes">Hero sections</h2>
-      <p>Full-bleed sections designed for the top of the page.</p>
-      <ul>
-        <li><strong>Hero</strong> — full-screen video or image with a headline that fades between two lines and a scroll arrow. The main opener for Pure and Maison presets.</li>
-        <li><strong>Hero slider</strong> — multi-slide carousel with autoplay, dots, and per-slide content. The Atelier preset's default opener.</li>
-        <li><strong>Split banner</strong> — image + text in a 50/50 or 60/40 split. Good for category pages.</li>
-        <li><strong>Video feature</strong> — full-bleed looping video with overlaid text.</li>
-      </ul>
-
-      <h2 class="h2" id="product-display">Product display</h2>
-      <ul>
-        <li><strong>Featured products</strong> — hand-picked product row or grid. Choose a collection or a fixed list.</li>
-        <li><strong>Product showcase</strong> — single-product editorial layout with sprite animation and feature blocks.</li>
-        <li><strong>Product editorial</strong> — long-form product story with imagery, copy, and inline buying.</li>
-        <li><strong>Product recommendations</strong> — a row of "you might also like" products that Shopify picks automatically.</li>
-        <li><strong>Recently viewed</strong> — customer's recent browse history.</li>
-        <li><strong>Shop the look</strong> — clickable hotspots on a lifestyle image. Up to 8 hotspots per image.</li>
-        <li><strong>Collection list</strong> — featured collection tiles with image, name, and CTA.</li>
-      </ul>
-
-      <h2 class="h2" id="storytelling">Brand storytelling</h2>
-      <ul>
-        <li><strong>Image with text</strong> — classic side-by-side image and copy.</li>
-        <li><strong>Editorial mosaic</strong> — magazine-style multi-image grid with text annotations.</li>
-        <li><strong>Editorial statement</strong> — large quote or manifesto display.</li>
-        <li><strong>Story carousel</strong> — sequential storytelling cards with media, tone color, and product links.</li>
-        <li><strong>Key ingredients</strong> — annotated ingredient cards with imagery (skincare / wellness).</li>
-        <li><strong>Clinical results</strong> — stat-driven proof points (e.g. "97% reported smoother skin").</li>
-        <li><strong>Before / after</strong> — drag-slider image comparison.</li>
-        <li><strong>Routine</strong> — multi-step routine builder with product callouts.</li>
-        <li><strong>Stats</strong> — animated number counters with labels.</li>
-      </ul>
-
-      <h2 class="h2" id="galleries">Galleries</h2>
-      <ul>
-        <li><strong>Lookbook grid</strong> — masonry-style lifestyle photography.</li>
-      </ul>
-
-      <h2 class="h2" id="social-proof">Social proof</h2>
-      <ul>
-        <li><strong>Testimonials</strong> — customer quotes with optional photo and star rating, auto-rotating slider.</li>
-        <li><strong>Brand logos</strong> — press, partner, or stockist logos in a uniform grid.</li>
-        <li><strong>Social feed</strong> — a grid of lifestyle photos with links (you choose the photos and links — it doesn't auto-pull from Instagram).</li>
-      </ul>
-
-      <h2 class="h2" id="engagement">Engagement &amp; conversion</h2>
-      <ul>
-        <li><strong>Newsletter</strong> — email signup using Shopify's native customer subscription.</li>
-        <li><strong>Contact form</strong> — standard Shopify contact form with name, email, message, and optional fields.</li>
-        <li><strong>FAQ</strong> — collapsible question and answer list with smooth expand animation.</li>
-        <li><strong>Features grid</strong> — icon-and-text grid for shipping, returns, guarantees.</li>
-        <li><strong>Blog carousel</strong> — recent blog posts in a horizontal carousel.</li>
-      </ul>
-
-      <h2 class="h2" id="motion">Motion &amp; dividers</h2>
-      <ul>
-        <li><strong>Marquee</strong> — infinite horizontal text ticker.</li>
-        <li><strong>Parallax image</strong> — full-width image with scroll-driven parallax depth.</li>
-        <li><strong>Scroll text</strong> — large scroll-triggered text reveal (one word at a time).</li>
-      </ul>
-
-      <h2 class="h2" id="site-wide">Site-wide controls</h2>
-      <p>Sections that live in the header or footer section groups, or render globally.</p>
-      <ul>
-        <li><strong>Announcement bar</strong> — top promo banner. Up to three rotating messages with optional links.</li>
-        <li><strong>Header</strong> — logo, menu (up to two levels), search, account, cart. Sticky on scroll.</li>
-        <li><strong>Footer</strong> — multi-column footer with menus, newsletter, social, payment icons, locale selector.</li>
-        <li><strong>Promo popup</strong> — newsletter or discount popup with configurable triggers and themable to each preset.</li>
-        <li><strong>Cart notification</strong> — toast that fires after add-to-cart, with the added product.</li>
-      </ul>
-
-      <h2 class="h2" id="main-sections">Main page sections</h2>
-      <p>One section per page type. These are the main content bodies of each page and are configured from the theme editor.</p>
-      <ul>
-        <li><strong>main-product</strong> — the product page (gallery + info column with blocks).</li>
-        <li><strong>main-collection</strong> — collection grid with filters, sort, and pagination.</li>
-        <li><strong>main-cart</strong> — full-page cart with line items, discounts, accelerated checkout.</li>
-        <li><strong>main-blog</strong> — blog index with article cards.</li>
-        <li><strong>main-article</strong> — single article with author, date, content, and comments.</li>
-        <li><strong>main-page</strong> — generic CMS page wrapper.</li>
-        <li><strong>main-search</strong> — search results page (products + articles).</li>
-        <li><strong>main-404</strong> — 404 error page with helpful return links.</li>
-        <li><strong>main-password</strong> — coming-soon / password-protected store page.</li>
-      </ul>
-
-      <h2 class="h2" id="blocks">Product page blocks</h2>
-      <p>On the product page, every element in the info column is a block you can reorder or remove:</p>
-      <ul>
-        <li>Vendor</li>
-        <li>Title</li>
-        <li>Price (with unit price and tax-included note)</li>
-        <li>Inventory status</li>
-        <li>Description</li>
-        <li>Benefits list</li>
-        <li>Variant picker (with swatches)</li>
-        <li>Quantity selector</li>
-        <li>Buy buttons (add-to-cart, dynamic checkout, accelerated checkout)</li>
-        <li>Follow on Shop</li>
-        <li>Shop Pay Installments banner</li>
-        <li>Complementary products</li>
-        <li>Trust badges / feature icons</li>
-        <li>Delivery estimate</li>
-        <li>Size guide modal</li>
-        <li>Share buttons</li>
-        <li>Popup blocks (materials, care, shipping info)</li>
-        <li>Tabs (description, materials, shipping, etc. — used on <code>product.with-tabs</code>)</li>
-        <li>Custom Liquid block — paste in any app snippet</li>
-        <li>App blocks — drop in any compatible Shopify app block</li>
-      </ul>
-
-      <h2 class="h2" id="swatches">Variant swatches</h2>
-      <p>Revon uses Shopify's native swatch object. To set a swatch color or image for a variant option value:</p>
-      <ol>
-        <li>In Shopify admin, go to <strong>Settings → Custom data → Products → Variant options</strong>.</li>
-        <li>Add or edit the option value to attach a <strong>color</strong> or <strong>image</strong> swatch definition.</li>
-        <li>Revon picks it up automatically on product cards and product pages.</li>
-      </ol>
-      <p>If no swatch is configured, Revon falls back to a built-in color-name-to-hex map for common names like <code>Black</code>, <code>Cream</code>, <code>Navy</code>, <code>Sage</code>, etc. Names it doesn't recognize render as a neutral grey circle with the name beside it.</p>
-
-      <h2 class="h2" id="custom-code">Custom code</h2>
-
       <div class="callout callout--warn">
-        <span class="callout__label">Before editing code</span>
-        <p>Always <strong>duplicate your theme</strong> from the Shopify admin so you have a rollback. Code customizations may not carry over to a future Revon update. If you're not comfortable editing Liquid or CSS, consider hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.</p>
+        <span class="callout__label">Shipping threshold</span>
+        <p>The progress bar is messaging only. Create the real free-shipping rate in Shopify under <strong>Settings &gt; Shipping and delivery</strong>, using the same amount.</p>
       </div>
 
-      <h3 class="h3">Adding custom CSS</h3>
-      <ol>
-        <li>Open <strong>Online Store → Themes → Edit code</strong>.</li>
-        <li>Open <code>assets/critical.css</code> (or <code>modern.css</code> for non-critical styles).</li>
-        <li>Add your rules at the bottom of the file.</li>
-        <li>Save — changes go live immediately.</li>
-      </ol>
+      <h3 class="h3">Social, search, and advanced controls</h3>
+      <ul>
+        <li>Add Instagram, Facebook, TikTok, Pinterest, X/Twitter, and YouTube URLs.</li>
+        <li>Enable or disable predictive search.</li>
+        <li>Show or hide breadcrumbs, the back-to-top control, and scroll progress.</li>
+        <li>Upload a fallback social-share image and enter a fallback meta description and X/Twitter handle.</li>
+      </ul>
 
-      <h3 class="h3">Adding custom Liquid</h3>
-      <p>You don't need to edit section files to add custom snippets. Use the <strong>Custom Liquid</strong> block available in the product section and most content sections.</p>
+      <h2 class="h2" id="sections">Section library</h2>
+      <p>Select <strong>Add section</strong> in a JSON template to use the library. Availability can vary by template context. Start with the smallest number of sections that communicates the offer, then add detail where customers need it.</p>
 
-      <h3 class="h3">Saving a custom preset</h3>
-      <p>If you've configured the theme to a state you want to reuse on another store:</p>
+      <h2 class="h2" id="commerce">Commerce and product discovery</h2>
+      <ul>
+        <li><strong>Featured products:</strong> a configurable product grid with collection or manual product selection.</li>
+        <li><strong>Featured product:</strong> a full product form placed on a non-product template, including product options and app blocks.</li>
+        <li><strong>Product recommendations:</strong> Shopify-generated related products on product templates.</li>
+        <li><strong>Recently viewed:</strong> products remembered in the customer's browser.</li>
+        <li><strong>Product showcase:</strong> focused product media and supporting feature blocks.</li>
+        <li><strong>Collection list:</strong> collection cards selected manually or from collections.</li>
+        <li><strong>Lookbook grid:</strong> editorial product or collection browsing in an asymmetric or regular layout.</li>
+        <li><strong>Shop the look:</strong> one room or outfit image with product hotspots positioned using X and Y controls.</li>
+        <li><strong>Routine:</strong> ordered product or content steps for a regimen, process, or set.</li>
+      </ul>
+
+      <h2 class="h2" id="storytelling">Hero, media, and storytelling</h2>
+      <ul>
+        <li><strong>Hero:</strong> one image-led opening section with heading, eyebrow, CTA, alignment, overlay, and responsive height controls.</li>
+        <li><strong>Hero slider:</strong> multiple campaign slides with separate desktop and mobile images.</li>
+        <li><strong>Image with text:</strong> image and copy in a two-column layout with optional quote, stat, or feature blocks.</li>
+        <li><strong>Split banner:</strong> two image panels with independent copy, links, overlays, and alignment.</li>
+        <li><strong>Editorial mosaic:</strong> configurable image tiles for magazine-like compositions.</li>
+        <li><strong>Editorial statement:</strong> a large text-led brand statement.</li>
+        <li><strong>Product editorial:</strong> long-form product or material story with supporting feature blocks.</li>
+        <li><strong>Story carousel:</strong> sequenced cards that can connect editorial images and products.</li>
+        <li><strong>Parallax image:</strong> a full-width image section with controlled scrolling movement.</li>
+        <li><strong>Video feature:</strong> hosted or external video presentation with fallback imagery and text.</li>
+        <li><strong>Before / after:</strong> an accessible comparison slider using two related images.</li>
+        <li><strong>Clinical results:</strong> evidence-led result blocks with a source field. Use only claims you can document.</li>
+        <li><strong>Key ingredients:</strong> ingredient or material cards with images, descriptions, and optional product links.</li>
+        <li><strong>Features grid:</strong> repeated icon-and-text benefits or service details.</li>
+        <li><strong>Stats:</strong> repeated numeric facts for verified store or product information.</li>
+      </ul>
+
+      <h2 class="h2" id="engagement">Trust and engagement</h2>
+      <ul>
+        <li><strong>Testimonials:</strong> customer or editorial quotes. Publish only authentic, authorized content.</li>
+        <li><strong>Brand logos:</strong> authorized brand, stockist, certification, or press logos.</li>
+        <li><strong>FAQ:</strong> expandable question blocks with optional CTA.</li>
+        <li><strong>Blog carousel:</strong> selected blog posts with image and metadata controls.</li>
+        <li><strong>Newsletter:</strong> Shopify customer signup form with configurable copy.</li>
+        <li><strong>Social feed:</strong> manually managed social-style image posts; this is not a live social-network API feed.</li>
+        <li><strong>Promo popup:</strong> optional timed message with image and CTA. It is disabled until you enable it.</li>
+        <li><strong>Contact form:</strong> Shopify contact form plus optional email, phone, address, and hours blocks.</li>
+      </ul>
+
+      <h2 class="h2" id="site-sections">Utility and site sections</h2>
+      <ul>
+        <li><strong>Announcement bar:</strong> one or more rotating store messages.</li>
+        <li><strong>Marquee:</strong> repeating text and separators.</li>
+        <li><strong>Scroll text:</strong> large text lines with optional eyebrow, description, and button blocks.</li>
+        <li><strong>Apps:</strong> a dedicated wrapper for app blocks.</li>
+        <li><strong>Custom Liquid:</strong> merchant-managed Liquid or approved embed code.</li>
+        <li><strong>Header:</strong> logo, navigation, localization, search, account, and cart access.</li>
+        <li><strong>Footer:</strong> menus, newsletter, social links, localization, payment icons, and legal links.</li>
+        <li><strong>Main page sections:</strong> product, collection, cart, search, blog, article, page, password, and 404 templates.</li>
+        <li><strong>Cart notification:</strong> compact add-to-cart confirmation used when that cart mode is selected.</li>
+      </ul>
+
+      <h2 class="h2" id="product-blocks">Product page blocks</h2>
+      <p>Open a product template and select <strong>Product information</strong>. Revon currently supports these reorderable blocks:</p>
+      <ul>
+        <li>Vendor, title, price, inventory, description, and benefits.</li>
+        <li>Variant picker, rating, and buy buttons.</li>
+        <li>Information row, trust badges, delivery estimate, and pickup availability.</li>
+        <li>Size guide, share buttons, popup, tabs, and separator.</li>
+        <li>Custom text, Custom Liquid, and app blocks.</li>
+      </ul>
+      <p>The product form supports native selling plans, quantity rules, volume pricing, unit pricing, accelerated checkout, local pickup, product video, external video, and 3D product models when the store data provides them.</p>
+
+      <h2 class="h2" id="swatches">Variant swatches</h2>
       <ol>
-        <li>Open <code>config/settings_data.json</code> via the code editor.</li>
-        <li>Find the <code>presets</code> object and copy one of the existing entries (Pure, Atelier, or Maison) as a starting point.</li>
-        <li>Rename the key and adjust the values to match your customization.</li>
-        <li>Save. Your preset shows up in the theme editor's preset picker.</li>
+        <li>In Shopify admin, open the product and confirm the option name and values are correct.</li>
+        <li>Use Shopify's product category and option-value tools to assign a color or image swatch where available.</li>
+        <li>Open the product template and keep the <strong>Variant picker</strong> block enabled.</li>
+        <li>Preview available, unavailable, and sold-out combinations on desktop and mobile.</li>
       </ol>
+      <p>Revon reads Shopify's native swatch object first. If no native swatch exists, common color names use a built-in fallback; unknown names use the global fallback swatch color.</p>
+
+      <h2 class="h2" id="apps">App blocks and embeds</h2>
+      <p>Revon accepts app blocks in the dedicated <strong>Apps</strong> section, the main product section, Featured product, Featured products, Clinical results, and Key ingredients. App embeds are enabled from <strong>Theme settings &gt; App embeds</strong> in Shopify's editor.</p>
+      <p>An app is not guaranteed compatible simply because it is listed in the Shopify App Store. Prefer apps that provide theme app extensions, app blocks, or app embeds, and test their storefront and editor behavior before publishing.</p>
+      <p>See <a href="apps.html">App integrations</a> for a safe installation checklist.</p>
+
+      <h2 class="h2" id="advanced">Advanced changes</h2>
+      <div class="callout callout--warn">
+        <span class="callout__label">Before editing code</span>
+        <p>Duplicate the theme and record every changed file. Direct edits can complicate future theme updates and are outside standard theme configuration support.</p>
+      </div>
+      <p>For a small embed or Liquid fragment, use the <strong>Custom Liquid</strong> section or product block first. Edit theme files only when a section or app cannot provide the required behavior.</p>
+      <p>Do not edit <code>config/settings_data.json</code> to create merchant theme styles. That file is managed by Shopify and stores live editor configuration. Developers creating a distributable preset should work in source control and validate the preset schema before deployment.</p>
 
       <div class="pager">
         <a href="presets.html" class="pager--prev">
-          <span class="pager__label">← Previous</span>
+          <span class="pager__label">&larr; Previous</span>
           <span class="pager__title">Presets</span>
         </a>
-        <a href="faq.html" class="pager--next">
-          <span class="pager__label">Next →</span>
-          <span class="pager__title">FAQ</span>
+        <a href="apps.html" class="pager--next">
+          <span class="pager__label">Next &rarr;</span>
+          <span class="pager__title">App integrations</span>
         </a>
       </div>
     </article>
@@ -287,7 +277,7 @@
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>
@@ -311,7 +301,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>

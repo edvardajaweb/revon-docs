@@ -85,7 +85,7 @@
       <ol>
         <li>Open <strong>Theme settings → Logo and branding</strong>.</li>
         <li>Click the <strong>Logo image</strong> picker and upload your logo. SVG works best; PNG is fine if transparent.</li>
-        <li>Save. The logo updates in the header, footer, and mobile menu.</li>
+        <li>Save, then check the header and mobile menu at both preview sizes.</li>
       </ol>
 
       <h3 class="h3">Change your favicon</h3>
@@ -105,7 +105,7 @@
       <h3 class="h3">Change the heading or body font</h3>
       <ol>
         <li>Open <strong>Theme settings → Typography</strong>.</li>
-        <li>Click <strong>Heading font</strong> or <strong>Body font</strong> and pick from Shopify's font picker. Any system font, Google Font, or font you've uploaded works.</li>
+        <li>Click <strong>Heading font</strong> or <strong>Body font</strong> and choose from Shopify's font picker.</li>
         <li>Save. Bold and italic variants load automatically.</li>
       </ol>
 
@@ -135,7 +135,7 @@
       <h3 class="h3">Change the announcement bar text</h3>
       <ol>
         <li>In the theme editor, scroll to the top of the section list and click the <strong>Announcement bar</strong> section.</li>
-        <li>Edit each block's message. You can rotate up to three.</li>
+        <li>Edit the message blocks and remove any that you do not need.</li>
         <li>Save.</li>
       </ol>
 
@@ -143,8 +143,8 @@
 
       <h3 class="h3">Set up variant color swatches</h3>
       <ol>
-        <li>In Shopify admin, go to <strong>Settings → Custom data → Products → Variant options</strong>.</li>
-        <li>Add a swatch (color or image) to each option value (e.g. Black, Sage, Cream).</li>
+        <li>Assign the product's category and connect the relevant category metafield to the variant option.</li>
+        <li>Choose category entries that provide a color or image swatch for each option value.</li>
         <li>Save. The swatches appear automatically on product cards and product pages — no theme settings to change.</li>
       </ol>
 
@@ -164,16 +164,16 @@
 
       <h2 class="h2" id="cart">Cart &amp; checkout</h2>
 
-      <h3 class="h3">Switch the cart between drawer and full page</h3>
+      <h3 class="h3">Choose the cart behavior</h3>
       <ol>
         <li>Open <strong>Theme settings → Cart</strong>.</li>
-        <li>Pick <strong>Drawer</strong> (slides in from the side) or <strong>Page</strong> (full <code>/cart</code> page).</li>
+        <li>Pick <strong>Drawer</strong>, <strong>Notification</strong>, or <strong>Page</strong>. The full cart remains available at <code>/cart</code>.</li>
         <li>Save.</li>
       </ol>
 
       <h3 class="h3">Set a free-shipping threshold</h3>
       <ol>
-        <li>Open <strong>Theme settings → Cart → Free shipping threshold</strong>.</li>
+        <li>Open <strong>Theme settings → Cart</strong> and enable the shipping-progress bar.</li>
         <li>Enter the order total above which shipping is free (in your store currency, before tax).</li>
         <li>Save. The cart shows a progress bar towards the threshold.</li>
       </ol>
@@ -187,9 +187,9 @@
 
       <h3 class="h3">Edit the main menu and dropdowns</h3>
       <ol>
-        <li>In Shopify admin, go to <strong>Online Store → Navigation</strong>.</li>
+        <li>In Shopify admin, go to <strong>Content → Menus</strong>.</li>
         <li>Click <strong>Main menu</strong> and add or edit items.</li>
-        <li>To create a dropdown, drop a sub-item onto a parent item. Revon supports up to two levels.</li>
+        <li>Drag sub-items under a parent to create dropdown navigation, then test desktop and mobile.</li>
       </ol>
 
       <h3 class="h3">Show a language or country selector</h3>
@@ -203,9 +203,10 @@
 
       <h3 class="h3">Switch to a different preset</h3>
       <ol>
+        <li>Duplicate the theme so you have a rollback.</li>
         <li>In the theme editor, click <strong>Theme settings</strong> (top-left).</li>
-        <li>Open the <strong>Theme styles</strong> picker at the top.</li>
-        <li>Pick <strong>Pure</strong>, <strong>Atelier</strong>, or <strong>Maison</strong>. Save. See the <a href="presets.html">Presets page</a> for a comparison.</li>
+        <li>Open <strong>Theme style</strong>, pick Pure, Atelier, or Maison, and choose <strong>Change style</strong>.</li>
+        <li>Save and review every template. Theme style changes global settings, not your existing section layout.</li>
       </ol>
 
       <h3 class="h3">Add social media links to the footer</h3>
@@ -215,15 +216,16 @@
         <li>Save. Icons appear in the footer for any field you filled in.</li>
       </ol>
 
-      <h3 class="h3">Turn off the cookie banner</h3>
+      <h3 class="h3">Change the global page width</h3>
       <ol>
-        <li>Open <strong>Theme settings → Advanced</strong>.</li>
-        <li>Toggle off <strong>Show cookie banner</strong>. Save.</li>
+        <li>Open <strong>Theme settings → Layout</strong>.</li>
+        <li>Adjust <strong>Page width</strong> between 1000px and 1600px. The default is 1440px.</li>
+        <li>Save and check long headings, product grids, and mobile edge spacing.</li>
       </ol>
 
       <div class="callout callout--warn">
-        <span class="callout__label">If you sell in the EU</span>
-        <p>You may still be legally required to show a cookie/consent banner under GDPR. Shopify's built-in <strong>Customer privacy</strong> banner (Settings → Customer privacy) is often a better fit than Revon's own banner.</p>
+        <span class="callout__label">Cookie consent</span>
+        <p>Revon does not include a decorative cookie banner. Configure consent through Shopify's <strong>Customer privacy</strong> settings or a suitable consent app for your markets.</p>
       </div>
 
       <h3 class="h3">Turn off all scroll animations</h3>
@@ -251,7 +253,7 @@
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>

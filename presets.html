@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Presets · Revon documentation</title>
-<meta name="description" content="Revon ships with three named presets — Pure, Atelier, and Maison — each with its own typography, color palette, and homepage layout.">
-<meta property="og:title" content="Three presets, one theme">
-<meta property="og:description" content="Pure, Atelier, and Maison — three ready-made styles for the Revon Shopify theme.">
+<title>Presets | Revon documentation</title>
+<meta name="description" content="Detailed comparison and setup guide for the Pure, Atelier, and Maison presets included with Revon.">
+<meta property="og:title" content="Revon presets">
+<meta property="og:description" content="Compare Pure, Atelier, and Maison by industry, typography, color, spacing, and included templates.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -55,18 +55,17 @@
 
 <main id="main">
   <div class="doc-layout">
-
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">On this page</span>
       <nav class="doc-sidebar__list">
-        <a href="#what">What is a preset?</a>
+        <a href="#understand">How presets work</a>
         <a href="#pure">Pure</a>
         <a href="#atelier">Atelier</a>
         <a href="#maison">Maison</a>
-        <a href="#choosing">Which one to choose</a>
-        <a href="#applying">Applying a preset</a>
-        <a href="#mixing">Mixing &amp; customizing</a>
-        <a href="#comparison">Side-by-side comparison</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#install">Install a preset</a>
+        <a href="#change-style">Change theme style</a>
+        <a href="#content">Add your content</a>
       </nav>
     </aside>
 
@@ -77,258 +76,155 @@
         <span>Presets</span>
       </nav>
 
-      <p class="eyebrow">Three voices, one theme</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Presets.</h1>
-      <p class="lead">Revon comes with three ready-made styles — <strong>Pure</strong>, <strong>Atelier</strong>, and <strong>Maison</strong>. Each one is a complete look: fonts, colors, spacing, animations, and a finished homepage. Pick the one closest to your brand and you're already most of the way there. Tweak from anywhere.</p>
+      <p class="eyebrow">Three focused install states</p>
+      <h1 class="h1" style="margin-top:var(--space-md)">Pure, Atelier, and Maison</h1>
+      <p class="lead">Every Revon preset uses the same reliable commerce foundation and sharp-corner design system. The difference is art direction: each preset supplies its own global style, homepage, product page, About page, header, footer, and industry-focused starting content.</p>
 
-      <h2 class="h2" id="what">What is a preset?</h2>
-      <p class="prose">Think of a preset as a head-start. Instead of starting with a blank theme and tuning every setting yourself, you pick a preset and Revon fills in the fonts, colors, spacing, animations, and a homepage that all work together. You can change anything afterwards — it's a starting point, not a lock.</p>
-
-      <div class="callout">
-        <span class="callout__label">Why three?</span>
-        <p>A beauty brand, a fashion label, and a homewares boutique each have a different visual language. Most themes make you translate yours from scratch. Revon's three presets cover those three voices, so you don't have to.</p>
+      <h2 class="h2" id="understand">How presets work</h2>
+      <p class="prose"><strong>When installing from the Shopify Theme Store:</strong> choose the preset whose listing and demo best match your store. Shopify installs that preset's full template state, including its section order and preset-specific page layouts.</p>
+      <p class="prose"><strong>After installation:</strong> the theme editor's Theme style control changes global settings such as colors, fonts, spacing, motion, and cart style. It does not replace a homepage you have already edited with another preset's full section stack.</p>
+      <div class="callout callout--warn">
+        <span class="callout__label">Choose early</span>
+        <p>Select the closest preset before adding images and rewriting section content. If you want to compare styles later, duplicate the theme first and test the change on the duplicate.</p>
       </div>
 
       <h2 class="h2" id="pure">Pure</h2>
-      <span class="font-sample font-sample--pure" aria-hidden="true">Aa — Bold &amp; clinical.</span>
-      <p class="prose"><strong>Best for:</strong> Beauty, wellness, supplements, and fragrance brands.</p>
-      <p class="prose"><strong>How it feels:</strong> Confident and clinical. Bold uppercase headings, a warm cream background, plenty of white space. Built so that ingredient stories and proof points feel earned, not exaggerated.</p>
+      <span class="font-sample font-sample--pure" aria-hidden="true">Aa / Direct, clinical, exact.</span>
+      <p class="prose"><strong>Best for:</strong> beauty, skincare, personal care, wellness, supplements, and fragrance.</p>
+      <p class="prose"><strong>Art direction:</strong> high-contrast Manrope, uppercase display typography, pure white surfaces, strong black controls, strict alignment, and evidence-led merchandising.</p>
 
-      <h3 class="h3">Typography</h3>
+      <h3 class="h3">Global style</h3>
       <ul class="prose">
-        <li><strong>Headings:</strong> Manrope extrabold (800), uppercase, tight letter-spacing (−3)</li>
-        <li><strong>Body:</strong> Manrope regular, 16px, generous line-height</li>
-        <li><strong>Display size:</strong> 48px base, scales up to 96px on the hero</li>
+        <li>Manrope heading at weight 800, uppercase, 48px base size, and -3 tracking.</li>
+        <li>Manrope body at 16px.</li>
+        <li>1440px page width, 96px desktop spacing, and 60px mobile spacing.</li>
+        <li>Fade-up reveals, page transitions, image hover, and scroll progress enabled.</li>
+        <li>Drawer cart by default.</li>
       </ul>
 
-      <h3 class="h3">Color palette</h3>
+      <h3 class="h3">Color schemes</h3>
       <div class="swatch-row" aria-label="Pure color palette">
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f3ee" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#f7f3ee</span><span class="swatch-row__label">Cream base</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#393834" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#393834</span><span class="swatch-row__label">Ink</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#ebe8e2" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#ebe8e2</span><span class="swatch-row__label">Surface</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#1c1b18" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#1c1b18</span><span class="swatch-row__label">Dark scheme</span></div>
-        </div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#ffffff" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#ffffff</span><span class="swatch-row__label">Light background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#171818" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#171818</span><span class="swatch-row__label">Light text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#f5f5f4" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f5f5f4</span><span class="swatch-row__label">Light surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#1c1b18" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#1c1b18</span><span class="swatch-row__label">Dark background</span></div></div>
       </div>
 
-      <h3 class="h3">Motion &amp; UI</h3>
-      <ul class="prose">
-        <li>Loading bar enabled (subtle progress indicator on page transitions)</li>
-        <li>Scroll progress indicator on long pages</li>
-        <li>Fade-up reveal animation on scroll</li>
-        <li>Cart drawer (not page) by default</li>
-      </ul>
-
-      <h3 class="h3">Signature sections</h3>
-      <ul class="prose">
-        <li><strong>Clinical results</strong> — stat-driven proof points (97% / 89% / 92%)</li>
-        <li><strong>Key ingredients</strong> — annotated ingredient cards with imagery</li>
-        <li><strong>Before/after</strong> — drag-slider for transformation imagery</li>
-        <li><strong>Routine</strong> — multi-step routine builder</li>
-      </ul>
-
-      <p class="prose"><strong>Who it suits:</strong> Independent skincare lines, cosmetic brands, supplement merchants, and fragrance houses that lead with ingredients or test results.</p>
+      <h3 class="h3">Installed homepage</h3>
+      <p class="prose">Hero &rarr; Featured products &rarr; Product showcase &rarr; Before / after &rarr; Clinical results &rarr; Key ingredients &rarr; Routine &rarr; Story carousel &rarr; Collection list &rarr; Shop the look &rarr; Stats &rarr; Image with text &rarr; FAQ &rarr; Newsletter.</p>
+      <p class="prose">The product template adds product editorial, product recommendations, a secondary featured-products edit, and recently viewed products. The About template uses a parallax banner, origin story, values, verified stats, and process content.</p>
 
       <h2 class="h2 h2--atelier" id="atelier">Atelier</h2>
-      <span class="font-sample font-sample--atelier" aria-hidden="true">A quiet way of dressing.</span>
-      <p class="prose"><strong>Best for:</strong> Slow fashion, capsule wardrobes, leather goods, and jewelry brands.</p>
-      <p class="prose"><strong>How it feels:</strong> Quiet and considered. Elegant serif headings, a soft paper-grey background, lots of breathing room. The opposite of fast fashion's loud saturation.</p>
+      <span class="font-sample font-sample--atelier" aria-hidden="true">A measured way of dressing.</span>
+      <p class="prose"><strong>Best for:</strong> fashion, slow fashion, jewelry, accessories, leather goods, and capsule wardrobes.</p>
+      <p class="prose"><strong>Art direction:</strong> editorial Cormorant headings, paper-grey surfaces, restrained movement, seasonal campaigns, and image-led product narratives.</p>
 
-      <h3 class="h3">Typography</h3>
+      <h3 class="h3">Global style</h3>
       <ul class="prose">
-        <li><strong>Headings:</strong> Cormorant Garamond regular (400), uppercase, looser tracking (−1)</li>
-        <li><strong>Body:</strong> Manrope regular, 16px</li>
-        <li><strong>Display size:</strong> 64px base — bigger but lighter than Pure</li>
+        <li>Cormorant heading at weight 400, uppercase, 64px base size, and -1 tracking.</li>
+        <li>Manrope body at 16px.</li>
+        <li>1440px page width, 120px desktop spacing, and 72px mobile spacing.</li>
+        <li>Fade reveals and page transitions enabled; scroll progress disabled.</li>
+        <li>Drawer cart by default.</li>
       </ul>
 
-      <h3 class="h3">Color palette</h3>
+      <h3 class="h3">Color schemes</h3>
       <div class="swatch-row" aria-label="Atelier color palette">
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f9fb" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#f7f9fb</span><span class="swatch-row__label">Paper</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#191c1e" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#191c1e</span><span class="swatch-row__label">Graphite</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#eceef0" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#eceef0</span><span class="swatch-row__label">Pale grey</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#c6c6ce" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#c6c6ce</span><span class="swatch-row__label">Border</span></div>
-        </div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f9fb" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f9fb</span><span class="swatch-row__label">Paper background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#191c1e" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#191c1e</span><span class="swatch-row__label">Graphite text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#eceef0" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#eceef0</span><span class="swatch-row__label">Pale surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#2d3133" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#2d3133</span><span class="swatch-row__label">Dark surface</span></div></div>
       </div>
 
-      <h3 class="h3">Motion &amp; UI</h3>
-      <ul class="prose">
-        <li>Loading bar &amp; scroll progress turned off — quieter UX</li>
-        <li>Crossfade reveal (not slide-up) on scroll</li>
-        <li>Wider page (1450px) and deeper section spacing (120px desktop, 72px mobile)</li>
-        <li>Cart drawer</li>
-      </ul>
-
-      <h3 class="h3">Signature sections</h3>
-      <ul class="prose">
-        <li><strong>Hero slider</strong> — multi-slide opener for seasonal campaigns</li>
-        <li><strong>Editorial mosaic</strong> — multi-image magazine grid</li>
-        <li><strong>Editorial statement</strong> — large manifesto / quote display</li>
-        <li><strong>Lookbook grid</strong> — masonry lifestyle photography</li>
-        <li><strong>Shop the look</strong> — clickable hotspots on outfit imagery</li>
-        <li><strong>Split banner</strong> — paired imagery for category storytelling</li>
-      </ul>
-
-      <p class="prose"><strong>Who it suits:</strong> Independent fashion labels, capsule-wardrobe brands, leather and tailoring studios, fine jewelry, and accessories sold on craft.</p>
+      <h3 class="h3">Installed homepage</h3>
+      <p class="prose">Hero slider &rarr; Marquee &rarr; Editorial mosaic &rarr; Featured products &rarr; Split banner &rarr; Shop the look &rarr; Video feature &rarr; Image with text &rarr; Stats &rarr; Scroll text &rarr; Collection list &rarr; Lookbook grid &rarr; Blog carousel &rarr; Newsletter.</p>
+      <p class="prose">The product template uses a stacked editorial gallery and adds a material/construction story, recommendations, and recently viewed products. Blank testimonial sections remain available in the editor but are disabled until authentic quotes are added.</p>
 
       <h2 class="h2 h2--maison" id="maison">Maison</h2>
-      <span class="font-sample font-sample--maison" aria-hidden="true">A room that breathes.</span>
-      <p class="prose"><strong>Best for:</strong> Home goods, interiors, ceramics, scent, and lifestyle brands.</p>
-      <p class="prose"><strong>How it feels:</strong> Warm and lived-in. Refined serif body type that reads like a print magazine, a calm sage-cream palette, gently rounded corners. Built for tactile products where both the object and the room around it matter.</p>
+      <span class="font-sample font-sample--maison" aria-hidden="true">A room with quiet structure.</span>
+      <p class="prose"><strong>Best for:</strong> furniture, home goods, interiors, ceramics, lighting, objects, and scent.</p>
+      <p class="prose"><strong>Art direction:</strong> Noto Serif headings, mixed-case editorial rhythm, cool sage surfaces, room-level merchandising, and disciplined whitespace.</p>
 
-      <h3 class="h3">Typography</h3>
+      <h3 class="h3">Global style</h3>
       <ul class="prose">
-        <li><strong>Headings:</strong> Noto Serif regular (400), mixed case (not uppercase)</li>
-        <li><strong>Body:</strong> Manrope regular, 16px, 160% line-height</li>
-        <li><strong>Editorial:</strong> Noto Serif italic for pull-quotes and asides</li>
-        <li><strong>Display size:</strong> 56px base</li>
+        <li>Noto Serif heading at weight 400, mixed case, 56px base size, and neutral tracking.</li>
+        <li>Manrope body at 16px and 160% line height.</li>
+        <li>1440px page width, 120px desktop spacing, and 72px mobile spacing.</li>
+        <li>Compact 12px subheadings and 11px uppercase buttons.</li>
+        <li>Fade reveals and page transitions enabled; scroll progress disabled.</li>
+        <li>Drawer cart by default.</li>
       </ul>
 
-      <h3 class="h3">Color palette</h3>
+      <h3 class="h3">Color schemes</h3>
       <div class="swatch-row" aria-label="Maison color palette">
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#e8ece8" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#e8ece8</span><span class="swatch-row__label">Sage cream</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#0e1011" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#0e1011</span><span class="swatch-row__label">Charcoal</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f8f4" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#f7f8f4</span><span class="swatch-row__label">Bone</span></div>
-        </div>
-        <div class="swatch-row__item">
-          <span class="swatch-row__chip" style="background:#bfc8c4" aria-hidden="true"></span>
-          <div class="swatch-row__meta"><span class="swatch-row__hex">#bfc8c4</span><span class="swatch-row__label">Stone</span></div>
-        </div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#e8ece8" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#e8ece8</span><span class="swatch-row__label">Sage background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#0e1011" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#0e1011</span><span class="swatch-row__label">Charcoal text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f8f4" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f8f4</span><span class="swatch-row__label">Bone surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#182021" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#182021</span><span class="swatch-row__label">Dark surface</span></div></div>
       </div>
 
-      <h3 class="h3">Motion &amp; UI</h3>
-      <ul class="prose">
-        <li>Soft fade reveal — no aggressive slide-ins</li>
-        <li>Gently rounded corners on buttons (2px), media (4px), inputs (2px)</li>
-        <li>Tighter button text (11px, +5 letter-spacing, uppercase)</li>
-        <li>Loading bar and scroll progress off — print-magazine pacing</li>
-        <li>Cart drawer</li>
-      </ul>
+      <h3 class="h3">Installed homepage</h3>
+      <p class="prose">Hero &rarr; Story carousel &rarr; Featured products &rarr; Shop the look &rarr; Collection list &rarr; Split banner &rarr; Features grid &rarr; Image with text &rarr; Blog carousel &rarr; FAQ &rarr; Newsletter &rarr; Promo popup.</p>
+      <p class="prose">The product template adds an image-with-text room-context section, recommendations, and recently viewed products. The About template includes a parallax banner, editorial manifesto, room method, values, process, and verified stats.</p>
 
-      <h3 class="h3">Signature sections</h3>
-      <ul class="prose">
-        <li><strong>Story carousel</strong> — sequential moodboard cards with media, tone color, and product links (used as the "rhythm board" in Maison's homepage)</li>
-        <li><strong>Shop the look</strong> — clickable hotspots on a room photo (used as the "room plan" in Maison's homepage)</li>
-        <li><strong>Image with text</strong> — print-magazine side-by-side editorial</li>
-        <li><strong>Promo popup</strong> — themed popup tuned to this preset</li>
-        <li><strong>Parallax image</strong> — full-bleed image with scroll-driven parallax</li>
-      </ul>
-
-      <p class="prose"><strong>Who it suits:</strong> Home goods boutiques, ceramics studios, candle and fragrance houses, interior accessories, and slow-living brands.</p>
-
-      <h2 class="h2" id="choosing">Which one to choose</h2>
-      <p class="prose">If you're not sure, this is a quick decision tree:</p>
-      <ul class="prose">
-        <li><strong>You sell things people put on or in their body</strong> (skincare, cosmetics, supplements, fragrance) — start with <strong>Pure</strong>.</li>
-        <li><strong>You sell things people wear</strong> (clothing, jewelry, accessories) — start with <strong>Atelier</strong>.</li>
-        <li><strong>You sell things people put in their home</strong> (homewares, ceramics, candles, interiors) — start with <strong>Maison</strong>.</li>
-      </ul>
-      <p class="prose">All three presets share the same section library under the hood — so you can move sections across presets, mix and match, or evolve from one starting point into something entirely your own. The preset is a starting line, not a cage.</p>
-
-      <h2 class="h2" id="applying">Applying a preset</h2>
-
-      <h3 class="h3">From the theme editor (recommended)</h3>
-      <ol>
-        <li>Open <strong>Online Store → Themes → Customize</strong>.</li>
-        <li>Click <strong>Theme settings</strong> in the top-left of the editor.</li>
-        <li>Open the <strong>Theme styles</strong> picker at the top.</li>
-        <li>Choose <strong>Pure</strong>, <strong>Atelier</strong>, or <strong>Maison</strong>.</li>
-        <li>Save. The theme settings switch immediately; the homepage may take a refresh.</li>
-      </ol>
-
-      <div class="callout callout--warn">
-        <span class="callout__label">Heads up</span>
-        <p>Applying a preset overwrites your current theme settings (colors, fonts, spacing, etc.). It does <strong>not</strong> overwrite section content you've added or edited. Always duplicate your theme first if you've already done customization work.</p>
-      </div>
-
-      <h3 class="h3">From the Shopify CLI (developers)</h3>
-      <p class="prose">If you're working with the theme locally and want to push a specific preset's homepage layout to a demo store:</p>
-      <pre><code># Pure — uses the base templates
-shopify theme push --store=your-store.myshopify.com
-
-# Atelier — applies listings/atelier/ overrides
-shopify theme push --store=your-store.myshopify.com --listing=atelier
-
-# Maison — applies listings/maison/ overrides
-shopify theme push --store=your-store.myshopify.com --listing=maison</code></pre>
-
-      <h2 class="h2" id="mixing">Mixing &amp; customizing</h2>
-      <p class="prose">A preset is the start of your design, not the end. After applying one you can:</p>
-      <ul class="prose">
-        <li>Swap the heading or body font to anything in the Shopify font picker.</li>
-        <li>Override colors via the theme editor — your changes win over preset defaults.</li>
-        <li>Add sections from any preset's signature list — they all work on any preset.</li>
-        <li>Use both color schemes (light + dark) on the same page via per-section settings.</li>
-        <li>Save your changes as a custom preset by adding a new entry under <code>config/settings_data.json → presets</code>.</li>
-      </ul>
-
-      <h2 class="h2" id="comparison">Side-by-side</h2>
-      <div class="compare-table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col">Pure</th>
-              <th scope="col">Atelier</th>
-              <th scope="col">Maison</th>
-            </tr>
-          </thead>
+      <h2 class="h2" id="comparison">Side-by-side comparison</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Setting</th><th>Pure</th><th>Atelier</th><th>Maison</th></tr></thead>
           <tbody>
-            <tr><td>Vertical</td><td>Beauty, wellness</td><td>Slow fashion</td><td>Home, lifestyle</td></tr>
+            <tr><td>Primary industry</td><td>Beauty / wellness</td><td>Fashion / accessories</td><td>Furniture / home</td></tr>
             <tr><td>Heading font</td><td>Manrope 800</td><td>Cormorant 400</td><td>Noto Serif 400</td></tr>
-            <tr><td>Heading case</td><td>Uppercase</td><td>Uppercase</td><td>Mixed case</td></tr>
-            <tr><td>Display size</td><td>48px base</td><td>64px base</td><td>56px base</td></tr>
-            <tr><td>Base color</td><td>Warm cream</td><td>Paper grey</td><td>Sage cream</td></tr>
-            <tr><td>Page width</td><td>1400px</td><td>1450px</td><td>1450px</td></tr>
-            <tr><td>Section spacing</td><td>96 / 60px</td><td>120 / 72px</td><td>120 / 72px</td></tr>
-            <tr><td>Reveal style</td><td>Fade-up</td><td>Fade</td><td>Fade</td></tr>
-            <tr><td>Loading bar</td><td>On</td><td>Off</td><td>Off</td></tr>
+            <tr><td>Heading treatment</td><td>Uppercase, tight</td><td>Uppercase, editorial</td><td>Mixed case, neutral</td></tr>
+            <tr><td>Base heading size</td><td>48px</td><td>64px</td><td>56px</td></tr>
+            <tr><td>Page width</td><td>1440px</td><td>1440px</td><td>1440px</td></tr>
+            <tr><td>Desktop spacing</td><td>96px</td><td>120px</td><td>120px</td></tr>
+            <tr><td>Reveal</td><td>Fade-up</td><td>Fade</td><td>Fade</td></tr>
             <tr><td>Scroll progress</td><td>On</td><td>Off</td><td>Off</td></tr>
-            <tr><td>Corner style</td><td>Sharp</td><td>Sharp</td><td>Softly rounded</td></tr>
+            <tr><td>Corner style</td><td>Sharp</td><td>Sharp</td><td>Sharp</td></tr>
+            <tr><td>Default cart</td><td>Drawer</td><td>Drawer</td><td>Drawer</td></tr>
           </tbody>
         </table>
       </div>
 
+      <h2 class="h2" id="install">Install the right preset</h2>
+      <ol class="prose">
+        <li>On Revon's Theme Store page, compare the preset listings and open each demo store.</li>
+        <li>Select <strong>Try theme</strong> from the preset you want. Shopify installs that preset's matching files into your draft themes.</li>
+        <li>Open the draft in the theme editor and confirm the preset name and section layout before adding content.</li>
+        <li>Keep the theme unpublished while you configure products, menus, images, policies, and apps.</li>
+      </ol>
+      <p class="prose">Pure is the root and default preset. Atelier and Maison include preset-level listing files so their clean installs match their own demos rather than inheriting Pure's homepage.</p>
+
+      <h2 class="h2" id="change-style">Change theme style after installation</h2>
+      <ol class="prose">
+        <li>Duplicate the theme.</li>
+        <li>Open the duplicate in the theme editor.</li>
+        <li>Select <strong>Theme settings &gt; Theme style</strong>.</li>
+        <li>Choose Pure, Atelier, or Maison, then select <strong>Change style</strong>.</li>
+        <li>Save and review every template.</li>
+      </ol>
       <div class="callout">
-        <span class="callout__label">Default preset</span>
-        <p>Out of the box, Revon ships with <strong>Pure</strong> selected as the active preset. Switch to Atelier or Maison from the theme editor at any time without losing data.</p>
+        <span class="callout__label">What changes</span>
+        <p>Theme style changes global preset settings such as fonts, color schemes, spacing, motion, and cart choice. Your existing section layout and section content stay associated with the current theme. Add, remove, or reorder sections manually if you want the full layout of another preset.</p>
       </div>
+
+      <h2 class="h2" id="content">Replace the starter content</h2>
+      <ul class="prose">
+        <li>Upload your own licensed product and lifestyle images. Demo-store images are not transferred with the theme.</li>
+        <li>Connect every product, collection, page, blog, and menu picker.</li>
+        <li>Replace onboarding text, sample links, and policy prompts.</li>
+        <li>Use only real discounts, verified claims, authentic reviews, and authorized logos.</li>
+        <li>Check image crops, headings, buttons, and hotspots on desktop and mobile.</li>
+        <li>Keep disabled sections disabled until their content is complete.</li>
+      </ul>
 
       <div class="pager">
         <a href="getting-started.html" class="pager--prev">
-          <span class="pager__label">← Previous</span>
+          <span class="pager__label">&larr; Previous</span>
           <span class="pager__title">Getting started</span>
         </a>
         <a href="customizing.html" class="pager--next">
-          <span class="pager__label">Next →</span>
+          <span class="pager__label">Next &rarr;</span>
           <span class="pager__title">Customizing</span>
         </a>
       </div>
@@ -340,7 +236,7 @@ shopify theme push --store=your-store.myshopify.com --listing=maison</code></pre
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>
@@ -364,7 +260,7 @@ shopify theme push --store=your-store.myshopify.com --listing=maison</code></pre
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>

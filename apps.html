@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App integrations · Revon documentation</title>
-<meta name="description" content="How Revon works with common Shopify apps — email marketing, subscriptions, reviews, loyalty, wishlists, and live chat.">
-<meta property="og:title" content="App integrations · Revon">
-<meta property="og:description" content="How Revon works with the most-asked-about Shopify apps.">
-<meta property="og:type" content="website">
+<title>App integrations | Revon documentation</title>
+<meta name="description" content="Safe setup and compatibility guide for Shopify app blocks, app embeds, subscriptions, reviews, loyalty, wishlists, chat, email, and search in Revon.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,19 +52,19 @@
 
 <main id="main">
   <div class="doc-layout">
-
     <aside class="doc-sidebar" aria-label="On this page">
-      <span class="doc-sidebar__label">Categories</span>
+      <span class="doc-sidebar__label">On this page</span>
       <nav class="doc-sidebar__list">
-        <a href="#how">How Revon works with apps</a>
-        <a href="#email">Email marketing</a>
+        <a href="#support">What Revon supports</a>
+        <a href="#install">Install an app safely</a>
+        <a href="#placements">Supported placements</a>
         <a href="#subscriptions">Subscriptions</a>
         <a href="#reviews">Reviews</a>
-        <a href="#loyalty">Loyalty &amp; rewards</a>
-        <a href="#wishlist">Wishlists</a>
-        <a href="#chat">Live chat &amp; helpdesk</a>
-        <a href="#search">Search</a>
-        <a href="#missing">App not listed?</a>
+        <a href="#marketing">Email and marketing</a>
+        <a href="#loyalty">Loyalty and wishlists</a>
+        <a href="#chat">Chat and search</a>
+        <a href="#cart-apps">Cart and checkout apps</a>
+        <a href="#troubleshooting">Troubleshooting</a>
       </nav>
     </aside>
 
@@ -78,136 +75,127 @@
         <span>App integrations</span>
       </nav>
 
-      <p class="eyebrow">Apps Revon plays well with</p>
+      <p class="eyebrow">Compatibility without guesswork</p>
       <h1 class="h1" style="margin-top:var(--space-md)">App integrations</h1>
-      <p class="lead">Revon supports Shopify's app block system, so most apps drop in without any code editing. Here's how the most commonly asked-about apps work with the theme.</p>
+      <p class="lead">Revon supports Shopify theme app extensions, native selling plans, app blocks, and app embeds. Because every third-party app controls its own code and release cycle, compatibility must be tested on a draft theme before publishing.</p>
 
-      <h2 class="h2" id="how">How Revon works with apps</h2>
-      <p>Modern Shopify apps come with <strong>app blocks</strong>. From the theme editor, click <strong>Add block</strong> inside any section that supports them (product page, featured products, cart, and most content sections), and the app's blocks appear in the picker. No code needed.</p>
-      <p>If an app doesn't have an app block (older apps especially), you can drop its code snippet into a <strong>Custom Liquid</strong> block or section. See <a href="customizing.html#blocks">Customizing → Product page blocks</a> for where to add Custom Liquid.</p>
-
-      <div class="callout">
-        <span class="callout__label">Good to know</span>
-        <p>App stability across theme updates depends on the app, not the theme. If you switch themes (or update Revon to a new version), the app's blocks travel with the app, not with the theme. You'll need to re-add them once.</p>
+      <h2 class="h2" id="support">What Revon supports</h2>
+      <ul>
+        <li><strong>App blocks:</strong> merchant-placeable blocks provided by a Shopify theme app extension.</li>
+        <li><strong>App embeds:</strong> site-wide widgets enabled from the theme editor, commonly used for chat, analytics, loyalty launchers, and overlays.</li>
+        <li><strong>Apps section:</strong> a full-width wrapper that accepts app blocks on JSON templates.</li>
+        <li><strong>Custom Liquid:</strong> a controlled place for an approved embed when an app does not provide a theme app extension.</li>
+        <li><strong>Native selling plans:</strong> subscription and prepaid purchase options stored through Shopify's selling-plan system.</li>
+      </ul>
+      <div class="callout callout--warn">
+        <span class="callout__label">No universal guarantee</span>
+        <p>No theme can guarantee compatibility with every app. Older apps that edit theme files, replace the product form, intercept the cart, or inject fixed-position widgets can require app-vendor support or custom integration.</p>
       </div>
 
-      <h2 class="h2" id="email">Email marketing</h2>
+      <h2 class="h2" id="install">Install an app safely</h2>
+      <ol>
+        <li>Duplicate your current Revon draft or published theme.</li>
+        <li>Read the app's installation and theme-extension requirements.</li>
+        <li>Install the app, but do not publish the test theme.</li>
+        <li>Enable its app embed or add its app block in the theme editor.</li>
+        <li>Test the editor, storefront, product options, add to cart, cart updates, checkout handoff, customer accounts, and mobile layout.</li>
+        <li>Check keyboard focus, screen-reader labels, 200% zoom, and reduced motion.</li>
+        <li>Compare performance before and after installation.</li>
+        <li>Remove any old code snippets before testing a replacement app.</li>
+      </ol>
 
-      <h3 class="h3">Klaviyo</h3>
-      <p>Best-known email and SMS platform for Shopify. Works with Revon out of the box via Klaviyo's app blocks (newsletter signup, abandoned cart, etc).</p>
-      <p><strong>Setup:</strong> Install Klaviyo from the Shopify App Store and link your store. In the theme editor, you can add Klaviyo's signup forms via app block to any section. Revon's built-in <strong>Newsletter</strong> section also writes to Shopify's customer database, which Klaviyo syncs from automatically.</p>
-
-      <h3 class="h3">Mailchimp</h3>
-      <p>Email marketing with a generous free tier.</p>
-      <p><strong>Setup:</strong> Install Mailchimp for Shopify, link your audience. Like Klaviyo, Mailchimp syncs subscribers from Shopify's customer database, so Revon's Newsletter section just works. For custom Mailchimp forms, paste the embed code into a Custom Liquid block.</p>
-
-      <h3 class="h3">Omnisend</h3>
-      <p>Email + SMS, popular alternative to Klaviyo.</p>
-      <p><strong>Setup:</strong> Install Omnisend, connect your store, and use its app blocks for popups and inline forms. The Revon Newsletter section is also compatible.</p>
-
-      <h2 class="h2" id="subscriptions">Subscriptions</h2>
-
-      <p>Revon supports Shopify's native <strong>selling plans</strong>. Subscription options from selling-plan apps appear on the product page and in the cart when the app stores plans in Shopify. App-specific widgets can be added with app blocks or the Apps section.</p>
-
-      <h3 class="h3">Shopify Subscriptions</h3>
-      <p>Shopify's own first-party subscription app. Free, simple, and supported natively.</p>
-      <p><strong>Setup:</strong> Install <strong>Shopify Subscriptions</strong> from the App Store, create a selling plan, assign it to products. Revon renders the subscribe / one-time radio buttons on the product page automatically.</p>
-
-      <h3 class="h3">Recharge</h3>
-      <p>The most mature subscription platform on Shopify, with deep customization.</p>
-      <p><strong>Setup:</strong> Install Recharge and set up your subscription plans. If your Recharge setup uses Shopify selling plans, Revon can render those plans through the native product form. Use Recharge app blocks or app embeds for app-specific widgets and portals.</p>
-
-      <h3 class="h3">Bold Subscriptions</h3>
-      <p>Long-standing subscription app with a Shopify-native version.</p>
-      <p><strong>Setup:</strong> Install Bold Subscriptions V2 (the version that uses Shopify selling plans). When the app stores plans as Shopify selling plans, Revon's product page can show those options through the native product form.</p>
-
-      <h3 class="h3">Loop Subscriptions</h3>
-      <p>Newer subscription app focused on retention and analytics.</p>
-      <p><strong>Setup:</strong> Set up plans in Loop, then use Shopify selling plans for native purchase options. Loop-specific widgets or portals should be added with app blocks or app embeds.</p>
-
-      <h2 class="h2" id="reviews">Reviews</h2>
-
-      <h3 class="h3">Judge.me</h3>
-      <p>A widely used reviews app on Shopify, with a generous free plan.</p>
-      <p><strong>Setup:</strong> Install Judge.me. In the theme editor, add the Judge.me app blocks to:</p>
+      <h2 class="h2" id="placements">Supported app-block placements</h2>
       <ul>
-        <li><strong>Product page</strong> — the review widget block (full reviews list) and the star rating block (in the info column)</li>
-        <li><strong>Homepage</strong> — the reviews carousel block</li>
-        <li><strong>Product card</strong> — the star rating preview block</li>
+        <li><strong>Apps section:</strong> use for standalone app content on any compatible JSON template.</li>
+        <li><strong>Main product:</strong> use for ratings, product-specific widgets, forms, memberships, and other product app blocks.</li>
+        <li><strong>Featured product:</strong> use for app content attached to a selected featured product.</li>
+        <li><strong>Featured products:</strong> accepts app blocks within the section's supported block area.</li>
+        <li><strong>Clinical results and Key ingredients:</strong> accept app blocks when an app provides suitable content for those contexts.</li>
       </ul>
-      <p>No code editing needed.</p>
+      <p>App embeds are not placed inside a section. Enable them through <strong>Theme settings &gt; App embeds</strong>. The exact embed label comes from the app.</p>
 
-      <h3 class="h3">Loox</h3>
-      <p>Photo-first review platform — customers attach pictures of their purchases.</p>
-      <p><strong>Setup:</strong> Install Loox. App blocks are available for the product page (review widget, star rating, gallery) and for any content section (Loox photo grid). All drop in via the theme editor.</p>
+      <h2 class="h2" id="subscriptions">Subscriptions and selling plans</h2>
+      <p>Revon's product form reads Shopify selling-plan groups and sends the selected selling-plan ID when an item is added to cart. Cart lines preserve the selling-plan allocation and associated pricing.</p>
+      <ol>
+        <li>Install a subscription app that uses Shopify's selling-plan system.</li>
+        <li>Create a plan and assign it to test products.</li>
+        <li>Confirm one-time and subscription options appear on the product page.</li>
+        <li>Change variants and confirm the available plan and price update.</li>
+        <li>Add both one-time and subscription lines to the cart.</li>
+        <li>Verify plan names, prices, quantities, and checkout behavior.</li>
+      </ol>
+      <p>Use the app's block or embed for app-specific account portals, bundle builders, retention tools, or advanced subscription messaging.</p>
 
-      <h3 class="h3">Yotpo Reviews</h3>
-      <p>Enterprise-grade reviews with deep loyalty and SMS add-ons.</p>
-      <p><strong>Setup:</strong> Install Yotpo Reviews and follow their onboarding. App blocks available for product page and homepage widgets.</p>
+      <h2 class="h2" id="reviews">Reviews and ratings</h2>
+      <p>Place review widgets through an app block on the product template or through the Apps section. Revon's native rating block can display compatible review-rating metafield data when the installed app writes to Shopify's standard review metafields.</p>
+      <ul>
+        <li>Test products with no reviews, one review, and many reviews.</li>
+        <li>Verify the rating link reaches the full review content.</li>
+        <li>Do not duplicate star ratings by enabling both native and app widgets in the same position.</li>
+        <li>Check that reviews do not overflow cards or product information at mobile widths.</li>
+        <li>Publish only authentic reviews and follow the app's moderation rules.</li>
+      </ul>
 
-      <h2 class="h2" id="loyalty">Loyalty &amp; rewards</h2>
+      <h2 class="h2" id="marketing">Email, SMS, and marketing forms</h2>
+      <p>Revon's Newsletter section submits a Shopify customer signup form. Whether subscribers sync to an email or SMS service depends on that service's Shopify integration and configuration.</p>
+      <ul>
+        <li>Use the built-in Newsletter for a simple Shopify customer signup.</li>
+        <li>Use an app block or app embed for multi-step forms, SMS consent, segmentation, or advanced popup behavior.</li>
+        <li>Do not show two signup popups at the same time.</li>
+        <li>Test consent text, success messages, validation, keyboard use, and localization.</li>
+        <li>Confirm subscribers arrive in the intended list or segment before launch.</li>
+      </ul>
 
-      <h3 class="h3">Smile.io</h3>
-      <p>Friendliest loyalty app on Shopify, with a free tier.</p>
-      <p><strong>Setup:</strong> Install Smile, configure rewards. The Smile launcher (the small "Rewards" button) appears automatically on every page once enabled. App blocks available for displaying points on the cart, product page, or customer account.</p>
+      <h2 class="h2" id="loyalty">Loyalty, referrals, and wishlists</h2>
+      <p>These features are not built into Revon. Install an app that provides an app block or embed and follow the app vendor's setup guide.</p>
+      <ul>
+        <li>Use app embeds for site-wide launchers only when they do not cover Revon's cart, search, localization, or back-to-top controls.</li>
+        <li>Use product app blocks for points, referral prompts, membership pricing, or wishlist controls.</li>
+        <li>Test logged-out and logged-in customer states.</li>
+        <li>Verify wishlist buttons do not resize product cards or hide quick view.</li>
+        <li>Verify account links work with the customer-account type configured for the store.</li>
+      </ul>
 
-      <h3 class="h3">LoyaltyLion</h3>
-      <p>More customizable loyalty platform, used by larger merchants.</p>
-      <p><strong>Setup:</strong> Install LoyaltyLion and follow their setup. The points panel adds via an app block; customer-facing widgets are also app blocks.</p>
+      <h2 class="h2" id="chat">Chat, helpdesk, and search</h2>
+      <p>Chat and helpdesk launchers are normally app embeds. Advanced search apps may replace predictive search or the search results template.</p>
+      <ul>
+        <li>Check fixed launchers against the cart drawer, mobile menu, cookie-consent UI, and back-to-top button.</li>
+        <li>Ensure the launcher remains keyboard reachable and does not cover checkout CTAs.</li>
+        <li>For advanced search, decide whether to keep Revon's predictive search enabled.</li>
+        <li>Test products, collections, pages, and articles with zero and many results.</li>
+        <li>Shopify Search &amp; Discovery can improve filters, recommendations, and search behavior without replacing the theme's visual interface.</li>
+      </ul>
 
-      <h2 class="h2" id="wishlist">Wishlists</h2>
+      <h2 class="h2" id="cart-apps">Cart, upsell, bundle, and checkout apps</h2>
+      <p>Cart and bundle apps have the highest integration risk because they can modify line-item properties, selling plans, discounts, quantities, or drawer behavior.</p>
+      <ul>
+        <li>Test drawer, notification, and page cart modes separately.</li>
+        <li>Test bundles, gifts, upsells, subscriptions, and discount combinations.</li>
+        <li>Verify line-item properties and selling plans survive cart updates.</li>
+        <li>Confirm cart totals match checkout totals.</li>
+        <li>Confirm app-added controls remain usable with keyboard and touch.</li>
+        <li>Ask the app vendor for support when its script replaces or patches theme markup.</li>
+      </ul>
 
-      <p>Wishlists aren't built into Revon — they require an app. Both options below add a heart icon to product cards and a dedicated wishlist page.</p>
-
-      <h3 class="h3">Wishlist Plus (Swym)</h3>
-      <p>The most-installed wishlist app, free for the first 500 wishlist items per month.</p>
-      <p><strong>Setup:</strong> Install Wishlist Plus. The heart icon adds to product cards via an app block. The wishlist page is hosted by Swym and linked from your storefront automatically.</p>
-
-      <h3 class="h3">Smart Wishlist</h3>
-      <p>Simpler alternative, fully free.</p>
-      <p><strong>Setup:</strong> Install and follow the app's instructions to enable on product pages.</p>
-
-      <h2 class="h2" id="chat">Live chat &amp; helpdesk</h2>
-
-      <h3 class="h3">Shopify Inbox</h3>
-      <p>Shopify's free first-party chat app.</p>
-      <p><strong>Setup:</strong> Install Shopify Inbox. The chat bubble appears automatically in the bottom-right of every page. No theme editing.</p>
-
-      <h3 class="h3">Gorgias</h3>
-      <p>Helpdesk and live chat used by mid-to-large Shopify merchants.</p>
-      <p><strong>Setup:</strong> Install Gorgias and follow their onboarding. The chat widget adds automatically. Optional app blocks let you embed a contact form into Revon's Contact page.</p>
-
-      <h3 class="h3">Tidio</h3>
-      <p>Free chat with AI bot features.</p>
-      <p><strong>Setup:</strong> Install Tidio. The chat bubble adds via their app — no manual placement needed.</p>
-
-      <h2 class="h2" id="search">Search</h2>
-
-      <p>Revon uses Shopify's built-in predictive search by default, which is fine for most small to mid-sized stores. For larger catalogs (5000+ products) or advanced filters, an app helps:</p>
-
-      <h3 class="h3">Shopify Search &amp; Discovery</h3>
-      <p>Shopify's free app for filter synonyms, search rules, and product recommendations.</p>
-      <p><strong>Setup:</strong> Install it from the App Store. It runs in the background and improves results from the default Revon search bar automatically.</p>
-
-      <h3 class="h3">Algolia / Klevu / Searchanise</h3>
-      <p>Third-party search engines for very large stores.</p>
-      <p><strong>Setup:</strong> Each app provides its own embedded search widget that replaces Revon's predictive search. Follow the app's instructions to enable. You may need to disable Revon's predictive search via theme settings to avoid two search results showing.</p>
-
-      <h2 class="h2" id="missing">App not listed?</h2>
-
-      <p>If the app has an <strong>app block</strong>, it almost certainly works with Revon out of the box. Click <strong>Add block</strong> inside the relevant section in the theme editor and look for the app's blocks in the picker.</p>
-
-      <p>If the app needs a <strong>code snippet</strong>, drop it into a <strong>Custom Liquid</strong> block or section. No theme file editing required.</p>
-
-      <p>If the app modifies the cart or checkout in unusual ways (e.g. some upsell apps or inventory countdown timers), it may need theme-level integration. <a href="support.html">Contact support</a> if you're not sure — let us know the app name and we'll point you at the right setup.</p>
+      <h2 class="h2" id="troubleshooting">Troubleshooting an app</h2>
+      <ol>
+        <li>Confirm the app is enabled on the same theme you are previewing.</li>
+        <li>Check <strong>Theme settings &gt; App embeds</strong>.</li>
+        <li>Check whether its app block was added to the intended template.</li>
+        <li>Preview an eligible product, customer, market, or plan.</li>
+        <li>Temporarily disable other app embeds to identify conflicts.</li>
+        <li>Reproduce the issue on a clean duplicate of Revon.</li>
+        <li>Contact the app vendor first for errors originating from its scripts.</li>
+      </ol>
+      <p>When contacting Revon support, include the app name, app version if visible, store preview URL, affected template, browser, screenshots, and exact reproduction steps.</p>
 
       <div class="pager">
-        <a href="cheatsheet.html" class="pager--prev">
-          <span class="pager__label">← Previous</span>
-          <span class="pager__title">Cheat sheet</span>
+        <a href="customizing.html" class="pager--prev">
+          <span class="pager__label">&larr; Previous</span>
+          <span class="pager__title">Customizing</span>
         </a>
         <a href="faq.html" class="pager--next">
-          <span class="pager__label">Next →</span>
+          <span class="pager__label">Next &rarr;</span>
           <span class="pager__title">FAQ</span>
         </a>
       </div>
@@ -219,7 +207,7 @@
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>
@@ -243,7 +231,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>

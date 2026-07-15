@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting started · Revon documentation</title>
-<meta name="description" content="How to install and set up the Revon Shopify theme, step by step.">
+<title>Getting started | Revon documentation</title>
+<meta name="description" content="Install, configure, test, and publish the Revon Shopify theme step by step.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,18 +52,18 @@
 
 <main id="main">
   <div class="doc-layout">
-
     <aside class="doc-sidebar" aria-label="On this page">
-      <span class="doc-sidebar__label">On this page</span>
+      <span class="doc-sidebar__label">Setup order</span>
       <nav class="doc-sidebar__list">
-        <a href="#install">01 Install the theme</a>
-        <a href="#preset">02 Choose a preset</a>
-        <a href="#essentials">03 Set up essentials</a>
-        <a href="#home-page">04 Build your home page</a>
-        <a href="#product-pages">05 Configure product pages</a>
-        <a href="#cart-checkout">06 Cart and checkout</a>
-        <a href="#go-live">07 Go live</a>
-        <a href="#support-policy">Support policy</a>
+        <a href="#install">01 Install a preset</a>
+        <a href="#prepare">02 Prepare safely</a>
+        <a href="#brand">03 Add your brand</a>
+        <a href="#navigation">04 Connect navigation</a>
+        <a href="#catalog">05 Prepare the catalog</a>
+        <a href="#templates">06 Build templates</a>
+        <a href="#commerce">07 Configure commerce</a>
+        <a href="#markets">08 Markets and apps</a>
+        <a href="#test">09 Test and publish</a>
       </nav>
     </aside>
 
@@ -74,137 +74,143 @@
         <span>Getting started</span>
       </nav>
 
-      <p class="eyebrow">Setup guide</p>
+      <p class="eyebrow">Merchant setup guide</p>
       <h1 class="h1" style="margin-top:var(--space-md)">Getting started</h1>
-      <p class="lead">Install the theme, pick a style, and fill in the basics. About 20 minutes from start to a fully styled home page. The biggest decision is step 02 — which preset fits your brand best.</p>
+      <p class="lead">Use this order to build a complete Revon store without redoing work. Finish the structure first, connect real store data second, add imagery third, and test every customer path before publishing.</p>
 
-      <h2 class="h2" id="install">01 Install the theme</h2>
+      <h2 class="h2" id="install">01 Install the right preset</h2>
       <ol>
-        <li>Buy Revon from the Shopify Theme Store. It's added to your store library automatically.</li>
-        <li>Go to <strong>Online Store → Themes</strong> in your Shopify admin.</li>
-        <li>In the <em>Theme library</em> section, find Revon and click <strong>Add</strong>.</li>
-        <li>Click <strong>Customize</strong> to open the theme editor.</li>
+        <li>Open Revon in the Shopify Theme Store.</li>
+        <li>Compare the Pure, Atelier, and Maison listings and demo stores.</li>
+        <li>Select <strong>Try theme</strong> from the preset that is closest to your industry and desired layout.</li>
+        <li>Open the installed draft from <strong>Online Store &gt; Themes</strong>.</li>
       </ol>
+      <ul>
+        <li><strong>Pure:</strong> beauty, wellness, personal care, supplements, and fragrance.</li>
+        <li><strong>Atelier:</strong> fashion, jewelry, accessories, and leather goods.</li>
+        <li><strong>Maison:</strong> furniture, home goods, lighting, ceramics, and interiors.</li>
+      </ul>
+      <p>Pure is Revon's default preset. Atelier and Maison include separate preset-level template files, so installing either preset gives you its matching homepage, product page, About page, header, and footer.</p>
 
+      <h2 class="h2" id="prepare">02 Prepare safely</h2>
+      <ol>
+        <li>Keep Revon unpublished while you configure it.</li>
+        <li>Duplicate the draft before changing theme style or editing code.</li>
+        <li>Use the theme editor's preview controls to check desktop and mobile.</li>
+        <li>Do not delete your current published theme. Shopify keeps products and orders separate, but theme settings and layouts belong to each theme copy.</li>
+      </ol>
       <div class="callout">
-        <span class="callout__label">Before you go live</span>
-        <p>Always <strong>duplicate your current published theme</strong> first. Go to <em>Themes</em>, click the three-dot menu on your live theme, and choose <strong>Duplicate</strong>. This gives you a clean rollback if anything goes wrong.</p>
+        <span class="callout__label">Demo content</span>
+        <p>Demo products, collections, and imagery are not transferred into your store. Revon provides the layout and editable starter copy; you connect your own store resources and licensed images.</p>
       </div>
 
-      <h2 class="h2" id="preset">02 Choose a preset</h2>
-      <p>Revon comes with three ready-made styles — <strong>Pure</strong>, <strong>Atelier</strong>, and <strong>Maison</strong>. Each one is a complete look: fonts, colors, spacing, animations, and a finished homepage, all tuned to a different kind of brand. <strong>Pure</strong> is the default; switch to a different one before you start customizing.</p>
-
-      <ol>
-        <li>In the theme editor, click <strong>Theme settings</strong> (top-left).</li>
-        <li>Open the <strong>Theme styles</strong> picker at the top.</li>
-        <li>Pick <strong>Pure</strong>, <strong>Atelier</strong>, or <strong>Maison</strong>.</li>
-        <li>Save. Theme settings switch immediately; the homepage refreshes with the matching layout.</li>
-      </ol>
-
-      <div class="callout">
-        <span class="callout__label">Which one?</span>
-        <p>Pure for beauty / wellness / fragrance. Atelier for fashion / jewelry / leather. Maison for home / lifestyle / interiors. The <a href="presets.html">Presets page</a> has a full side-by-side comparison.</p>
-      </div>
-
-      <h2 class="h2" id="essentials">03 Set up essentials</h2>
+      <h2 class="h2" id="brand">03 Add your brand system</h2>
 
       <h3 class="h3">Logo and favicon</h3>
       <ol>
-        <li>Open <strong>Theme settings → Logo</strong>.</li>
-        <li>Upload your main logo. SVG is preferred; PNG works well if transparent.</li>
-        <li>Upload a favicon under <strong>Theme settings → Favicon</strong>. Recommended 64×64px PNG.</li>
+        <li>Open <strong>Theme settings &gt; Logo and branding</strong>.</li>
+        <li>Upload a transparent SVG or high-resolution PNG logo.</li>
+        <li>Upload a square favicon and preview it in a browser tab.</li>
+        <li>Open the Header section and check logo scale on desktop and mobile.</li>
       </ol>
 
-      <h3 class="h3">Colors and typography</h3>
+      <h3 class="h3">Colors</h3>
       <ol>
-        <li>Open <strong>Theme settings → Colors</strong>. Revon ships with a warm editorial palette you can override.</li>
-        <li>Open <strong>Theme settings → Typography</strong> to change heading and body fonts. All Google Fonts and Shopify-hosted fonts are supported.</li>
+        <li>Open <strong>Theme settings &gt; Colors</strong>.</li>
+        <li>Edit the light and dark color schemes to match your brand.</li>
+        <li>Set sale, success, warning, error, and fallback swatch colors.</li>
+        <li>Preview links, buttons, forms, badges, unavailable states, and dark sections.</li>
       </ol>
 
-      <h3 class="h3">Navigation menus</h3>
+      <h3 class="h3">Typography and layout</h3>
       <ol>
-        <li>Go to <strong>Online Store → Navigation</strong>.</li>
-        <li>Make sure a menu called <strong>Main menu</strong> exists — Revon uses it by default.</li>
-        <li>For multi-level dropdowns, drop sub-items onto a parent item to nest them. Revon renders up to two levels.</li>
-        <li>Create a <strong>Footer</strong> menu the same way; the footer section pulls from it by default.</li>
+        <li>Open <strong>Theme settings &gt; Typography</strong> and select fonts through Shopify's font picker.</li>
+        <li>Adjust heading weight, size, transform, and tracking only after testing long headings.</li>
+        <li>Keep the default 1440px page width initially. The control supports 1000-1600px.</li>
+        <li>Adjust desktop and mobile spacing separately.</li>
       </ol>
 
-      <h2 class="h2" id="home-page">04 Build your home page</h2>
-      <p>
-        When you applied a preset in step 02, Revon set up a curated homepage for you. Open the home page template in the editor and you'll see a stack of pre-configured sections. Click any section to edit its settings, click <strong>Add section</strong> to insert a new one, or drag to reorder.
-      </p>
-
-      <h3 class="h3">Pure homepage stack</h3>
-      <p>Hero → Featured products → Product showcase → Before/after → Clinical results → Key ingredients → Routine → Story carousel → Collection list → Shop the look → Testimonials → Stats → Social feed → Image with text → FAQ → Newsletter.</p>
-
-      <h3 class="h3">Atelier homepage stack</h3>
-      <p>Hero slider → Marquee → Editorial mosaic → Featured products → Split banner → Shop the look → Video feature → Image with text → Stats → Scroll text → Collection list → Lookbook grid → Testimonials → Brand logos → Blog carousel → Newsletter.</p>
-
-      <h3 class="h3">Maison homepage stack</h3>
-      <p>Hero → Story carousel → Featured products → Shop the look → Collection list → Split banner → Features grid → Image with text → Testimonials → Blog carousel → FAQ → Newsletter → Promo popup.</p>
-
-      <div class="callout">
-        <span class="callout__label">Mix freely</span>
-        <p>Every section works in every preset. You can pull the Clinical results section into the Atelier preset, or drop a Lookbook grid into Maison. The preset is your starting point, not a rulebook.</p>
-      </div>
-
-      <h2 class="h2" id="product-pages">05 Configure product pages</h2>
+      <h2 class="h2" id="navigation">04 Connect navigation and footer</h2>
       <ol>
-        <li>Open a product in the theme editor via <strong>Product pages</strong> in the template picker.</li>
-        <li>Each piece of the product info column is a block — drag to reorder, or remove anything you don't need.</li>
-        <li>To display product variants as colored swatches, add a color or image metafield on the variant option and Revon will render them automatically.</li>
-        <li>To show a 3D model, upload a <code>.glb</code> file to your product's media. Revon will render it with the Shopify model viewer.</li>
+        <li>In Shopify admin, open <strong>Content &gt; Menus</strong>.</li>
+        <li>Create or review the main menu and footer menus.</li>
+        <li>Create products, collections, pages, or policies before linking to them.</li>
+        <li>Nest menu items carefully and test both desktop dropdowns and the mobile drawer.</li>
+        <li>In the theme editor, open Header and select the main menu.</li>
+        <li>Open Footer and connect menus, newsletter, social links, payment icons, and localization controls.</li>
       </ol>
 
-      <h2 class="h2" id="cart-checkout">06 Cart and checkout</h2>
-      <p>
-        Revon supports both cart drawer and cart page modes. Choose which under
-        <strong>Theme settings → Cart</strong>. Both modes include:
-      </p>
+      <h2 class="h2" id="catalog">05 Prepare products and collections</h2>
       <ul>
-        <li>Automatic discount code display</li>
-        <li>Order notes</li>
-        <li>Free-shipping progress bar</li>
-        <li>Unit price display for regulated regions</li>
-        <li>Accelerated checkout buttons (Shop Pay, Apple Pay, Google Pay)</li>
+        <li>Use clear product titles, descriptions, prices, inventory, vendors, and product types.</li>
+        <li>Add meaningful image alt text and consistent image ratios.</li>
+        <li>Add product videos, external videos, or 3D models only when they help customers inspect the product.</li>
+        <li>Create option values and native swatches for colors or materials.</li>
+        <li>Configure selling plans, quantity rules, volume pricing, unit pricing, and local pickup when relevant.</li>
+        <li>Create automated or manual collections, then connect them to navigation and homepage sections.</li>
+        <li>Test one available product, one sold-out product, one sale product, one multi-option product, and one gift card.</li>
       </ul>
 
-      <h2 class="h2" id="go-live">07 Go live</h2>
+      <h2 class="h2" id="templates">06 Build the main templates</h2>
+      <p>Use the template picker at the top of the theme editor. Start with these templates:</p>
+      <ul>
+        <li><strong>Home page:</strong> connect every product, collection, image, video, page, and CTA. Remove sections you do not need.</li>
+        <li><strong>Default product:</strong> reorder product information blocks and verify media, variants, buying options, pickup, and recommendations.</li>
+        <li><strong>Collection:</strong> set grid density, filtering, sorting, image ratio, and pagination.</li>
+        <li><strong>Cart:</strong> configure notes and review empty and populated states.</li>
+        <li><strong>Search:</strong> verify predictive search and the full results page.</li>
+        <li><strong>About, contact, and FAQ pages:</strong> create the Shopify pages, then assign the matching theme template.</li>
+        <li><strong>Blog and article:</strong> add realistic article content and test long titles and rich text.</li>
+        <li><strong>Password and 404:</strong> replace starter copy and check links.</li>
+      </ul>
+      <p>See <a href="presets.html">Presets</a> for the exact homepage and supporting template stack installed by Pure, Atelier, and Maison.</p>
+
+      <h2 class="h2" id="commerce">07 Configure cart and checkout handoff</h2>
       <ol>
-        <li>Preview your theme thoroughly on desktop and mobile.</li>
-        <li>Click <strong>Publish</strong> from the theme editor or the Themes page.</li>
-        <li>Check the live site in an incognito window to confirm everything renders without your admin session.</li>
+        <li>Open <strong>Theme settings &gt; Cart</strong>.</li>
+        <li>Select drawer, notification, or page behavior.</li>
+        <li>If using the shipping-progress message, enter the threshold and create the matching shipping rate in Shopify.</li>
+        <li>If using gift wrapping, understand that Revon saves gift-wrap and gift-message cart attributes; it does not charge a fee automatically.</li>
+        <li>Run an add-to-cart test, change quantities, remove lines, enter a note, and continue to checkout.</li>
+        <li>Check discount allocations, selling-plan lines, line-item properties, unit prices, and accelerated checkout buttons when available.</li>
       </ol>
 
-      <h2 class="h2" id="support-policy">Support policy</h2>
-
-      <h3 class="h3">What's included</h3>
+      <h2 class="h2" id="markets">08 Configure markets, languages, and apps</h2>
       <ul>
-        <li>Bug fixes in Revon's code</li>
-        <li>Answers to questions about theme features and settings</li>
-        <li>Guidance on using Shopify features supported by Revon</li>
+        <li>Configure Shopify Markets, currencies, languages, domains, product availability, and pricing in Shopify admin.</li>
+        <li>Enable country and language selectors in the Header or Footer when your store serves multiple markets.</li>
+        <li>Revon includes English, German, Spanish, and French locale files. Review translations for your store's terminology.</li>
+        <li>Install only the apps required for launch.</li>
+        <li>Use app blocks in supported sections or app embeds from the theme editor.</li>
+        <li>Test every app on product, cart, account, and mobile screens before publishing.</li>
       </ul>
+      <p>Read <a href="apps.html">App integrations</a> before installing reviews, subscriptions, loyalty, wishlists, chat, or advanced search.</p>
 
-      <h3 class="h3">What's not included</h3>
+      <h2 class="h2" id="test">09 Test and publish</h2>
       <ul>
-        <li>Custom code modifications to your theme</li>
-        <li>App integrations without an app block</li>
-        <li>Help with third-party apps or services</li>
-        <li>Content creation, SEO consulting, or marketing advice</li>
+        <li>Preview Chrome, Safari, Firefox, Edge, iPhone, and Android layouts.</li>
+        <li>Navigate with a keyboard and confirm visible focus on every link, button, form, drawer, and modal.</li>
+        <li>Test at 200% browser zoom and with reduced motion enabled.</li>
+        <li>Test home, product, collection, search, cart, page, blog, article, account, password, gift card, and 404 pages.</li>
+        <li>Test empty, loading, error, unavailable, sold-out, and long-content states.</li>
+        <li>Check that every image is licensed, sharp, correctly cropped, and has useful alt text.</li>
+        <li>Confirm all discounts, results, awards, reviews, shipping statements, and policies are real.</li>
+        <li>Place a test order using Shopify's test payment setup.</li>
+        <li>Publish only after testing the final draft in an incognito window.</li>
       </ul>
 
       <div class="callout callout--warn">
-        <span class="callout__label">Stuck?</span>
-        <p>Head to the <a href="faq.html">FAQ</a> or <a href="support.html">contact support</a>. We reply within two business days.</p>
+        <span class="callout__label">Need help?</span>
+        <p>Use the <a href="support.html">support form</a> and include your store URL, theme version, page URL, browser, steps to reproduce, and screenshots.</p>
       </div>
 
       <div class="pager">
         <a href="index.html" class="pager--prev">
-          <span class="pager__label">← Previous</span>
+          <span class="pager__label">&larr; Previous</span>
           <span class="pager__title">Overview</span>
         </a>
         <a href="presets.html" class="pager--next">
-          <span class="pager__label">Next →</span>
+          <span class="pager__label">Next &rarr;</span>
           <span class="pager__title">Presets</span>
         </a>
       </div>
@@ -216,7 +222,7 @@
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>
@@ -240,7 +246,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>

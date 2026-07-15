@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ · Revon documentation</title>
-<meta name="description" content="Frequently asked questions about the Revon Shopify theme — presets, sections, performance, app integrations, and more.">
+<title>FAQ | Revon documentation</title>
+<meta name="description" content="Accurate answers about installing, customizing, updating, testing, and integrating the Revon Shopify theme.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I install Revon on my store?","acceptedAnswer":{"@type":"Answer","text":"After purchasing from the Shopify Theme Store, Revon is added to your theme library automatically. Go to Online Store → Themes, find Revon in your library, and click Add. See the Getting started guide for step-by-step instructions."}},{"@type":"Question","name":"How do I update Revon to a new version?","acceptedAnswer":{"@type":"Answer","text":"When a new version ships, Shopify notifies you on the Themes page. Click Update and Shopify will add the new version as a separate theme alongside your current one. Your settings don\u0027t migrate automatically — you\u0027ll need to reconfigure essentials like logo, fonts, and colors. This is by design so custom code changes aren\u0027t overwritten."}},{"@type":"Question","name":"Will I lose my customizations when I update?","acceptedAnswer":{"@type":"Answer","text":"Settings made through the theme editor (section content, colors, fonts) don\u0027t automatically carry over to a new version. Code customizations you\u0027ve made directly to theme files will also not carry over. We recommend duplicating your current theme before updating so you have a stable fallback."}},{"@type":"Question","name":"Do I need a developer to install or set up Revon?","acceptedAnswer":{"@type":"Answer","text":"No. Revon is designed to be set up entirely through the Shopify theme editor — no Liquid or CSS edits required for the standard configuration. A developer only becomes useful if you want custom sections, deep code modifications, or app integrations beyond what app blocks provide."}},{"@type":"Question","name":"What is a preset?","acceptedAnswer":{"@type":"Answer","text":"A preset is a named bundle of theme settings — typography, color palette, spacing, motion, cart type — plus a curated homepage layout. Revon ships with three: Pure (beauty/wellness), Atelier (slow fashion), and Maison (home/lifestyle). Each is a complete starting point tuned for a different industry. See the Presets page for a full comparison."}},{"@type":"Question","name":"Which preset is the default?","acceptedAnswer":{"@type":"Answer","text":"Pure is selected as the default preset on a fresh install. You can switch to Atelier or Maison at any time from the theme editor under Theme settings → Theme styles."}},{"@type":"Question","name":"How do I switch between presets?","acceptedAnswer":{"@type":"Answer","text":"In the theme editor, click Theme settings (top-left), open the Theme styles picker at the top, and choose a different preset. Save. The theme settings switch immediately and the homepage refreshes with the matching layout. Section content you\u0027ve already customized is preserved."}},{"@type":"Question","name":"Will switching presets erase my work?","acceptedAnswer":{"@type":"Answer","text":"Switching a preset overwrites your theme settings (colors, fonts, spacing, etc.) with that preset\u0027s defaults. It does not overwrite your section content, products, collections, or templates. Always duplicate your theme before switching if you\u0027ve spent significant time tuning settings — that way you have a clean rollback."}},{"@type":"Question","name":"Can I use sections from one preset on another?","acceptedAnswer":{"@type":"Answer","text":"Yes. Revon's sections are designed to work across presets. You can pull \"Clinical results\" from Pure into Atelier, drop \"Lookbook grid\" from Atelier into Maison, or any other combination. Presets only define defaults, not restrictions."}},{"@type":"Question","name":"Can I make my own preset?","acceptedAnswer":{"@type":"Answer","text":"For most stores, picking one of the three built-in presets and tweaking the theme settings is enough — you don\u0027t need a custom preset. If you do want a saved, named style (for example, because you run more than one store), this needs code editing. A developer can do it in a few minutes — see Customizing → Saving a custom preset for the steps."}},{"@type":"Question","name":"Does the demo store content come with the theme?","acceptedAnswer":{"@type":"Answer","text":"No. The Theme Store does not transfer demo store products, collections, or images when you install a theme. You\u0027ll need to add your own. Each preset\u0027s homepage layout ships with image placeholder slots that mirror the demo, so once you replace the placeholders with your own content the theme will look similar."}},{"@type":"Question","name":"Where can I find royalty-free images?","acceptedAnswer":{"@type":"Answer","text":"We recommend Shopify Burst for free high-quality product and lifestyle photos. Unsplash and Pexels are also good options. All three are free for commercial use without attribution."}},{"@type":"Question","name":"What image sizes should I upload?","acceptedAnswer":{"@type":"Answer","text":"For product images, upload the largest version you have — Shopify generates responsive sizes automatically and Revon uses srcset to pick the right one. Aim for at least 2000px on the longest edge. For section backgrounds (hero, parallax), 2400×1500 is a safe minimum. Revon uses image.presentation.focal_point so you can set the crop center in Shopify\u0027s image editor."}},{"@type":"Question","name":"How do I set image focal points?","acceptedAnswer":{"@type":"Answer","text":"In your Shopify admin, open any image (product or file). Click Edit → drag the focal-point indicator to the part of the image you want kept in view when cropped. Revon respects this on every responsive image — product cards, heroes, lookbooks, etc."}},{"@type":"Question","name":"How do I change fonts?","acceptedAnswer":{"@type":"Answer","text":"Open Theme settings → Typography. Revon has four font pickers: heading, body, editorial, and handwritten. Each accepts any font in the Shopify font picker (system fonts, Google Fonts, and any font uploaded via Shopify Admin). Bold and italic variants load automatically."}},{"@type":"Question","name":"How do I change colors?","acceptedAnswer":{"@type":"Answer","text":"Open Theme settings → Colors. Each preset defines two color schemes (a light and a dark) — edit any color and the change applies everywhere that uses that scheme. Individual sections can opt into a different scheme via the section\u0027s Color scheme setting, so you can alternate light and dark blocks down a page."}},{"@type":"Question","name":"How do I add variant color swatches?","acceptedAnswer":{"@type":"Answer","text":"Revon uses Shopify\u0027s native swatch system. In your Shopify admin, go to Settings → Custom data → Products → Variant options, and set a color or image for each option value. Revon will render them automatically on product cards and product pages. Names it doesn\u0027t recognize fall back to a neutral grey circle."}},{"@type":"Question","name":"Can I use a different menu for navigation?","acceptedAnswer":{"@type":"Answer","text":"Yes. In the theme editor, click the Header section and change the Menu setting to any menu you\u0027ve created in Online Store → Navigation."}},{"@type":"Question","name":"How many levels does the dropdown menu support?","acceptedAnswer":{"@type":"Answer","text":"Revon supports up to two levels of nested navigation. Create sub-items in Shopify\u0027s menu editor and drop them onto a parent item to nest. The header renders the second level as a full-width megamenu panel on desktop and as an indented accordion in the mobile drawer."}},{"@type":"Question","name":"How do I disable the cookie banner?","acceptedAnswer":{"@type":"Answer","text":"Open Theme settings → Advanced and toggle off Show cookie banner. Note that some regions (notably the EU under GDPR) require some form of cookie consent — Shopify\u0027s built-in cookie banner under Settings → Customer privacy may be a better fit if you sell internationally."}},{"@type":"Question","name":"How does the cinematic hero work?","acceptedAnswer":{"@type":"Answer","text":"Cinematic hero is a full-viewport section that accepts either a looping video (.mp4, .webm) or a static image as the background. On top you get a morphing headline (two heading fields that cross-fade), eyebrow, body copy, two CTAs, and an optional scroll indicator. Add it from Add section → Cinematic hero. The video plays muted and loops; provide a poster image for the first paint."}},{"@type":"Question","name":"What\u0027s the difference between Cinematic hero and Editorial hero?","acceptedAnswer":{"@type":"Answer","text":"Cinematic hero is full-bleed video/image with overlay text — great for beauty and lifestyle brands wanting maximum impact. Editorial hero is magazine-style: a more constrained layout with serif typography, a bold heading, an italic accent line, and a content block stack underneath. Editorial hero suits fashion and home brands that lead with type over imagery."}},{"@type":"Question","name":"How do I set up the Before/After slider?","acceptedAnswer":{"@type":"Answer","text":"Add a Before / after section and upload two images of identical dimensions — one labeled \"Before\", one labeled \"After\". The section renders a draggable handle that wipes between them. Add multiple Before/After pairs as repeating blocks for a stack of comparisons."}},{"@type":"Question","name":"How do Shop the look hotspots work?","acceptedAnswer":{"@type":"Answer","text":"Add a Shop the look section, upload a lifestyle image, then add hotspot blocks. Each hotspot has an X/Y position (as a percentage), a product picker, and an optional label. On the storefront, the hotspot renders as a clickable dot — clicking it opens a quick-view card with the product and an add-to-cart button. Up to eight hotspots per image."}},{"@type":"Question","name":"How do I configure Clinical results / Key ingredients?","acceptedAnswer":{"@type":"Answer","text":"Both are repeating-block sections. For Clinical results, each block holds a stat value (\"97%\"), a one-line claim, and an optional source. For Key ingredients, each block holds an ingredient name, image, description, and an optional \"Found in\" link to a related product or collection. Both sections are designed for skincare / wellness storytelling but work for any merchant who wants stat- or ingredient-driven proof."}},{"@type":"Question","name":"Does Revon support subscriptions?","acceptedAnswer":{"@type":"Answer","text":"Revon supports Shopify's native selling plans. Subscription apps that store plans in Shopify can show those options through the product form and cart. App-specific widgets should be added with app blocks, app embeds, or the Apps section."}},{"@type":"Question","name":"Does Revon support 3D models and video?","acceptedAnswer":{"@type":"Answer","text":"Yes. Upload a .glb file or a video file to the product\u0027s media in the Shopify admin, and Revon will render it in the product gallery alongside images. The 3D viewer uses Shopify\u0027s model-viewer component with AR support on mobile."}},{"@type":"Question","name":"How do I enable Shop Pay Installments?","acceptedAnswer":{"@type":"Answer","text":"Shop Pay Installments appear automatically on the product page when your store qualifies. There is no theme setting to toggle — it\u0027s controlled by your payment provider and eligibility. Currently US-only."}},{"@type":"Question","name":"Cart drawer or cart page — which should I pick?","acceptedAnswer":{"@type":"Answer","text":"Drawer keeps customers in-flow — they add an item, see the drawer slide in, and continue shopping. Page is better if you have a complex cart (gift wrapping, custom notes, upsells) that benefits from a dedicated screen. Set the preference under Theme settings → Cart → Cart type. The cart page is always accessible at /cart regardless."}},{"@type":"Question","name":"How does the free-shipping bar work?","acceptedAnswer":{"@type":"Answer","text":"Set a threshold under Theme settings → Cart → Free shipping threshold (in your store currency, before tax). The cart drawer and cart page render a progress bar showing how much more the customer needs to add. The bar is informational — actual free shipping is configured under Shopify Admin → Settings → Shipping."}},{"@type":"Question","name":"How does the gift card page work?","acceptedAnswer":{"@type":"Answer","text":"When a customer buys a gift card product, they\u0027re sent a custom-styled gift card page with the code, a QR code (for in-store redemption if applicable), Apple Wallet support, and a personalized message. The gift card product page also has a recipient form so buyers can send the gift card directly to someone else\u0027s email on a scheduled date."}},{"@type":"Question","name":"Does Revon support multiple languages?","acceptedAnswer":{"@type":"Answer","text":"Yes. Revon ships with English (default), German, Spanish, and French translations of all merchant-facing strings. Additional languages can be added by duplicating locales/en.default.json and translating the values. When you sell in multiple languages, Revon shows a language selector in the footer and mobile menu."}},{"@type":"Question","name":"Does Revon support multiple currencies?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you enable Shopify Markets and sell in multiple currencies, Revon shows a country selector in the footer and mobile menu. Prices update automatically based on the customer\u0027s selection. The selector can be hidden via theme settings if you only sell in one currency."}},{"@type":"Question","name":"How do I add a custom language?","acceptedAnswer":{"@type":"Answer","text":"Revon ships with English, German, Spanish, and French. To add another language without any code, install Shopify\u0027s free Translate \u0026 Adapt app (or any other Shopify translation app) and translate the storefront from inside the app. A developer can also add a new language file directly in the theme code if you prefer that route."}},{"@type":"Question","name":"How is the theme\u0027s performance?","acceptedAnswer":{"@type":"Answer","text":"Revon is optimized for Shopify\u0027s performance benchmarks. It uses lazy-loaded images, deferred scripts, font preloading, and native browser features instead of heavy JavaScript libraries. Critical CSS is split out and inlined; non-critical CSS loads after. Your actual Lighthouse score will depend on the apps you install and the size of the images you upload."}},{"@type":"Question","name":"Will animations slow down my Lighthouse score?","acceptedAnswer":{"@type":"Answer","text":"The default animation budget is conservative — fade-ups and crossfades, no continuous layout shifts. If you\u0027re seeing performance issues, the most common cause is heavy product imagery or third-party app scripts, not the theme\u0027s animations. You can disable all animations via Theme settings → Animations and effects → Enable animations."}},{"@type":"Question","name":"Is Revon accessible?","acceptedAnswer":{"@type":"Answer","text":"Yes. Revon is designed to meet WCAG 2.1 AA. All interactive elements are keyboard accessible, focus states are visible, forms have proper labels, decorative SVGs are aria-hidden, and text colors meet contrast requirements. The theme respects prefers-reduced-motion for animations. If you find an accessibility issue, please report it."}},{"@type":"Question","name":"Does Revon work with my favorite app?","acceptedAnswer":{"@type":"Answer","text":"Revon supports modern Shopify app blocks on product pages, featured products, pages, articles, and the Apps section. Apps that use embeds or top-level app blocks can be added through the theme editor. Older snippet-based apps may still require their own setup steps."}},{"@type":"Question","name":"How do I add a wishlist, reviews, or loyalty program?","acceptedAnswer":{"@type":"Answer","text":"These features aren't built into Revon - they require an app. Shopify's App Store has free and paid options for each. Prefer apps that provide app blocks or app embeds, then place those blocks in the product page, Apps section, or another supported area."}},{"@type":"Question","name":"Does Revon work with Klaviyo / Mailchimp?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Newsletter section uses Shopify\u0027s native customer subscription, which both Klaviyo and Mailchimp can sync from. For their own embed forms (for example, multi-step signup), use the Custom Liquid section or the app's app block/embed."}},{"@type":"Question","name":"Can I get a refund?","acceptedAnswer":{"@type":"Answer","text":"Refund policies for themes are handled by Shopify directly. See Shopify\u0027s theme refund policy for details."}},{"@type":"Question","name":"I have a different question.","acceptedAnswer":{"@type":"Answer","text":"Head to the Contact page and send us a message. We reply within two business days."}}]}</script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -53,371 +52,220 @@
 
 <main id="main">
   <div class="doc-layout">
-
-    <aside class="doc-sidebar" aria-label="On this page">
+    <aside class="doc-sidebar" aria-label="FAQ categories">
       <span class="doc-sidebar__label">Categories</span>
       <nav class="doc-sidebar__list">
-        <a href="#install">Installation &amp; updates</a>
+        <a href="#installation">Installation and updates</a>
         <a href="#presets">Presets</a>
-        <a href="#demo">Demo content &amp; images</a>
-        <a href="#customization">Customization</a>
-        <a href="#sections">Premium sections</a>
-        <a href="#products">Products &amp; cart</a>
-        <a href="#i18n">Languages &amp; currencies</a>
-        <a href="#perf">Performance &amp; a11y</a>
-        <a href="#apps">Apps &amp; integrations</a>
+        <a href="#design">Design and content</a>
+        <a href="#sections">Sections</a>
+        <a href="#products">Products and cart</a>
+        <a href="#apps">Apps</a>
+        <a href="#markets">Markets and languages</a>
+        <a href="#quality">Performance and access</a>
       </nav>
     </aside>
 
-    <article class="doc-content reveal">
+    <article class="doc-content prose reveal">
       <nav class="doc-content__breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Docs</a>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         <span>FAQ</span>
       </nav>
 
-      <p class="eyebrow">Common questions, plainly answered</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Frequently asked.</h1>
-      <p class="lead">Answers to the questions merchants ask most often. Can't find what you're looking for? <a href="support.html" class="prose" style="border-bottom:1.5px solid var(--color-dark); color:var(--color-dark)">Contact support</a> and we'll reply within two business days.</p>
+      <p class="eyebrow">Clear answers</p>
+      <h1 class="h1" style="margin-top:var(--space-md)">Frequently asked questions</h1>
+      <p class="lead">These answers describe Revon v1.0.0 and the current Pure, Atelier, and Maison presets. Shopify admin labels can move over time, but the theme controls named here match the current theme schema.</p>
 
-      <h2 class="h2" id="install">Installation &amp; updates</h2>
-      <div class="faq-list">
+      <h2 class="h2" id="installation">Installation and updates</h2>
 
-        <details class="faq-item">
-          <summary>How do I install Revon on my store?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>After purchasing from the Shopify Theme Store, Revon is added to your theme library automatically. Go to <strong>Online Store → Themes</strong>, find Revon in your library, and click <strong>Add</strong>. See the <a href="getting-started.html">Getting started</a> guide for step-by-step instructions.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How do I install Revon?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Choose Pure, Atelier, or Maison from Revon's Shopify Theme Store listing and select <strong>Try theme</strong>. Shopify adds that preset as a draft theme. Open <strong>Online Store &gt; Themes</strong>, find the draft, and select <strong>Customize</strong>.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I update Revon to a new version?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>When a new version ships, Shopify notifies you on the Themes page. Click <strong>Update</strong> and Shopify will add the new version as a separate theme alongside your current one. Your settings don't migrate automatically — you'll need to reconfigure essentials like logo, fonts, and colors. This is by design so custom code changes aren't overwritten.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Do the demo products and images come with the theme?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. Products, collections, pages, menus, blog posts, and demo-store imagery are store data and are not transferred. The installed preset provides its template layout, settings, editable starter copy, and empty resource or image pickers.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Will I lose my customizations when I update?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Settings made through the theme editor (section content, colors, fonts) don't automatically carry over to a new version. Code customizations you've made directly to theme files will also not carry over. We recommend duplicating your current theme before updating so you have a stable fallback.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How do Shopify Theme Store updates work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>When an update is available, Shopify can add the updated version to your draft themes. Theme-editor customizations are normally copied into the updated version. Compatible code edits can also be included, while conflicting edits require review. Always preview the updated draft before publishing and keep the previous version as a fallback.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Do I need a developer to install or set up Revon?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>No. Revon is designed to be set up entirely through the Shopify theme editor — no Liquid or CSS edits required for the standard configuration. A developer only becomes useful if you want custom sections, deep code modifications, or app integrations beyond what app blocks provide.</p>
-          </div>
-        </details>
-      </div>
+      <details class="faq-item">
+        <summary>Will products or orders be deleted when I switch themes?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. Products, collections, customers, orders, pages, and menus are managed separately in Shopify admin. Theme layouts, section settings, wording, app placements, and code changes belong to each theme copy and should be reviewed before publishing a different theme.</p></div>
+      </details>
 
-      <h2 class="h2" id="presets">Presets</h2>
-      <div class="faq-list">
+      <h2 class="h2" id="presets">Presets and theme styles</h2>
 
-        <details class="faq-item">
-          <summary>What is a preset?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>A preset is a named bundle of theme settings — typography, color palette, spacing, motion, cart type — plus a curated homepage layout. Revon ships with three: <strong>Pure</strong> (beauty/wellness), <strong>Atelier</strong> (slow fashion), and <strong>Maison</strong> (home/lifestyle). Each is a complete starting point tuned for a different industry. See the <a href="presets.html">Presets page</a> for a full comparison.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Which preset is the default?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Pure is the root and default preset. It is designed for beauty, wellness, personal-care, supplement, and fragrance catalogs.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Which preset is the default?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Pure is selected as the default preset on a fresh install. You can switch to Atelier or Maison at any time from the theme editor under <strong>Theme settings → Theme styles</strong>.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>What is different about Atelier and Maison?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Atelier installs fashion-focused homepage, product, About, header, and footer files with Cormorant typography. Maison installs furniture and interiors-focused files with Noto Serif typography. Both use the same core section library and commerce code as Pure.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I switch between presets?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>In the theme editor, click <strong>Theme settings</strong> (top-left), open the <strong>Theme styles</strong> picker at the top, and choose a different preset. Save. The theme settings switch immediately and the homepage refreshes with the matching layout. Section content you've already customized is preserved.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does changing Theme style replace my homepage?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. <strong>Theme settings &gt; Theme style</strong> applies the selected style's global settings, including fonts, color schemes, spacing, motion, and cart type. It does not replace an already-customized section layout with another preset's full homepage. Duplicate the theme before changing style.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Will switching presets erase my work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Switching a preset overwrites your <em>theme settings</em> (colors, fonts, spacing, etc.) with that preset's defaults. It does <strong>not</strong> overwrite your section content, products, collections, or templates. Always duplicate your theme before switching if you've spent significant time tuning settings — that way you have a clean rollback.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Can I use a Pure section in Maison or Atelier?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes. The addable section library is shared. For example, Maison can use Before / after, Atelier can use Key ingredients, and Pure can use Editorial mosaic. Check that the section fits the products and keep claims and imagery authentic.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Can I use sections from one preset on another?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. Every section in the theme works on all three presets. You can pull "Clinical results" from Pure into Atelier, drop "Lookbook grid" from Atelier into Maison, or any other combination. Presets only define defaults, not restrictions.</p>
-          </div>
-        </details>
+      <h2 class="h2" id="design">Design, images, and content</h2>
 
-        <details class="faq-item">
-          <summary>Can I make my own preset?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>For most stores, picking one of the three built-in presets and tweaking the theme settings is enough — you don't need a custom preset. If you do want a saved, named style (for example, because you run more than one store), this needs code editing. A developer can do it in a few minutes — see <a href="customizing.html#custom-code">Customizing → Saving a custom preset</a> for the steps.</p>
-          </div>
-        </details>
-      </div>
+      <details class="faq-item">
+        <summary>Can I change the 1440px page width?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes. Open <strong>Theme settings &gt; Layout</strong>. Page width is adjustable from 1000px to 1600px in 10px steps. All three presets start at 1440px.</p></div>
+      </details>
 
-      <h2 class="h2" id="demo">Demo content &amp; images</h2>
-      <div class="faq-list">
+      <details class="faq-item">
+        <summary>Can I add rounded corners?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Revon's built-in design system uses sharp corners across all three presets. There is no global radius control. Adding rounded corners requires custom CSS and changes the intended brutalist visual language.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Does the demo store content come with the theme?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>No. The Theme Store does not transfer demo store products, collections, or images when you install a theme. You'll need to add your own. Each preset's homepage layout ships with image placeholder slots that mirror the demo, so once you replace the placeholders with your own content the theme will look similar.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Can I use AI-generated images?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes, when the generator's terms allow commercial use and you have rights to every input. Keep prompts, original outputs, generation dates, and the service terms. Avoid logos, celebrities, copied designer products, misleading text, watermarks, and recognizable third-party intellectual property. Inspect AI images for impossible product construction and inconsistent details.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Where can I find royalty-free images?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>We recommend <a href="https://burst.shopify.com">Shopify Burst</a> for free high-quality product and lifestyle photos. Unsplash and Pexels are also good options. All three are free for commercial use without attribution.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>What image sizes should I upload?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Upload the largest clean source available and keep a consistent aspect ratio for each use. Product imagery commonly works well at 2000px or more on the longest edge. Wide hero images should have enough resolution for large desktop displays and a separate mobile image when the section provides one. Shopify generates responsive renditions automatically.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>What image sizes should I upload?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>For product images, upload the largest version you have — Shopify generates responsive sizes automatically and Revon uses <code>srcset</code> to pick the right one. Aim for at least 2000px on the longest edge. For section backgrounds (hero, parallax), 2400×1500 is a safe minimum. Revon uses <code>image.presentation.focal_point</code> so you can set the crop center in Shopify's image editor.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How do I avoid unsupported claims?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Use Clinical results and Stats only for information you can document. Use real prices and discounts, authentic reviews, authorized logos, accurate shipping language, and policies that match your business. Keep a source for percentages, certifications, awards, test results, and press quotes.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I set image focal points?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>In your Shopify admin, open any image (product or file). Click <strong>Edit</strong> → drag the focal-point indicator to the part of the image you want kept in view when cropped. Revon respects this on every responsive image — product cards, heroes, lookbooks, etc.</p>
-          </div>
-        </details>
-      </div>
+      <h2 class="h2" id="sections">Sections and customization</h2>
 
-      <h2 class="h2" id="customization">Customization</h2>
-      <div class="faq-list">
+      <details class="faq-item">
+        <summary>How many addable sections does Revon include?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>The current theme schemas expose 39 addable section types, including Apps, Custom Liquid, commerce, storytelling, navigation, and engagement sections. Template-specific main sections are also included for product, collection, cart, search, blog, article, page, password, and 404 views.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I change fonts?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Open <strong>Theme settings → Typography</strong>. Revon has four font pickers: <strong>heading</strong>, <strong>body</strong>, <strong>editorial</strong>, and <strong>handwritten</strong>. Each accepts any font in the Shopify font picker (system fonts, Google Fonts, and any font uploaded via Shopify Admin). Bold and italic variants load automatically.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How does Shop the look work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Upload one lifestyle image, then add Product blocks. Each block selects a product and provides X and Y position controls for the hotspot. Preview hotspots on desktop and mobile and keep them away from image edges and important product details.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I change colors?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Open <strong>Theme settings → Colors</strong>. Each preset defines two color schemes (a light and a dark) — edit any color and the change applies everywhere that uses that scheme. Individual sections can opt into a different scheme via the section's <strong>Color scheme</strong> setting, so you can alternate light and dark blocks down a page.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How should I use Before / after?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Upload two closely matched images with the same dimensions, crop, angle, lighting, and scale. Write accurate labels and alternative text. For beauty or wellness results, obtain consent and keep evidence for any accompanying claim.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I add variant color swatches?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon uses Shopify's native swatch system. In your Shopify admin, go to <strong>Settings → Custom data → Products → Variant options</strong>, and set a color or image for each option value. Revon will render them automatically on product cards and product pages. Names it doesn't recognize fall back to a neutral grey circle.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does the Social feed connect to Instagram or TikTok?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. Social feed is a manually managed image section and does not call a social-network API. Upload authorized images and add links yourself. Use an app block or embed if you need a live third-party feed.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Can I use a different menu for navigation?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. In the theme editor, click the Header section and change the <strong>Menu</strong> setting to any menu you've created in <strong>Online Store → Navigation</strong>.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Where should I add custom code?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Use a Custom Liquid section or product block for a small approved embed. For app integrations, prefer app blocks and app embeds. Duplicate the theme before editing Liquid, CSS, JavaScript, templates, or configuration files directly.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How many levels does the dropdown menu support?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon supports up to two levels of nested navigation. Create sub-items in Shopify's menu editor and drop them onto a parent item to nest. The header renders the second level as a full-width megamenu panel on desktop and as an indented accordion in the mobile drawer.</p>
-          </div>
-        </details>
+      <h2 class="h2" id="products">Products, variants, and cart</h2>
 
-        <details class="faq-item">
-          <summary>How do I disable the cookie banner?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Open <strong>Theme settings → Advanced</strong> and toggle off <strong>Show cookie banner</strong>. Note that some regions (notably the EU under GDPR) require some form of cookie consent — Shopify's built-in cookie banner under <strong>Settings → Customer privacy</strong> may be a better fit if you sell internationally.</p>
-          </div>
-        </details>
-      </div>
+      <details class="faq-item">
+        <summary>Does Revon support subscriptions?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Revon supports Shopify's native selling plans. Use a subscription app that stores plans through Shopify, assign a plan to test products, and verify one-time and subscription lines in the product form, cart, and checkout.</p></div>
+      </details>
 
-      <h2 class="h2" id="sections">Premium sections</h2>
-      <div class="faq-list">
+      <details class="faq-item">
+        <summary>Does Revon support video and 3D product media?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes. The product gallery supports images, hosted video, external video, and Shopify product-model media. Add the media to the product in Shopify admin and test loading, controls, variant media changes, mobile framing, and model interaction.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How does the hero section work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>The Hero section is a full-viewport opener that accepts either a looping video (<code>.mp4</code>, <code>.webm</code>) or a static image as the background. On top you get a morphing headline (two heading fields that cross-fade), eyebrow, body copy, two CTAs, and an optional scroll indicator. Add it from <strong>Add section → Hero</strong>. The video plays muted and loops; provide a poster image for the first paint.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>How do native color swatches work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Assign a Shopify product category, connect the relevant category metafield to the variant option, and use entries that provide a color or image swatch. Revon reads Shopify's swatch object. Common color names have a fallback, and unknown names use the global fallback swatch color.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>What's the difference between Hero and Hero slider?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Hero is a single full-bleed video/image with overlay text — great for beauty and lifestyle brands wanting maximum impact on one statement. Hero slider is a multi-slide carousel with autoplay and dots, where each slide has its own image and copy — better for seasonal campaigns or fashion lookbooks where you want to rotate several looks.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does the gift-wrapping setting charge a fee?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. The setting displays a gift-wrap checkbox and message field on the cart page and saves them as cart attributes. It does not add a gift-wrap product or price. Use an app or a real product workflow when gift wrapping must add a charge.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I set up the Before/After slider?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Add a <strong>Before / after</strong> section and upload two images of identical dimensions — one labeled "Before", one labeled "After". The section renders a draggable handle that wipes between them. Add multiple Before/After pairs as repeating blocks for a stack of comparisons.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does the free-shipping bar create a shipping rate?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. It is an informational progress bar. Create the actual rate under <strong>Settings &gt; Shipping and delivery</strong> and enter the same threshold in Revon's Cart settings.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do Shop the look hotspots work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Add a <strong>Shop the look</strong> section, upload a lifestyle image, then add hotspot blocks. Each hotspot has an X/Y position (as a percentage), a product picker, and an optional label. On the storefront, the hotspot renders as a clickable dot — clicking it opens a quick-view card with the product and an add-to-cart button. Up to eight hotspots per image.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Which cart modes are available?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Drawer, notification, and page. The full cart page remains available at <code>/cart</code>. Test the selected mode with discounts, selling plans, quantities, line-item properties, shipping messages, and accelerated checkout.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I configure Clinical results / Key ingredients?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Both are repeating-block sections. For <strong>Clinical results</strong>, each block holds a stat value ("97%"), a one-line claim, and an optional source. For <strong>Key ingredients</strong>, each block holds an ingredient name, image, description, and an optional "Found in" link to a related product or collection. Both sections are designed for skincare / wellness storytelling but work for any merchant who wants stat- or ingredient-driven proof.</p>
-          </div>
-        </details>
-      </div>
+      <h2 class="h2" id="apps">Apps and privacy</h2>
 
-      <h2 class="h2" id="products">Products &amp; cart</h2>
-      <div class="faq-list">
+      <details class="faq-item">
+        <summary>Does Revon work with every Shopify app?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No theme can guarantee every app. Revon supports app blocks, app embeds, a dedicated Apps section, Custom Liquid, and native selling plans. Test each app on a duplicate theme and contact the app vendor when its code replaces product or cart markup.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Does Revon support subscriptions?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon supports Shopify's native selling plans. Subscription apps that store plans in Shopify can show those options through the product form and cart. App-specific widgets should be added with app blocks, app embeds, or the Apps section.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Where can app blocks be placed?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Revon accepts app blocks in the Apps section, Main product, Featured product, Featured products, Clinical results, and Key ingredients. App embeds are enabled separately from the theme editor's App embeds panel.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Does Revon support 3D models and video?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. Upload a <code>.glb</code> file or a video file to the product's media in the Shopify admin, and Revon will render it in the product gallery alongside images. The 3D viewer uses Shopify's <code>model-viewer</code> component with AR support on mobile.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does Revon include a cookie-consent banner?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>No. Use Shopify's customer privacy settings and consent tooling, or a compliant consent app suited to the markets where you sell. Do not use a decorative theme popup as a substitute for consent management.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I enable Shop Pay Installments?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Shop Pay Installments appear automatically on the product page when your store qualifies. There is no theme setting to toggle — it's controlled by your payment provider and eligibility. Currently US-only.</p>
-          </div>
-        </details>
+      <h2 class="h2" id="markets">Markets, currencies, and languages</h2>
 
-        <details class="faq-item">
-          <summary>Cart drawer or cart page — which should I pick?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Drawer keeps customers in-flow — they add an item, see the drawer slide in, and continue shopping. Page is better if you have a complex cart (gift wrapping, custom notes, upsells) that benefits from a dedicated screen. Set the preference under <strong>Theme settings → Cart → Cart type</strong>. The cart page is always accessible at <code>/cart</code> regardless.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Which language files are included?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>English is the default, with German, Spanish, and French locale files included. Review every translation for your store's products, policies, and terminology. Use Shopify Translate &amp; Adapt, CSV translation, or another translation workflow for additional languages and store content.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How does the free-shipping bar work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Set a threshold under <strong>Theme settings → Cart → Free shipping threshold</strong> (in your store currency, before tax). The cart drawer and cart page render a progress bar showing how much more the customer needs to add. The bar is informational — actual free shipping is configured under <strong>Shopify Admin → Settings → Shipping</strong>.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Does Revon support country and language selectors?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes. Enable the selectors in the supported Header or Footer settings after configuring Shopify Markets and published languages. Currency, domain, availability, pricing, and final checkout behavior are controlled by Shopify Markets and store configuration.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How does the gift card page work?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>When a customer buys a gift card product, they're sent a custom-styled gift card page with the code, a QR code (for in-store redemption if applicable), Apple Wallet support, and a personalized message. The gift card product page also has a recipient form so buyers can send the gift card directly to someone else's email on a scheduled date.</p>
-          </div>
-        </details>
-      </div>
+      <h2 class="h2" id="quality">Performance and accessibility</h2>
 
-      <h2 class="h2" id="i18n">Languages &amp; currencies</h2>
-      <div class="faq-list">
+      <details class="faq-item">
+        <summary>What affects storefront performance most?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Large images, autoplay media, many sections, third-party app scripts, custom code, and font choices can all affect performance. Compress images, use responsive media, remove unused apps, and test Lighthouse on real home, product, collection, cart, and search pages.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Does Revon support multiple languages?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. Revon ships with English (default), German, Spanish, and French translations of all merchant-facing strings. Additional languages can be added by duplicating <code>locales/en.default.json</code> and translating the values. When you sell in multiple languages, Revon shows a language selector in the footer and mobile menu.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>Can animations be disabled?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Yes. Theme settings include global animation, reveal-effect, smooth-scroll, page-transition, and image-hover controls. Revon also responds to the customer's reduced-motion preference.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>Does Revon support multiple currencies?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. When you enable Shopify Markets and sell in multiple currencies, Revon shows a country selector in the footer and mobile menu. Prices update automatically based on the customer's selection. The selector can be hidden via theme settings if you only sell in one currency.</p>
-          </div>
-        </details>
+      <details class="faq-item">
+        <summary>What should I accessibility-test before publishing?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+        <div class="faq-item__body"><p>Test keyboard navigation, visible focus, screen-reader names, form labels, error messages, dialogs, drawers, media controls, color contrast, touch targets, reduced motion, and 200% zoom. Re-test after adding apps or custom code because they can change the accessibility of the final storefront.</p></div>
+      </details>
 
-        <details class="faq-item">
-          <summary>How do I add a custom language?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon ships with English, German, Spanish, and French. To add another language without any code, install Shopify's free <strong>Translate &amp; Adapt</strong> app (or any other Shopify translation app) and translate the storefront from inside the app. A developer can also add a new language file directly in the theme code if you prefer that route.</p>
-          </div>
-        </details>
-      </div>
-
-      <h2 class="h2" id="perf">Performance &amp; accessibility</h2>
-      <div class="faq-list">
-
-        <details class="faq-item">
-          <summary>How is the theme's performance?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon is optimized for Shopify's performance benchmarks. It uses lazy-loaded images, deferred scripts, font preloading, and native browser features instead of heavy JavaScript libraries. Critical CSS is split out and inlined; non-critical CSS loads after. Your actual Lighthouse score will depend on the apps you install and the size of the images you upload.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Will animations slow down my Lighthouse score?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>The default animation budget is conservative — fade-ups and crossfades, no continuous layout shifts. If you're seeing performance issues, the most common cause is heavy product imagery or third-party app scripts, not the theme's animations. You can disable all animations via <strong>Theme settings → Animations and effects → Enable animations</strong>.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Is Revon accessible?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. Revon is designed to meet WCAG 2.1 AA. All interactive elements are keyboard accessible, focus states are visible, forms have proper labels, decorative SVGs are <code>aria-hidden</code>, and text colors meet contrast requirements. The theme respects <code>prefers-reduced-motion</code> for animations. If you find an accessibility issue, please <a href="support.html">report it</a>.</p>
-          </div>
-        </details>
-      </div>
-
-      <h2 class="h2" id="apps">Apps &amp; integrations</h2>
-      <div class="faq-list">
-
-        <details class="faq-item">
-          <summary>Does Revon work with my favorite app?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Revon supports modern Shopify app blocks on product pages, featured products, pages, articles, and the Apps section. Apps that use embeds or top-level app blocks can be added through the theme editor. Older snippet-based apps may still require their own setup steps.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How do I add a wishlist, reviews, or loyalty program?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>These features aren't built into Revon - they require an app. Shopify's App Store has free and paid options for each. Prefer apps that provide app blocks or app embeds, then place those blocks in the product page, Apps section, or another supported area.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Does Revon work with Klaviyo / Mailchimp?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Yes. The Newsletter section uses Shopify's native customer subscription, which both Klaviyo and Mailchimp can sync from. For their own embed forms (for example, multi-step signup), use the Custom Liquid section or the app's app block/embed.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can I get a refund?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Refund policies for themes are handled by Shopify directly. See <a href="https://help.shopify.com/en/manual/online-store/themes/theme-store-refund-policy">Shopify's theme refund policy</a> for details.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>I have a different question.<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">
-            <p>Head to the <a href="support.html">Contact page</a> and send us a message. We reply within two business days.</p>
-          </div>
-        </details>
+      <div class="callout">
+        <span class="callout__label">Still need help?</span>
+        <p>Send a request through <a href="support.html">Contact support</a>. Include the store preview URL, Revon version, affected page, browser, screenshots, and exact steps to reproduce.</p>
       </div>
 
       <div class="pager">
-        <a href="customizing.html" class="pager--prev">
-          <span class="pager__label">← Previous</span>
-          <span class="pager__title">Customizing</span>
+        <a href="apps.html" class="pager--prev">
+          <span class="pager__label">&larr; Previous</span>
+          <span class="pager__title">App integrations</span>
         </a>
-        <a href="changelog.html" class="pager--next">
-          <span class="pager__label">Next →</span>
-          <span class="pager__title">Changelog</span>
+        <a href="support.html" class="pager--next">
+          <span class="pager__label">Next &rarr;</span>
+          <span class="pager__title">Contact support</span>
         </a>
       </div>
     </article>
@@ -428,7 +276,7 @@
   <div class="site-footer__inner">
     <div>
       <div class="site-footer__brand">Revon</div>
-      <p class="site-footer__tagline">An editorial Shopify theme for brands that want to build something memorable. Crafted by Edvardaja Studio.</p>
+      <p class="site-footer__tagline">A clinical minimalist Shopify theme with three focused presets. Crafted by Edvardaja Studio.</p>
     </div>
     <div>
       <div class="site-footer__col-label">Documentation</div>
@@ -452,7 +300,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>

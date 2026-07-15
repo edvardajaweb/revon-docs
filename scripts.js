@@ -4,12 +4,28 @@
   var openBtn = document.querySelector('[data-mobile-open]');
   var closeBtn = document.querySelector('[data-mobile-close]');
   var drawer = document.querySelector('[data-mobile-drawer]');
+  var lastFocused = null;
+
+  function drawerFocusable() {
+    if (!drawer) return [];
+    return Array.prototype.slice.call(drawer.querySelectorAll('a[href], button:not([disabled])'));
+  }
 
   function setDrawer(open) {
     if (!drawer) return;
+    if (open) lastFocused = document.activeElement;
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     document.body.style.overflow = open ? 'hidden' : '';
     if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      window.requestAnimationFrame(function () {
+        var focusable = drawerFocusable();
+        if (focusable[0]) focusable[0].focus();
+      });
+    } else if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+      lastFocused = null;
+    }
   }
 
   if (openBtn) openBtn.addEventListener('click', function () { setDrawer(true); });
@@ -20,6 +36,23 @@
       setDrawer(false);
     }
   });
+
+  if (drawer) {
+    drawer.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab' || drawer.getAttribute('aria-hidden') === 'true') return;
+      var focusable = drawerFocusable();
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+  }
 
   if (drawer) {
     drawer.querySelectorAll('a').forEach(function (a) {
@@ -154,7 +187,8 @@
   document.body.appendChild(backToTop);
 
   backToTop.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
 
   window.addEventListener('scroll', function () {

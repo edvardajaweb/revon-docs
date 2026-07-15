@@ -1,155 +1,94 @@
-# Revon — Theme documentation site
+# Revon documentation site
 
-Static HTML docs site + public contact form for the Revon Shopify theme, built to satisfy
-[Shopify Theme Store Rule 21](https://shopify.dev/docs/storefronts/themes/store/requirements#documentation-and-contact-forms):
+Static merchant documentation and public support pages for Revon v1.0.0.
 
-> You must provide theme documentation and a public support contact form. You must link your
-> documentation and contact form to your theme listing page.
+## Contents
 
-## What's in this folder
+- `index.html`: documentation overview
+- `getting-started.html`: complete setup and launch sequence
+- `presets.html`: Pure, Atelier, and Maison install-state reference
+- `customizing.html`: global settings, 39 addable sections, and product blocks
+- `cheatsheet.html`: short recipes for common tasks
+- `apps.html`: app blocks, embeds, selling plans, and compatibility testing
+- `faq.html`: merchant questions based on the current theme implementation
+- `changelog.html`: release history
+- `support.html`: public contact form and support policy
+- `styles.css`: shared documentation design
+- `scripts.js`: mobile navigation, scroll behavior, and form enhancements
+- `sitemap.xml` and `robots.txt`: crawler configuration
 
-```
-docs/
-├── index.html             landing page
-├── getting-started.html   install + setup guide
-├── presets.html           Pure / Atelier / Maison preset reference
-├── customizing.html       Section catalog, blocks, theme settings
-├── faq.html               frequently asked questions
-├── changelog.html         version history
-├── support.html           contact form + support policy
-├── styles.css             shared styles
-├── scripts.js             small client-side behaviors (mobile drawer, scroll-spy, form handling)
-└── README.md              this file
-```
+There is no build step. The site uses static HTML, CSS, a small shared JavaScript file,
+and externally hosted documentation fonts.
 
-Minimal JavaScript (~5 KB, all in `scripts.js`), no build step, no dependencies. Drop it on any static host.
+## Source of truth
 
-## Before publishing — you MUST do these two things
+Update documentation only after checking the current theme files:
 
-### 1. Wire up the contact form ✅ done
+- Global controls: `../theme/config/settings_schema.json`
+- Preset globals: `../theme/config/settings_data.json`
+- Pure templates: `../theme/templates/` and `../theme/sections/*-group.json`
+- Atelier install files: `../theme/listings/atelier/`
+- Maison install files: `../theme/listings/maison/`
+- Addable sections and blocks: each `../theme/sections/*.liquid` schema
+- Product blocks: `../theme/sections/main-product.liquid`
 
-The form on [support.html](support.html) is wired to Formspree
-(`https://formspree.io/f/xjgljokn`). To finish setup, log in to the Formspree dashboard
-for this form and:
+Do not document a setting, block, app placement, limit, or behavior unless it exists in
+the current schema and rendered code.
 
-- Enable **Auto-response** (required by Theme Store Rule 21) — write a short message
-  confirming you received the request and that you reply within two business days
-- Enable **File uploads** (Rule 21 requires allowing screenshot attachments)
-- Set **Notifications** to the email address you actually check (where you want support requests delivered)
-- Optionally add **reCAPTCHA** for spam
+## Local preview
 
-The first form submission also acts as the activation step — submit one test message
-after deploying to confirm the endpoint is live.
+The pages can be opened directly in a browser. A local server is optional:
 
-**If you switch backends**, supported alternatives are:
-- [Web3Forms](https://web3forms.com/) — unlimited submissions, no account required
-- [Formsubmit.co](https://formsubmit.co/) — no signup, add `https://formsubmit.co/your@email.com` as the action
-- [Tally](https://tally.so/) — nicer UI but requires building the form in their editor
-- [Netlify Forms](https://docs.netlify.com/forms/setup/) — free if you deploy via Netlify
-
-### 2. Update the Shopify theme `theme_info` URLs ✅ done
-
-The `theme_info` block in `theme/config/settings_schema.json` already points at this
-docs site:
-
-```json
-{
-  "name": "theme_info",
-  "theme_name": "Revon",
-  "theme_version": "1.0.0",
-  "theme_author": "Edvardaja Studio",
-  "theme_documentation_url": "https://edvardajaweb.github.io/revon-docs/",
-  "theme_support_url": "https://edvardajaweb.github.io/revon-docs/support.html"
-}
+```powershell
+cd revon/docs
+python -m http.server 4173
 ```
 
-Paste the same URLs into the Theme Store submission form when listing the theme.
+Then open `http://localhost:4173/`.
 
-## Deployment options (ranked by ease)
+## Public deployment
 
-### Option A — GitHub Pages (free, 5 min)
+The configured public URL is:
 
-1. Create a new GitHub repo called `revon-docs` (or any name)
-2. Push the contents of this folder to the repo
-3. In the repo settings, go to **Pages**, set source to `main` branch, root folder
-4. GitHub gives you a URL like `https://yourusername.github.io/revon-docs/`
-5. Your docs are live
+- Documentation: <https://edvardajaweb.github.io/revon-docs/>
+- Support: <https://edvardajaweb.github.io/revon-docs/support.html>
 
-```bash
-cd /Users/dominykajakialyte/Desktop/Revon-docs
-git init
-git add .
-git commit -m "Initial Revon docs site"
-# create the empty repo on github.com first, then:
-git remote add origin https://github.com/YOUR_USERNAME/revon-docs.git
-git branch -M main
-git push -u origin main
-```
+The `docs` directory is its own Git repository. Review its status, commit the changed
+pages, and push to the branch used by GitHub Pages. Confirm that the public site has
+finished deploying before submitting or updating the Theme Store listing.
 
-**Custom domain:** optional — buy a domain, add a `CNAME` file, update DNS. See
-[GitHub's docs on custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+## Support form
 
-### Option B — Netlify (free, 2 min, auto-deploys on git push)
+`support.html` posts to Formspree. Before launch:
 
-1. Sign up at <https://netlify.com/>
-2. Drag the `Revon-docs` folder onto their dashboard
-3. They give you a URL like `https://sparkly-taco-123.netlify.app/`
-4. Done. You can also connect a GitHub repo for auto-deploys and add a custom domain.
+1. Confirm the Formspree endpoint belongs to the active support account.
+2. Enable the required notification and automatic acknowledgement.
+3. Confirm attachments work.
+4. Submit a real test request.
+5. Confirm both the support notification and customer acknowledgement arrive.
+6. Keep the stated two-business-day response policy operational.
 
-Netlify also has native [form handling](https://docs.netlify.com/forms/setup/) as an
-alternative to Formspree — add `netlify` as an attribute to the `<form>` tag and they
-catch submissions automatically.
+## Documentation release checklist
 
-### Option C — Vercel (free, similar to Netlify)
+1. Validate all local links and fragment identifiers.
+2. Check that every page has one `h1`, a unique title, and a meta description.
+3. Search for obsolete controls and unsupported claims.
+4. Compare preset typography, colors, spacing, and template order with theme JSON.
+5. Check desktop and mobile layouts.
+6. Test keyboard navigation, focus, mobile drawer, FAQ controls, and support form.
+7. Validate HTML and run Lighthouse after deployment.
+8. Update `sitemap.xml` dates when publishing material changes.
+9. Push the docs repository and verify the public HTTPS URLs.
 
-Same flow as Netlify. Sign up, import the folder, deploy.
+## Writing rules
 
-### Option D — Your own hosting
-
-Upload the files via FTP/SFTP to any web server. Point a subdomain like
-`docs.yourstudio.com` at it.
-
-## Customization
-
-This site intentionally has no branding beyond the word "Revon" so it feels consistent
-with the theme. If you want to match your studio's brand:
-
-- **Colors**: edit the `:root` variables at the top of `styles.css`
-- **Fonts**: change `--font-sans` and `--font-serif`
-- **Logo**: replace the text `Revon` in each file's `.site-header__brand` with an `<img>` tag
-- **Favicon**: add `<link rel="icon" href="favicon.ico">` to each `<head>` and drop a favicon in the folder
-
-Avoid adding heavy CSS frameworks or JavaScript — Rule 21 just needs the site to be
-accessible and functional, not fancy.
-
-## Accessibility & performance
-
-The site is already:
-- Keyboard navigable (skip-to-content link, visible focus rings)
-- WCAG 2.1 AA contrast compliant
-- Mobile responsive (breakpoint at 600px)
-- Zero-JavaScript (loads instantly)
-- Screen-reader friendly (semantic HTML, proper heading hierarchy, labeled form inputs)
-
-Run it through [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) after
-deploy to confirm — you should see 100 / 100 on Performance and Accessibility without any
-tuning.
-
-## License
-
-These docs are part of your Revon theme deliverable. Edit them freely to match your
-studio's voice — they don't need to be literal copies of what's here.
-
-## Checklist before you submit to the Theme Store
-
-- [x] ~~Replaced `YOUR_FORM_ID` in `support.html` with a real Formspree endpoint~~ — done (`xjgljokn`).
-- [ ] Enabled auto-responder in the Formspree dashboard
-- [ ] Enabled file uploads in the Formspree dashboard
-- [ ] Tested the form end-to-end — submitted a test message and received both the notification and the auto-response
-- [x] ~~Deployed to a public URL~~ — live at <https://edvardajaweb.github.io/revon-docs/>
-- [ ] Re-deployed after the latest docs rewrite (presets.html added, customizing/getting-started/faq/changelog rewritten — push `docs/` to its remote)
-- [ ] Tested every page loads over HTTPS
-- [ ] Ran Lighthouse — Performance and Accessibility both ≥ 95
-- [x] ~~Updated `theme_documentation_url` and `theme_support_url` in the theme's `config/settings_schema.json`~~ — done.
-- [ ] Walked through each page as a merchant who's never seen Revon — is anything confusing?
-- [ ] Pasted the docs URL and support URL into the Theme Store submission form
+- Use merchant-facing labels from the Shopify editor.
+- Separate Shopify configuration from Revon configuration.
+- Explain consequences before destructive steps.
+- Never guarantee compatibility with every app.
+- Never publish sample discounts, reviews, results, awards, or delivery claims as facts.
+- State that gift wrapping saves cart attributes and does not add a fee.
+- State that the shipping progress bar does not create a shipping rate.
+- State that theme styles change global settings, not an existing section layout.
+- Keep Pure identified as the default preset.
+- Keep all three presets at the current 1440px default page width.
