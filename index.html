@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revon — Theme documentation</title>
-<meta name="description" content="Documentation, setup guide, FAQs and support for the Revon Shopify theme.">
-<meta property="og:title" content="Revon — Theme documentation">
-<meta property="og:description" content="The complete guide to installing, customizing, and getting the most out of the Revon Shopify theme.">
+<title>Revon &mdash; Editorial Shopify theme for modern brands</title>
+<meta name="description" content="Meet Revon: a clinical, editorial Shopify OS 2.0 theme with three complete presets, 39 sections, and native conversion tools.">
+<meta property="og:title" content="Revon &mdash; One theme. Three distinct worlds.">
+<meta property="og:description" content="A precise, editorial Shopify theme for beauty, fashion, home, and lifestyle brands.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/revon-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +16,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="landing-page">
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -35,15 +36,15 @@
     </button>
     <a href="support.html" class="site-header__cta">Contact support</a>
     <button class="site-header__menu-btn" type="button" data-mobile-open aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
     </button>
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
     </button>
   </div>
   <nav class="mobile-drawer__nav" aria-label="Mobile">
@@ -60,264 +61,158 @@
   </nav>
 </div>
 
-<main id="main">
-
-  <section class="hero">
-    <div class="hero__inner">
-      <p class="eyebrow hero__eyebrow"><span class="hero__eyebrow-dot"></span>Shopify theme · documentation · v1.0</p>
-      <h1 class="display hero__heading">Build a storefront worth <em class="display__accent">remembering.</em></h1>
-      <p class="lead hero__lead">
-        Three editorial presets. Thirty-nine conversion-ready sections. Badges,
-        countdowns, swatches, and upsells built in — no apps required. Revon gives
-        your brand a storefront that sells the way it looks, and this guide gets
-        you from install to live in an afternoon.
-      </p>
-      <ul class="hero__chips" aria-label="Built-in features">
-        <li class="hero__chip">Custom badges</li>
-        <li class="hero__chip">Countdown timers</li>
-        <li class="hero__chip">Variant swatches</li>
-        <li class="hero__chip">Complete-the-look</li>
-        <li class="hero__chip">Gift cards</li>
-        <li class="hero__chip">Instant AJAX cart &amp; filters</li>
-      </ul>
-      <div class="hero__actions">
-        <a href="getting-started.html" class="btn btn--primary btn--arrow">Get started</a>
-        <a href="presets.html" class="btn btn--secondary">See the presets</a>
+<main id="main" class="landing-main">
+  <section class="landing-hero" aria-labelledby="landing-title">
+    <img class="landing-hero__image" src="assets/revon-hero.jpg" alt="Revon Pure preset showing an editorial skincare campaign" width="1440" height="900" fetchpriority="high">
+    <div class="landing-hero__veil" aria-hidden="true"></div>
+    <div class="landing-hero__inner">
+      <p class="landing-kicker">Shopify OS 2.0 &middot; Theme documentation &middot; v1.0</p>
+      <h1 id="landing-title" class="landing-hero__title">One theme.<br><em>Three worlds.</em></h1>
+      <p class="landing-hero__lead">Revon pairs clinical precision with editorial confidence. Launch a complete beauty, fashion, or home storefront without assembling a stack of design apps.</p>
+      <div class="landing-hero__actions">
+        <a href="getting-started.html" class="landing-button landing-button--light">Start building</a>
+        <a href="presets.html" class="landing-button landing-button--ghost">Explore presets</a>
       </div>
-      <div class="hero__meta">
-        <div class="hero__meta-item">
-          <span class="hero__meta-value">3</span>
-          <span class="hero__meta-label">Complete presets</span>
+    </div>
+    <dl class="landing-hero__metrics">
+      <div><dt>Presets</dt><dd>03</dd></div>
+      <div><dt>Sections</dt><dd>39</dd></div>
+      <div><dt>Languages</dt><dd>04</dd></div>
+      <div><dt>Apps to launch</dt><dd>00</dd></div>
+    </dl>
+  </section>
+
+  <section class="landing-signal" aria-label="Revon capabilities">
+    <span>Pure is the default</span>
+    <span>Sections everywhere</span>
+    <span>Native AJAX commerce</span>
+    <span>App-block ready</span>
+    <span>Built for real catalogs</span>
+  </section>
+
+  <section class="landing-section landing-showcase" aria-labelledby="showcase-title">
+    <div class="landing-section__head reveal">
+      <div>
+        <p class="landing-kicker landing-kicker--dark">The storefront, not a wireframe</p>
+        <h2 id="showcase-title" class="landing-heading">Designed to sell before it starts explaining.</h2>
+      </div>
+      <p class="landing-section__intro">Every screen below is the live Pure preset: sharp hierarchy, calm product photography, and commerce controls that stay out of the shopper's way.</p>
+    </div>
+
+    <figure class="storefront-frame storefront-frame--collection reveal">
+      <div class="storefront-frame__bar">
+        <span>Collection / desktop</span>
+        <span>1440 viewport</span>
+      </div>
+      <img src="assets/revon-collection.jpg" alt="Revon collection page with filtering, sorting, product imagery, badges, and prices" width="1440" height="900" loading="lazy">
+      <figcaption>Dense enough to compare. Quiet enough to browse.</figcaption>
+    </figure>
+
+    <div class="landing-showcase__pair">
+      <figure class="storefront-frame storefront-frame--product reveal">
+        <div class="storefront-frame__bar">
+          <span>Product / desktop</span>
+          <span>Conversion detail</span>
         </div>
-        <div class="hero__meta-item">
-          <span class="hero__meta-value">39</span>
-          <span class="hero__meta-label">Addable sections</span>
+        <img src="assets/revon-product.jpg" alt="Revon product page with gallery, product details, benefits, quantity controls, and add to cart" width="1440" height="900" loading="lazy">
+        <figcaption>Product education and purchase controls in one composed view.</figcaption>
+      </figure>
+
+      <div class="landing-mobile-story reveal">
+        <div class="landing-mobile-story__copy">
+          <p class="landing-kicker landing-kicker--dark">Mobile first, not mobile later</p>
+          <h3>Editorial impact in a 390-pixel viewport.</h3>
+          <p>Navigation, typography, imagery, and calls to action recompose deliberately for touch instead of collapsing into a smaller desktop.</p>
         </div>
-        <div class="hero__meta-item">
-          <span class="hero__meta-value">4</span>
-          <span class="hero__meta-label">Languages</span>
-        </div>
-        <div class="hero__meta-item">
-          <span class="hero__meta-value">0</span>
-          <span class="hero__meta-label">Apps required</span>
-        </div>
+        <figure class="storefront-mobile">
+          <img src="assets/revon-mobile.jpg" alt="Revon Pure preset homepage on mobile" width="390" height="844" loading="lazy">
+          <figcaption>Pure preset / mobile</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span class="marquee__part">Three complete presets · Thirty-nine sections · Zero apps required · Four languages · Shopify OS 2.0 · Editorial by design ·&nbsp;</span>
-      <span class="marquee__part">Three complete presets · Thirty-nine sections · Zero apps required · Four languages · Shopify OS 2.0 · Editorial by design ·&nbsp;</span>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="section-head reveal">
-      <div class="section-head__title">
-        <p class="eyebrow">Three voices, one theme</p>
-        <h2 class="h2">Pick a preset, get a finished store.</h2>
+  <section class="landing-section landing-presets" aria-labelledby="presets-title">
+    <div class="landing-section__head reveal">
+      <div>
+        <p class="landing-kicker landing-kicker--dark">Three complete directions</p>
+        <h2 id="presets-title" class="landing-heading">Start with a point of view, not a blank canvas.</h2>
       </div>
-      <a href="presets.html" class="btn btn--secondary">Compare presets</a>
+      <a href="presets.html" class="landing-text-link">Compare every setting</a>
     </div>
 
-    <div class="preset-grid">
-      <a href="presets.html#pure" class="preset-card preset-card--pure reveal">
-        <span class="preset-card__num">Preset 01</span>
-        <span class="preset-card__name">Pure</span>
-        <span class="preset-card__vertical">Beauty · Wellness · Fragrance</span>
-        <div class="preset-card__swatches" aria-hidden="true">
-          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#ffffff"></span>
-          <span class="preset-card__swatch" style="background:#f5f5f4"></span>
-          <span class="preset-card__swatch" style="background:#171818"></span>
-          <span class="preset-card__swatch" style="background:#1c1b18"></span>
-        </div>
-        <p class="preset-card__body">A direct clinical look on pure white. Built for beauty, wellness, personal-care, and supplement brands, with structured product education and evidence-led sections. Pure is the default preset.</p>
-        <span class="preset-card__link">See preset</span>
+    <div class="landing-preset-grid">
+      <a href="presets.html#pure" class="landing-preset landing-preset--pure reveal">
+        <span class="landing-preset__index">01 / Default</span>
+        <strong class="landing-preset__name">Pure</strong>
+        <span class="landing-preset__market">Beauty &middot; Wellness &middot; Personal care</span>
+        <span class="landing-preset__sample">Clinical clarity. Zero noise.</span>
+        <span class="landing-preset__palette" role="img" aria-label="Pure color palette"><i></i><i></i><i></i><i></i></span>
+        <span class="landing-preset__link">Explore Pure</span>
       </a>
-      <a href="presets.html#atelier" class="preset-card preset-card--atelier reveal">
-        <span class="preset-card__num">Preset 02</span>
-        <span class="preset-card__name preset-card__name--atelier">Atelier</span>
-        <span class="preset-card__vertical">Slow fashion · Jewelry · Leather</span>
-        <div class="preset-card__swatches" aria-hidden="true">
-          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#f7f9fb"></span>
-          <span class="preset-card__swatch" style="background:#eceef0"></span>
-          <span class="preset-card__swatch" style="background:#c6c6ce"></span>
-          <span class="preset-card__swatch" style="background:#191c1e"></span>
-        </div>
-        <p class="preset-card__body">An elegant serif look in soft paper grey. Built for slow fashion, jewelry, and leather brands. Includes lookbook grids, magazine-style layouts, and clickable outfit photos.</p>
-        <span class="preset-card__link">See preset</span>
+      <a href="presets.html#atelier" class="landing-preset landing-preset--atelier reveal">
+        <span class="landing-preset__index">02 / Editorial</span>
+        <strong class="landing-preset__name">Atelier</strong>
+        <span class="landing-preset__market">Fashion &middot; Jewelry &middot; Leather</span>
+        <span class="landing-preset__sample">Made slowly.<br>Worn often.</span>
+        <span class="landing-preset__palette" role="img" aria-label="Atelier color palette"><i></i><i></i><i></i><i></i></span>
+        <span class="landing-preset__link">Explore Atelier</span>
       </a>
-      <a href="presets.html#maison" class="preset-card preset-card--maison reveal">
-        <span class="preset-card__num">Preset 03</span>
-        <span class="preset-card__name preset-card__name--maison">Maison</span>
-        <span class="preset-card__vertical">Home · Ceramics · Scent · Interiors</span>
-        <div class="preset-card__swatches" aria-hidden="true">
-          <span class="preset-card__swatch preset-card__swatch--bordered" style="background:#f7f8f4"></span>
-          <span class="preset-card__swatch" style="background:#e8ece8"></span>
-          <span class="preset-card__swatch" style="background:#bfc8c4"></span>
-          <span class="preset-card__swatch" style="background:#0e1011"></span>
-        </div>
-        <p class="preset-card__body">A refined serif look in calm sage. Built for home, ceramics, and lifestyle brands. Includes room plans, mood boards, and long-form storytelling.</p>
-        <span class="preset-card__link">See preset</span>
+      <a href="presets.html#maison" class="landing-preset landing-preset--maison reveal">
+        <span class="landing-preset__index">03 / Refined</span>
+        <strong class="landing-preset__name">Maison</strong>
+        <span class="landing-preset__market">Home &middot; Ceramics &middot; Interiors</span>
+        <span class="landing-preset__sample">Objects for<br>considered living.</span>
+        <span class="landing-preset__palette" role="img" aria-label="Maison color palette"><i></i><i></i><i></i><i></i></span>
+        <span class="landing-preset__link">Explore Maison</span>
       </a>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head reveal">
-      <div class="section-head__title">
-        <p class="eyebrow">Six headliners</p>
-        <h2 class="h2">Sections your customers will remember.</h2>
+  <section class="landing-capabilities" aria-labelledby="capabilities-title">
+    <div class="landing-capabilities__inner">
+      <div class="landing-capabilities__lead reveal">
+        <p class="landing-kicker landing-kicker--light">Native where it matters</p>
+        <h2 id="capabilities-title">More selling power. Less app-shaped clutter.</h2>
+        <p>Revon includes the workflows shoppers expect and the controls merchants need, while preserving a fast, coherent storefront.</p>
+        <a href="customizing.html" class="landing-button landing-button--signal">Explore all 39 sections</a>
       </div>
-      <a href="customizing.html" class="btn btn--secondary">View all 39 sections</a>
-    </div>
-
-    <div class="feature-grid">
-      <a href="customizing.html#storytelling" class="feature-card reveal">
-        <span class="feature-card__num">Hero</span>
-        <h3 class="feature-card__title">Hero</h3>
-        <p class="feature-card__body">One screen, one message, one CTA. A full-bleed opener that sets the tone before a single word is read.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
-      <a href="customizing.html#storytelling" class="feature-card reveal">
-        <span class="feature-card__num">Proof</span>
-        <h3 class="feature-card__title">Clinical results</h3>
-        <p class="feature-card__body">Turn evidence into sales — a stat, a claim, and a source line. Trust your shoppers can verify.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
-      <a href="customizing.html#storytelling" class="feature-card reveal">
-        <span class="feature-card__num">Story</span>
-        <h3 class="feature-card__title">Key ingredients</h3>
-        <p class="feature-card__body">Show what's inside and why it matters — photo, story, and a link straight to the product it's in.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
-      <a href="customizing.html#storytelling" class="feature-card reveal">
-        <span class="feature-card__num">Compare</span>
-        <h3 class="feature-card__title">Before / after</h3>
-        <p class="feature-card__body">A drag slider that lets shoppers see the difference for themselves — the most convincing pixels on your homepage.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
-      <a href="customizing.html#commerce" class="feature-card reveal">
-        <span class="feature-card__num">Shop</span>
-        <h3 class="feature-card__title">Shop the look</h3>
-        <p class="feature-card__body">Tag products right on a photo. Shoppers tap a hotspot, see the product, and add it to cart — without leaving the image.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
-      <a href="customizing.html#storytelling" class="feature-card reveal">
-        <span class="feature-card__num">Editorial</span>
-        <h3 class="feature-card__title">Editorial mosaic</h3>
-        <p class="feature-card__body">Magazine-grade photo grids that make your store read like a publication, not a product list.</p>
-        <span class="feature-card__link">Section reference</span>
-      </a>
+      <ol class="landing-capability-list">
+        <li class="reveal"><span>01</span><div><strong>Find products faster</strong><p>Predictive search, collection filters, sorting, quick view, badges, swatches, and recently viewed products.</p></div></li>
+        <li class="reveal"><span>02</span><div><strong>Build a larger basket</strong><p>Complete-the-look bundles, cart recommendations, sticky purchase controls, and complementary product storytelling.</p></div></li>
+        <li class="reveal"><span>03</span><div><strong>Turn detail into trust</strong><p>Pickup availability, inventory states, unit pricing, selling plans, product media, ingredient stories, and comparison sections.</p></div></li>
+        <li class="reveal"><span>04</span><div><strong>Stay merchant editable</strong><p>Global design controls, flexible section settings, app blocks, app embeds, localization, and no code required for daily merchandising.</p></div></li>
+      </ol>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head reveal">
-      <div class="section-head__title">
-        <p class="eyebrow">The guide</p>
-        <h2 class="h2">Everything you need, nothing you don't.</h2>
-      </div>
+  <section class="landing-section landing-path" aria-labelledby="path-title">
+    <div class="landing-path__intro reveal">
+      <p class="landing-kicker landing-kicker--dark">From install to launch</p>
+      <h2 id="path-title" class="landing-heading">Documentation that respects your time.</h2>
+      <p>Use the full guides when you need context or jump straight to a focused recipe when you already know the outcome you want.</p>
     </div>
-
-    <div class="feature-grid">
-      <a href="getting-started.html" class="feature-card reveal">
-        <span class="feature-card__num">01 · Setup</span>
-        <h3 class="feature-card__title">Getting started</h3>
-        <p class="feature-card__body">Install the right preset, connect real store data, configure templates, test commerce, and publish with confidence.</p>
-        <span class="feature-card__link">Read guide</span>
-      </a>
-      <a href="presets.html" class="feature-card reveal">
-        <span class="feature-card__num">02 · Style</span>
-        <h3 class="feature-card__title">Presets</h3>
-        <p class="feature-card__body">Three ready-made styles — Pure, Atelier, and Maison. Each comes with its own fonts, colors, and homepage.</p>
-        <span class="feature-card__link">Browse presets</span>
-      </a>
-      <a href="customizing.html" class="feature-card reveal">
-        <span class="feature-card__num">03 · Reference</span>
-        <h3 class="feature-card__title">Customizing</h3>
-        <p class="feature-card__body">How to use every section, plus colors, fonts, layout, and theme settings. The full reference.</p>
-        <span class="feature-card__link">Explore options</span>
-      </a>
-      <a href="cheatsheet.html" class="feature-card reveal">
-        <span class="feature-card__num">04 · Quick</span>
-        <h3 class="feature-card__title">Cheat sheet</h3>
-        <p class="feature-card__body">The most common tasks as 2- or 3-step recipes. Change the logo, switch a preset, set up swatches, and more.</p>
-        <span class="feature-card__link">See recipes</span>
-      </a>
-      <a href="apps.html" class="feature-card reveal">
-        <span class="feature-card__num">05 · Apps</span>
-        <h3 class="feature-card__title">App integrations</h3>
-        <p class="feature-card__body">How Revon works with email, subscriptions, reviews, loyalty, wishlists, and chat apps.</p>
-        <span class="feature-card__link">Browse apps</span>
-      </a>
-      <a href="faq.html" class="feature-card reveal">
-        <span class="feature-card__num">06 · Answers</span>
-        <h3 class="feature-card__title">FAQ</h3>
-        <p class="feature-card__body">Common questions answered — installing, presets, premium sections, speed, and apps.</p>
-        <span class="feature-card__link">Browse Q&amp;A</span>
-      </a>
-    </div>
+    <nav class="landing-path__links" aria-label="Documentation guides">
+      <a href="getting-started.html" class="reveal"><span>01</span><strong>Getting started</strong><small>Install, connect, test, publish</small></a>
+      <a href="presets.html" class="reveal"><span>02</span><strong>Preset system</strong><small>Pure, Atelier, Maison</small></a>
+      <a href="customizing.html" class="reveal"><span>03</span><strong>Section reference</strong><small>Every setting, clearly explained</small></a>
+      <a href="badges.html" class="reveal"><span>04</span><strong>Product badges</strong><small>Create and manage custom labels</small></a>
+      <a href="cheatsheet.html" class="reveal"><span>05</span><strong>Cheat sheet</strong><small>Common tasks in a few steps</small></a>
+      <a href="apps.html" class="reveal"><span>06</span><strong>App integrations</strong><small>Reviews, loyalty, subscriptions, chat</small></a>
+    </nav>
   </section>
 
-  <section class="section">
-    <div class="container-narrow reveal">
-      <p class="eyebrow">Built in</p>
-      <h2 class="h2" style="margin-top:var(--space-md)">Features other themes sell as apps.</h2>
-      <p class="lead" style="margin-top:var(--space-md)">Custom badges, countdown timers, variant swatches, complete-the-look upsells, gift cards with personal messages — all native, all free, all working the moment you install. And when you do want apps, Revon supports app blocks, app embeds, and Shopify selling plans out of the box.</p>
-
-      <div class="stat-strip">
-        <div class="stat-strip__item">
-          <div class="stat-strip__value">OS 2.0</div>
-          <div class="stat-strip__label">Section everywhere</div>
-        </div>
-        <div class="stat-strip__item">
-          <div class="stat-strip__value">3D</div>
-          <div class="stat-strip__label">Product media</div>
-        </div>
-        <div class="stat-strip__item">
-          <div class="stat-strip__value">A11Y</div>
-          <div class="stat-strip__label">Access foundations</div>
-        </div>
-        <div class="stat-strip__item">
-          <div class="stat-strip__value">SEO</div>
-          <div class="stat-strip__label">Rich Google snippets</div>
-        </div>
-      </div>
-
-      <ul class="prose" style="max-width:none; display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; padding-top:var(--space-md)">
-        <li>Three ready-made styles (Pure, Atelier, Maison)</li>
-        <li>39 addable section types for commerce, storytelling, trust, and utility</li>
-        <li>Color and image swatches for product variants</li>
-        <li><a href="badges.html">Per-product custom card badges — tag a product <code>badge:Top Seller</code> and it shows on the card</a></li>
-        <li>Countdown timer for launches and sales — homepage section and a "sale ends in" bar on the product page</li>
-        <li>Color swatches on product cards, previewing each variant's image on hover</li>
-        <li>Complete-the-look: hand-picked companions with a one-tap "add selected to cart"</li>
-        <li>Dedicated gift card page with selectable amounts and the buyer's personal message</li>
-        <li>3D models and videos in the product gallery</li>
-        <li>Subscriptions through Shopify selling plans</li>
-        <li>Sell in multiple currencies and 4 built-in languages (EN, DE, ES, FR)</li>
-        <li>Accelerated checkout and Shopify payment terms when eligible</li>
-        <li>Discounts shown on each item and at the cart total</li>
-        <li>Unit pricing (€/100g) for regions that require it</li>
-        <li>Smart image cropping — you pick the focal point, Revon respects it</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section section--cta">
-    <div class="cta-block reveal">
-      <p class="eyebrow">Ready to launch</p>
-      <h2 class="h2 cta-block__heading">Your store could look like this by <em class="display__accent">tonight.</em></h2>
-      <p class="lead">Pick a preset, connect your catalog, and publish. The setup guide takes you from install to live in one sitting — every step in plain language.</p>
-      <div class="cta-block__actions">
-        <a href="getting-started.html" class="btn btn--primary btn--arrow">Start the setup guide</a>
-        <a href="presets.html" class="btn btn--secondary">Compare presets</a>
+  <section class="landing-final" aria-labelledby="final-title">
+    <div class="landing-final__inner reveal">
+      <p class="landing-kicker landing-kicker--light">Your next storefront starts here</p>
+      <h2 id="final-title">Launch the brand people came to remember.</h2>
+      <p>Choose a finished preset, connect your catalog, and make it unmistakably yours.</p>
+      <div class="landing-final__actions">
+        <a href="getting-started.html" class="landing-button landing-button--light">Open the setup guide</a>
+        <a href="support.html" class="landing-button landing-button--ghost">Talk to support</a>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
@@ -349,7 +244,7 @@
     </div>
   </div>
   <div class="site-footer__bottom">
-    <span>© 2026 Edvardaja Studio</span>
+    <span>&copy; 2026 Edvardaja Studio</span>
     <span>Revon v1.0.0</span>
   </div>
 </footer>
