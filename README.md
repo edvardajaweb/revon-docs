@@ -8,6 +8,7 @@ Static merchant documentation and public support pages for Revon v1.0.0.
 - `getting-started.html`: complete setup and launch sequence
 - `presets.html`: Pure, Atelier, and Maison install-state reference
 - `customizing.html`: global settings, 39 addable sections, and product blocks
+- `badges.html`: custom, automatic, image, and trust badge setup and troubleshooting
 - `cheatsheet.html`: short recipes for common tasks
 - `apps.html`: app blocks, embeds, selling plans, and compatibility testing
 - `faq.html`: merchant questions based on the current theme implementation
