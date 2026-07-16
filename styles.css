@@ -2000,3 +2000,106 @@ main { flex: 1; }
 @media (max-width: 600px) {
   .back-to-top { right: 16px; bottom: 16px; width: 44px; height: 44px; }
 }
+
+/* ── Landing-page wow layer ─────────────────────────────────────── */
+
+/* Italic serif accent inside display headings — Revon's signature move */
+.display__accent {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.015em;
+}
+
+/* Giant outlined wordmark behind the hero */
+.hero::after {
+  content: 'REVON';
+  position: absolute;
+  right: -0.06em;
+  bottom: -0.18em;
+  z-index: 0;
+  font-size: clamp(140px, 24vw, 340px);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(23, 24, 24, 0.08);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__inner { z-index: 1; }
+
+.hero__meta-value {
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1;
+}
+
+/* Editorial marquee divider */
+.marquee {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee__part {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding-right: 12px;
+}
+
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+/* Preset cards — palette tints + lift */
+.preset-card {
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out),
+              background var(--duration-normal) var(--ease-out);
+}
+
+.preset-card--pure { background: #ffffff; }
+.preset-card--atelier { background: #f2f4f7; }
+.preset-card--maison { background: #eef1ea; }
+
+.preset-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -24px rgba(23, 24, 24, 0.28);
+}
+
+.preset-card--pure:hover { background: #ffffff; }
+.preset-card--atelier:hover { background: #f2f4f7; }
+.preset-card--maison:hover { background: #eef1ea; }
+
+/* CTA — display-scale closing line */
+.cta-block__heading {
+  font-size: clamp(38px, 5.6vw, 76px);
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-block__heading .display__accent {
+  color: rgba(255, 255, 255, 0.92);
+}
