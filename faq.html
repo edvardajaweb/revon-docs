@@ -200,8 +200,28 @@
 
       <details class="faq-item">
         <summary>Where do I configure product badges?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-        <div class="faq-item__body"><p>Create a Products metafield with namespace and key <code>custom.badge</code> and type <strong>Single line text</strong>. Revon supports one value or a list and displays up to two custom labels per product. For a quick fallback, add product tags such as <code>badge:Vegan</code>. Metafield values take priority over badge tags. Visibility and custom badge colors are under <strong>Theme settings &gt; Product cards &gt; Badges</strong>. The same panel controls automatic Sale and New badges, while Sold out follows product availability. For the product page, use <strong>Product information &gt; Image badge text</strong> or the <strong>Trust badges</strong> block. See the <a href="badges.html">complete Product badges guide</a>.</p></div>
+        <div class="faq-item__body"><p>Add a product tag that starts with <code>badge:</code> — for example <code>badge:Top Seller</code> or <code>badge:Vegan</code> — and the label appears as a badge on that product's card everywhere it's shown. A product can carry several badges; they stack neatly. Badge colors, the tag prefix, and the automatic Sale and New badges are all under <strong>Theme settings &gt; Product cards</strong>, while Sold out follows product availability. For the product page, use the <strong>Trust badges</strong> block. See the <a href="badges.html">complete Product badges guide</a>.</p></div>
       </details>
+        <details class="faq-item">
+          <summary>How do I sell gift cards in several amounts?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__body"><p>On your gift card product, create one option named <code>Amount</code> with a variant per denomination (for example 10, 50, 100, 200), each priced to match. Also set the product's <strong>Theme template</strong> to <code>gift-card</code> so it uses Revon's dedicated gift layout with a "How it works" explainer and a bestsellers row.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does the countdown timer work, and what happens when it ends?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__body"><p>Add the <strong>Countdown timer</strong> section (or the countdown block on the product page) and enter the end date and time as <code>YYYY-MM-DDTHH:MM</code> — for example <code>2026-12-31T23:59</code>. It counts down in the visitor's local time zone. When it ends, the section either hides itself or shows a message you choose; the product-page block always hides itself.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why don't the color swatches on product cards change the image when I hover?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__body"><p>The hover preview shows the <em>variant's own image</em>, so each color variant needs an image assigned to it (edit the variant in Shopify admin and pick its image). Products whose variants share one image show swatches without the preview. Toggle card swatches under <strong>Theme settings &gt; Product cards &gt; Show color swatches</strong>.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I rename the blog (for example to "Journal")?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__body"><p>Revon's blog sections use Shopify's default <code>news</code> blog. Go to <strong>Content &gt; Blog posts &gt; Manage blogs</strong>, open it, and change its <em>title</em> to anything you like. The internal handle stays <code>news</code>, so nothing breaks.</p></div>
+        </details>
+
 
       <details class="faq-item">
         <summary>Does the gift-wrapping setting charge a fee?<span class="faq-item__icon" aria-hidden="true"></span></summary>

@@ -71,6 +71,8 @@
         <a href="#product-blocks">Product blocks</a>
         <a href="#badges">Product badges</a>
         <a href="#swatches">Variant swatches</a>
+        <a href="#gift-card">Gift card page</a>
+        <a href="#blog-features">Blog &amp; articles</a>
         <a href="#apps">App blocks</a>
         <a href="#advanced">Advanced changes</a>
       </nav>
@@ -113,6 +115,7 @@
 
       <h3 class="h3">Colors</h3>
       <p>Each preset includes a light and a dark color scheme. A scheme contains background, surface, primary text, secondary text, border, button background, and button text colors. Select a scheme inside a section instead of entering the same colors repeatedly.</p>
+      <p>At the top of the Colors settings sits the <strong>Brand palette</strong> — three colors (primary, secondary, accent) that capture your brand at a glance. Each preset ships its own palette; adjust it any time.</p>
       <p>Utility colors control sale, success, warning, error, and fallback swatch states. After changing a scheme, check body text, links, buttons, disabled controls, and form errors for readable contrast.</p>
 
       <h3 class="h3">Typography</h3>
@@ -143,6 +146,8 @@
         <li><strong>Zoom image:</strong> enlarges the featured image inside its frame.</li>
         <li><strong>Lift card:</strong> moves the complete card upward by 4px without adding a rounded surface or shadow.</li>
         <li><strong>None:</strong> keeps product-card media static.</li>
+        <li><strong>Show color swatches:</strong> shows up to four color options on each card; hovering (or focusing) a swatch previews that variant's image. Needs each color variant to have its own image for the preview.</li>
+        <li><strong>Badges:</strong> toggles for the automatic sale and New badges, plus the custom badge tag prefix and badge colors — see <a href="badges.html">Product badges</a>.</li>
         <li>Show or hide vendor and product type.</li>
         <li>Enable the quick-view button, which appears on hover or keyboard focus.</li>
         <li>Show or hide custom badges and choose their background and text colors.</li>
@@ -193,6 +198,7 @@
         <li><strong>Lookbook grid:</strong> editorial product or collection browsing in an asymmetric or regular layout.</li>
         <li><strong>Shop the look:</strong> one room or outfit image with product hotspots positioned using X and Y controls.</li>
         <li><strong>Routine:</strong> ordered product or content steps for a regimen, process, or set.</li>
+        <li><strong>Countdown timer:</strong> a live countdown to a sale or launch date. Enter the end date as <code>YYYY-MM-DDTHH:MM</code>; when it ends the section hides itself or shows your message. Also available as a compact block on the product page.</li>
       </ul>
 
       <h2 class="h2" id="storytelling">Hero, media, and storytelling</h2>
@@ -218,7 +224,7 @@
       <ul>
         <li><strong>Testimonials:</strong> customer or editorial quotes. Publish only authentic, authorized content.</li>
         <li><strong>Brand logos:</strong> authorized brand, stockist, certification, or press logos.</li>
-        <li><strong>FAQ:</strong> expandable question blocks with optional CTA.</li>
+        <li><strong>FAQ:</strong> expandable question blocks with optional CTA. Choose <strong>Centered</strong> (default) or <strong>Left</strong> — a two-column editorial layout with a sticky heading — in the section's Layout setting.</li>
         <li><strong>Blog carousel:</strong> selected blog posts with image and metadata controls.</li>
         <li><strong>Newsletter:</strong> Shopify customer signup form with configurable copy.</li>
         <li><strong>Social feed:</strong> manually managed social-style image posts; this is not a live social-network API feed.</li>
@@ -247,62 +253,32 @@
         <li>Information row, trust badges, delivery estimate, and pickup availability.</li>
         <li>Size guide, share buttons, popup, tabs, and separator.</li>
         <li>Custom text, Custom Liquid, and app blocks.</li>
+        <li><strong>Complete the look:</strong> hand-pick up to three companion products; shoppers tick what they want and add everything to the cart in one tap, with a live total.</li>
+        <li><strong>Countdown timer:</strong> a compact "Sale ends in" bar that hides itself when the timer runs out.</li>
       </ul>
       <p>The product form supports native selling plans, quantity rules, volume pricing, unit pricing, accelerated checkout, local pickup, product video, external video, and 3D product models when the store data provides them.</p>
 
       <h2 class="h2" id="badges">Product badges</h2>
-      <p>Revon supports merchant-created product-card badges, automatic status badges, a product-gallery image badge, and product-page trust badges. Each system has a different source and scope.</p>
+      <p>Revon supports your own custom card badges (via product tags), automatic status badges (sold out, sale percentage, new), and product-page trust badges.</p>
+
       <div class="callout">
         <span class="callout__label">Full walkthrough</span>
-        <p>Open the dedicated <a href="badges.html">Product badges guide</a> for one-value and list metafield setup, tag fallback, bulk editing, display priority, examples, troubleshooting, and a complete testing checklist.</p>
+        <p>Open the dedicated <a href="badges.html">Product badges guide</a> for setup, styling, stacking rules, bulk editing, examples, troubleshooting, and a testing checklist.</p>
       </div>
 
       <h3 class="h3">Custom product-card badges</h3>
-      <p>The recommended setup uses Shopify product metafields, which keep each badge attached to its product and make bulk editing easier.</p>
       <ol>
-        <li>In Shopify admin, open <strong>Settings &gt; Metafields and metaobjects &gt; Products</strong>.</li>
-        <li>Select <strong>Add definition</strong> and name it <strong>Custom badge</strong>.</li>
-        <li>Set the namespace and key to <code>custom.badge</code>.</li>
-        <li>Select <strong>Single line text</strong>. Use one value for one badge, or enable <strong>List of values</strong> when products can have two badges.</li>
-        <li>Set a recommended maximum-length validation of 32 characters, enable Storefronts access when that option is shown, pin the definition, and save.</li>
-        <li>Open a product, find <strong>Custom badge</strong> in its Metafields area, enter wording such as “Vegan,” “Limited edition,” or “Made to order,” and save.</li>
+        <li>Open a product in Shopify admin.</li>
+        <li>Add a tag that starts with <code>badge:</code> followed by your label — for example <code>badge:Top Seller</code>.</li>
+        <li>Save. The badge appears on that product's card everywhere it's shown.</li>
       </ol>
-      <p>Revon displays the first two non-empty metafield values. Text is escaped and limited to 32 displayed characters so a label cannot break the card layout. See Shopify's guide to <a href="https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions">creating custom metafield definitions</a> when the admin labels differ from the steps above.</p>
+      <p>A product can carry several badges; they stack down the card's corner. The prefix and the badge colors are under <strong>Theme settings &rarr; Product cards</strong> (leave the prefix blank to turn custom badges off).</p>
 
-      <h3 class="h3">Quick product-tag fallback</h3>
-      <p>For a quick setup without a metafield definition, add a product tag in the format <code>badge:Limited edition</code>. Revon reads up to two <code>badge:</code> tags. If the product has a non-empty <code>custom.badge</code> metafield, metafield values take priority and badge tags are ignored.</p>
-      <p>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong> to enable or disable custom badges and choose their shared background and text colors. Custom badges appear on collection, search, featured-product, recommendation, and other cards that use Revon's shared product-card component.</p>
-
-      <h3 class="h3">Automatic product-card badges</h3>
-      <p>Product cards can show custom labels plus one automatic status badge. The automatic status uses this priority:</p>
-      <ol>
-        <li><strong>Sold out:</strong> shown whenever the product is unavailable. This state takes priority and cannot be hidden by the Sale or New controls.</li>
-        <li><strong>Sale:</strong> shown as a calculated percentage when a valid compare-at price is higher than the selling price and <strong>Show sale badge</strong> is enabled.</li>
-        <li><strong>New:</strong> shown when <strong>Show new badge</strong> is enabled and the product has the exact tag <code>new</code> or <code>New</code>.</li>
-      </ol>
-      <p>Sale wording and percentages come from real product pricing. Do not add a compare-at price only to create a visual badge.</p>
-
-      <h3 class="h3">Product gallery image badge</h3>
-      <ol>
-        <li>Open the required product template in the theme editor.</li>
-        <li>Select <strong>Product information</strong>.</li>
-        <li>Enter text in <strong>Image badge text</strong>. The label appears on the corner of the main gallery image; leave it blank to hide it.</li>
-      </ol>
-      <p>This is a template setting. Every product assigned to that product template receives the same image badge. Use an alternate product template when only a group of products should share wording such as “Limited edition” or “Made to order.”</p>
+      <h3 class="h3">Automatic badges</h3>
+      <p><em>Sold out</em> follows product availability and overrides all other badges. The <em>sale badge</em> shows the discount percentage whenever a compare-at price is set. The <em>New</em> badge appears on products tagged <code>new</code>. The sale and New badges each have a toggle in <strong>Theme settings &rarr; Product cards</strong>.</p>
 
       <h3 class="h3">Trust badges</h3>
-      <ol>
-        <li>Open the product template and select <strong>Product information</strong>.</li>
-        <li>Add or select the <strong>Trust badges</strong> block.</li>
-        <li>Edit up to three text labels and choose an icon for each: lock, shield, truck, refresh, heart, star, check, or leaf.</li>
-        <li>Clear a badge's text to hide that item, then drag the block to the required position.</li>
-      </ol>
-      <p>Trust badges are also template-level content. Keep each statement short, accurate, and consistent with the store's shipping, returns, security, sustainability, and product policies.</p>
-
-      <div class="callout">
-        <span class="callout__label">Keep badges useful</span>
-        <p>Use short factual labels and avoid creating urgency, certification, sustainability, discount, or availability claims that the product data cannot support.</p>
-      </div>
+      <p>Three icon-and-text reassurance chips in the product info column — edit the <strong>Trust badges</strong> block on the product template to set each icon and label. Defaults: <em>Secure checkout</em>, <em>Easy 30-day returns</em>, <em>Fast, tracked shipping</em>.</p>
 
       <h2 class="h2" id="swatches">Variant swatches</h2>
       <ol>
@@ -312,11 +288,24 @@
         <li>Preview available, unavailable, and sold-out combinations on desktop and mobile.</li>
       </ol>
       <p>Revon reads Shopify's native swatch object first. If no native swatch exists, common color names use a built-in fallback; unknown names use the global fallback swatch color.</p>
+      <p>On product cards, up to four color swatches appear under the price when a product has a color option — hovering or focusing a swatch previews that variant's image. Toggle under <strong>Theme settings &rarr; Product cards &rarr; Show color swatches</strong>.</p>
 
       <h2 class="h2" id="apps">App blocks and embeds</h2>
       <p>Revon accepts app blocks in the dedicated <strong>Apps</strong> section, the main product section, Featured product, Featured products, Clinical results, and Key ingredients. App embeds are enabled from <strong>Theme settings &gt; App embeds</strong> in Shopify's editor.</p>
       <p>An app is not guaranteed compatible simply because it is listed in the Shopify App Store. Prefer apps that provide theme app extensions, app blocks, or app embeds, and test their storefront and editor behavior before publishing.</p>
       <p>See <a href="apps.html">App integrations</a> for a safe installation checklist.</p>
+
+      <h2 class="h2" id="gift-card">Gift card page</h2>
+      <p>Revon ships a dedicated template for your gift card product with gift-appropriate content: "delivered instantly by email", "never expires", a <strong>How it works</strong> explainer, and a bestsellers row.</p>
+      <ol>
+        <li>In <strong>Shopify admin &rarr; Products</strong>, open your gift card product.</li>
+        <li>In the sidebar, set <strong>Theme template</strong> to <code>gift-card</code>.</li>
+        <li>To sell multiple amounts, add one option named <code>Amount</code> with a variant per denomination (10 / 50 / 100 / 200), each priced to match.</li>
+      </ol>
+      <p>When a buyer sends the card as a gift, the recipient's name and personal message appear on the gift card page they receive.</p>
+
+      <h2 class="h2" id="blog-features">Blog &amp; articles</h2>
+      <p>Article pages include a <strong>comment form</strong> (with moderation notices when you approve comments first), <strong>comment pagination</strong>, clickable <strong>tags</strong>, and <strong>share buttons</strong>. Blog sections use Shopify's default <code>news</code> blog — to brand it, rename that blog's <em>title</em> (for example to "Journal") under <strong>Content &rarr; Blog posts &rarr; Manage blogs</strong>; the handle stays <code>news</code> and everything keeps working.</p>
 
       <h2 class="h2" id="advanced">Advanced changes</h2>
       <div class="callout callout--warn">

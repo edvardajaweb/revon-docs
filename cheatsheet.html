@@ -156,7 +156,7 @@
 
       <h3 class="h3">Create custom product-card badges</h3>
       <ol>
-        <li>Create a Products metafield named <strong>Custom badge</strong> with namespace and key <code>custom.badge</code> and type <strong>Single line text</strong>. A list is supported when you need two labels.</li>
+        <li>Add a product tag that starts with <code>badge:</code> — for example <code>badge:Top Seller</code>. The text after the prefix becomes the badge.</li>
         <li>Enter a value on each product. For a quick fallback, use a product tag such as <code>badge:Limited edition</code>.</li>
         <li>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong> to enable custom badges and choose their background and text colors.</li>
         <li>Preview collection, search, recommendation, and featured-product cards on desktop and mobile.</li>
@@ -172,10 +172,10 @@
       <h3 class="h3">Add a product-page image or trust badge</h3>
       <ol>
         <li>Open the product template and select <strong>Product information</strong>.</li>
-        <li>Use <strong>Image badge text</strong> for a label on the main gallery image, or add the <strong>Trust badges</strong> block for up to three icon-and-text statements.</li>
+        <li>Add the <strong>Trust badges</strong> block on the product template for up to three icon-and-text reassurance chips.</li>
         <li>Save and check every product assigned to that template because these badge settings are shared by the template.</li>
       </ol>
-      <p>See the dedicated <a href="badges.html">Product badges guide</a> for complete metafield setup, tag fallback, styling, priority, bulk editing, and troubleshooting.</p>
+      <p>See the dedicated <a href="badges.html">Product badges guide</a> for setup, styling, stacking rules, bulk editing, and troubleshooting.</p>
 
       <h3 class="h3">Set the focal point on a product image</h3>
       <ol>
@@ -189,6 +189,25 @@
         <li>Open the product in Shopify admin.</li>
         <li>Click <strong>Add media</strong> and upload a <code>.glb</code> file (3D model), a <code>.mp4</code> video, or paste a YouTube/Vimeo URL.</li>
         <li>Save. Revon shows it in the product gallery alongside images.</li>
+      </ol>
+
+      <h3 class="h3">Add a countdown to a sale</h3>
+      <ol>
+        <li>In the theme editor, <strong>Add section &rarr; Countdown timer</strong> (or on a product template, <strong>Add block &rarr; Countdown timer</strong>).</li>
+        <li>Enter the end date and time as <code>YYYY-MM-DDTHH:MM</code>, e.g. <code>2026-12-31T23:59</code>.</li>
+        <li>Choose what happens when it ends — hide, or show your message.</li>
+      </ol>
+
+      <h3 class="h3">Set up the gift card page</h3>
+      <ol>
+        <li>Open your gift card product and set its <strong>Theme template</strong> to <code>gift-card</code>.</li>
+        <li>Add an option named <code>Amount</code> with a variant per denomination (10 / 50 / 100 / 200), priced to match.</li>
+      </ol>
+
+      <h3 class="h3">Hand-pick "Complete the look" products</h3>
+      <ol>
+        <li>Open a product in the theme editor and <strong>Add block &rarr; Complete the look</strong>.</li>
+        <li>Pick up to three companion products. Shoppers tick the ones they want and add them all in one tap.</li>
       </ol>
 
       <h2 class="h2" id="cart">Cart &amp; checkout</h2>

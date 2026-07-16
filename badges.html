@@ -65,12 +65,10 @@
       <span class="doc-sidebar__label">On this page</span>
       <nav class="doc-sidebar__list">
         <a href="#overview">Badge types</a>
-        <a href="#quick">Quick tag method</a>
-        <a href="#metafield">Metafield setup</a>
-        <a href="#values">Add badge values</a>
-        <a href="#bulk">Bulk editing</a>
+        <a href="#custom">Custom badges with tags</a>
+        <a href="#styling">Styling and settings</a>
         <a href="#appearance">Appearance and rules</a>
-        <a href="#other-badges">Image and trust badges</a>
+        <a href="#trust">Trust badges</a>
         <a href="#troubleshooting">Troubleshooting</a>
         <a href="#qa">Testing checklist</a>
       </nav>
@@ -85,177 +83,86 @@
 
       <p class="eyebrow">Merchandising guide</p>
       <h1 class="h1" style="margin-top:var(--space-md)">Product badges</h1>
-      <p class="lead">Create product-specific labels, control automatic status badges, and keep product-page trust messaging accurate. This guide explains every badge source in Revon and the exact scope of each setting.</p>
+      <p class="lead">Highlight bestsellers, new arrivals, limited editions — any label you like — right on your product cards. Badges in Revon are controlled with product tags and a few theme settings, so there's nothing to install and no code to touch.</p>
 
       <div class="callout">
-        <span class="callout__label">Recommended method</span>
-        <p>Use the <code>custom.badge</code> product metafield for permanent merchant-managed labels. Use <code>badge:</code> product tags only as a quick fallback. Metafields provide a clearer admin field and are easier for a team to manage consistently.</p>
+        <span class="callout__label">The short version</span>
+        <p>Add a product tag that starts with <code>badge:</code> — for example <code>badge:Top Seller</code> — and a "Top Seller" badge appears on that product's card everywhere it's shown. That's the whole system.</p>
       </div>
 
-      <h2 class="h2" id="overview">Understand the four badge types</h2>
-      <div class="table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr><th>Badge type</th><th>Source</th><th>Where it appears</th><th>Limit</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Custom card badge</td><td><code>custom.badge</code> metafield or <code>badge:</code> tag</td><td>Shared product cards</td><td>Two per product</td></tr>
-            <tr><td>Automatic status</td><td>Availability, compare-at price, or <code>new</code> tag</td><td>Shared product cards</td><td>One per product</td></tr>
-            <tr><td>Image badge</td><td>Product template setting</td><td>Main product gallery image</td><td>One per template</td></tr>
-            <tr><td>Trust badges</td><td>Product template block</td><td>Product information area</td><td>Three per template</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Custom card badges are product data, so different products can show different labels while using the same template. Image and trust badges are template content, so every product assigned to that product template receives the same wording.</p>
+      <h2 class="h2" id="overview">Badge types</h2>
+      <p>Revon shows three kinds of badges on product cards, plus trust badges on the product page:</p>
+      <ul>
+        <li><strong>Automatic status badges</strong> — <em>Sold out</em> appears whenever a product has no available variants; the <em>sale badge</em> shows the exact discount (for example <code>-20%</code>) whenever a compare-at price is higher than the price.</li>
+        <li><strong>Custom badges</strong> — your own labels, added per product with a tag. Unlimited label wording, consistent brand styling.</li>
+        <li><strong>"New" badge</strong> — a convenience badge that appears on any product tagged <code>new</code>.</li>
+        <li><strong>Trust badges</strong> — three reassurance chips (checkout, returns, shipping) in the product page's info column. These are a product-page block, not a card badge — see <a href="#trust">Trust badges</a>.</li>
+      </ul>
 
-      <h2 class="h2" id="quick">Quick setup with product tags</h2>
-      <p>Use this method when you need a badge immediately and do not yet want to create a metafield definition.</p>
+      <h2 class="h2" id="custom">Custom badges with tags</h2>
       <ol>
-        <li>From Shopify admin, open <strong>Products</strong> and select a product.</li>
-        <li>Find the product's <strong>Tags</strong> field.</li>
-        <li>Add a tag using <code>badge:</code> followed by the exact customer-facing label. Example: <code>badge:Limited edition</code>.</li>
-        <li>Optional: add a second tag such as <code>badge:Vegan</code>.</li>
-        <li>Save the product and preview a collection or search-results page.</li>
+        <li>In Shopify admin, open <strong>Products</strong> and select a product.</li>
+        <li>In the <strong>Tags</strong> field, add a tag that starts with the badge prefix (default <code>badge:</code>) followed by your label:
+          <ul>
+            <li><code>badge:Top Seller</code> &rarr; shows <strong>Top Seller</strong></li>
+            <li><code>badge:Limited</code> &rarr; shows <strong>Limited</strong></li>
+            <li><code>badge:Award Winner</code> &rarr; shows <strong>Award Winner</strong></li>
+          </ul>
+        </li>
+        <li>Save. The badge appears on that product's card storewide — collections, search results, featured rows, recommendations, and recently viewed.</li>
       </ol>
-      <p>The <code>badge:</code> prefix is not displayed. Revon reads up to two matching tags and displays only the text after the colon. Prefix matching is case-insensitive, but using lowercase <code>badge:</code> keeps product data consistent.</p>
-      <div class="callout callout--warn">
-        <span class="callout__label">Tag fallback rule</span>
-        <p>When a product has a non-empty <code>custom.badge</code> metafield, metafield values take priority and all <code>badge:</code> tags are ignored for that product.</p>
-      </div>
-
-      <h2 class="h2" id="metafield">Recommended metafield setup</h2>
-      <p>Create one definition for the store. Afterward, every product receives a clearly named Custom badge field in Shopify admin.</p>
-
-      <h3 class="h3">Option A: one custom badge per product</h3>
-      <ol>
-        <li>From Shopify admin, open <strong>Settings &gt; Metafields and metaobjects</strong>.</li>
-        <li>In Metafield definitions, select <strong>Products</strong>.</li>
-        <li>Select <strong>Add definition</strong>.</li>
-        <li>Enter <strong>Custom badge</strong> for the name.</li>
-        <li>Open <strong>Namespace and key</strong> and enter exactly <code>custom.badge</code>.</li>
-        <li>For the type, select <strong>Single line text</strong> and keep it as one value.</li>
-        <li>Add a maximum-length validation of 32 characters.</li>
-        <li>Enable <strong>Storefronts</strong> access when the Access option is shown.</li>
-        <li>Pin the definition so it appears directly on product pages, then save.</li>
-      </ol>
-
-      <h3 class="h3">Option B: up to two custom badges per product</h3>
-      <p>Follow the same steps, but enable <strong>List of values</strong> for the Single line text type. Revon reads the list in its saved order and displays the first two non-empty values. Choose the one-value or list structure before a team starts entering data so every product follows the same workflow.</p>
-
-      <p>Shopify documents the current admin process in <a href="https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions">Creating custom metafield definitions</a> and explains list fields in <a href="https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/metafield-lists">Metafield lists</a>.</p>
-
-      <h2 class="h2" id="values">Add or remove badge values</h2>
-      <ol>
-        <li>From Shopify admin, open <strong>Products</strong> and select the product.</li>
-        <li>Scroll to the product's Metafields area. Select <strong>View all</strong> when the pinned field is not visible.</li>
-        <li>Open <strong>Custom badge</strong>.</li>
-        <li>Enter one short label, or add and order up to two list values.</li>
-        <li>Save the product.</li>
-        <li>Preview a storefront location that uses product cards.</li>
-      </ol>
-      <p>Leave the metafield empty and remove any <code>badge:</code> tags when a product should have no custom badge. Badge text is escaped before output and limited to 32 displayed characters. Revon does not render empty values.</p>
+      <p>Everything after the prefix becomes the label, in exactly the capitalization you typed. A product can carry <strong>several badges at once</strong> — they stack neatly down the top-left corner of the card. To remove a badge, just delete the tag.</p>
 
       <h3 class="h3">Good label examples</h3>
       <ul>
-        <li><strong>Pure:</strong> Vegan, Fragrance-free, Refillable.</li>
-        <li><strong>Atelier:</strong> Limited run, Made to order, Exclusive color.</li>
-        <li><strong>Maison:</strong> Solid oak, Hand finished, Made to order.</li>
+        <li>Merchandising: <code>badge:Top Seller</code>, <code>badge:Back in Stock</code>, <code>badge:Last Chance</code></li>
+        <li>Product facts: <code>badge:Vegan</code>, <code>badge:Fragrance-Free</code>, <code>badge:Handmade</code></li>
+        <li>Editions: <code>badge:Limited</code>, <code>badge:Exclusive</code>, <code>badge:New Formula</code></li>
       </ul>
-      <p>Use only wording that is accurate for that product. Keep evidence for certification, sustainability, material, clinical, discount, availability, and production claims.</p>
+      <p>Keep labels short — two or three words read best on narrow mobile cards.</p>
 
-      <h2 class="h2" id="bulk">Bulk edit badges</h2>
-      <p>After the metafield definition exists, Shopify's bulk editor can update many products without opening each product page.</p>
-      <ol>
-        <li>From Shopify admin, open <strong>Products</strong>.</li>
-        <li>Select the products you want to update.</li>
-        <li>Select <strong>Bulk edit</strong>.</li>
-        <li>Open <strong>Columns</strong>, find Metafields, and enable <strong>Custom badge</strong>.</li>
-        <li>Enter or remove values in the Custom badge column.</li>
-        <li>Save, correct any validation errors, and preview representative products.</li>
-      </ol>
-      <p>See Shopify's <a href="https://help.shopify.com/en/manual/custom-data/metafields/bulk-edit-metafields">bulk metafield editing guide</a> for the latest bulk-editor controls.</p>
+      <h3 class="h3">Bulk editing</h3>
+      <p>Because badges are tags, everything Shopify offers for tags works for badges: select several products in the Products list and use <strong>More actions &rarr; Add tags</strong>, or edit tags in the bulk editor. You can also build an automated collection from a badge tag — for example, a "Bestsellers" collection whose condition is <em>tag equals</em> <code>badge:Top Seller</code> — so your badge and your collection always agree.</p>
 
-      <h2 class="h2" id="appearance">Appearance and display rules</h2>
-      <ol>
-        <li>Open <strong>Online Store &gt; Themes</strong> and select <strong>Customize</strong> on a draft copy of Revon.</li>
-        <li>Open <strong>Theme settings &gt; Product cards &gt; Badges</strong>.</li>
-        <li>Use <strong>Show custom badges</strong> to enable or disable all metafield and tag badges.</li>
-        <li>Choose <strong>Custom badge background</strong> and <strong>Custom badge text</strong> colors.</li>
-        <li>Save and check contrast in every preset and color scheme used by the store.</li>
-      </ol>
-      <p>Custom badge colors are global. Individual products control wording, not color. All labels remain sharp-cornered and use the compact product-card typography.</p>
-
-      <h3 class="h3">Where custom badges appear</h3>
+      <h2 class="h2" id="styling">Styling and settings</h2>
+      <p>Open <strong>Theme settings &rarr; Product cards</strong>:</p>
       <ul>
-        <li>Collection product grids.</li>
-        <li>Search results.</li>
-        <li>Featured products that use Revon's shared card.</li>
-        <li>Product recommendations.</li>
-        <li>Other theme sections that render the shared <code>product-card</code> component.</li>
+        <li><strong>Custom badge tag prefix</strong> — defaults to <code>badge:</code>. Change it to anything (for example <code>label:</code>), or leave it blank to turn custom badges off entirely.</li>
+        <li><strong>Custom badge background</strong> and <strong>Custom badge text</strong> — one brand-consistent color pair used by every custom badge.</li>
+        <li><strong>Show sale badge</strong> — toggles the automatic percentage badge.</li>
+        <li><strong>Show "New" badge</strong> — toggles the <code>new</code>-tag badge.</li>
       </ul>
-      <p>The <code>custom.badge</code> value does not appear inside the main product information area. Use the Image badge or Trust badges controls for product-page messaging.</p>
 
-      <h3 class="h3">Stacking and priority</h3>
-      <p>A card can show up to two custom badges plus one automatic status badge. Automatic status uses the following order:</p>
-      <ol>
-        <li><strong>Sold out:</strong> product availability is false.</li>
-        <li><strong>Sale:</strong> a valid compare-at price is higher than the selling price and Show sale badge is enabled.</li>
-        <li><strong>New:</strong> Show new badge is enabled and the product has the exact tag <code>new</code> or <code>New</code>.</li>
-      </ol>
-      <p>Only one automatic status appears. Custom labels remain separate, so a product can show &quot;Limited edition&quot; together with a real Sale percentage.</p>
+      <h2 class="h2" id="appearance">Appearance and rules</h2>
+      <ul>
+        <li>Badges sit in the <strong>top-left corner</strong> of the card image and stack vertically when a product has more than one.</li>
+        <li><strong>Sold out overrides everything</strong> — when a product is unavailable, only the Sold out badge shows.</li>
+        <li>Order within the stack: sale percentage first, then your custom badges, then New.</li>
+        <li>Badge text is displayed exactly as typed (safely escaped), in the theme's uppercase label style.</li>
+        <li>Badge tags are ordinary Shopify tags — they don't interfere with search, filtering, or apps, and they never render as visible tag lists in Revon's cards.</li>
+      </ul>
 
-      <h2 class="h2" id="other-badges">Product-page image and trust badges</h2>
-      <h3 class="h3">Image badge</h3>
-      <ol>
-        <li>Open the required product template in the theme editor.</li>
-        <li>Select <strong>Product information</strong>.</li>
-        <li>Enter text in <strong>Image badge text</strong>.</li>
-        <li>Save. The label appears on the main gallery image only.</li>
-      </ol>
-      <p>This is template-level content. Every product assigned to that product template receives the same image badge. Use alternate product templates for groups such as Made to order or Pre-order.</p>
-
-      <h3 class="h3">Trust badges</h3>
-      <ol>
-        <li>Inside <strong>Product information</strong>, add or select the <strong>Trust badges</strong> block.</li>
-        <li>Edit up to three labels.</li>
-        <li>Choose an icon for each: lock, shield, truck, refresh, heart, star, check, or leaf.</li>
-        <li>Clear an item's text to hide it and drag the block to the required position.</li>
-      </ol>
-      <p>Trust badges are also template-level. Make sure shipping, returns, security, sustainability, and material statements match the store's real policies and product data.</p>
+      <h2 class="h2" id="trust">Trust badges (product page)</h2>
+      <p>Trust badges are the three reassurance chips in the product info column — separate from card badges. Edit them on the product template: select the <strong>Trust badges</strong> block, then set each item's icon and text. The defaults are <em>Secure checkout</em>, <em>Easy 30-day returns</em>, and <em>Fast, tracked shipping</em> — replace them with whatever your store genuinely offers.</p>
 
       <h2 class="h2" id="troubleshooting">Troubleshooting</h2>
-      <h3 class="h3">The custom badge does not appear</h3>
+      <h3 class="h3">The badge doesn't appear</h3>
       <ul>
-        <li>Confirm <strong>Show custom badges</strong> is enabled.</li>
-        <li>Confirm the namespace and key are exactly <code>custom.badge</code>.</li>
-        <li>Confirm the product value is saved and not empty.</li>
-        <li>For tag fallback, confirm the tag begins with <code>badge:</code> and contains text after the colon.</li>
-        <li>Confirm you are viewing a theme card rather than an app-provided product card.</li>
-        <li>Refresh the storefront preview after saving product data.</li>
+        <li>Check the tag starts with your exact prefix — <code>badge:</code> by default, including the colon.</li>
+        <li>Check <strong>Theme settings &rarr; Product cards &rarr; Custom badge tag prefix</strong> isn't blank (blank disables custom badges).</li>
+        <li>If the product is sold out, only the Sold out badge shows — that's by design.</li>
       </ul>
-
-      <h3 class="h3">The tag badge is ignored</h3>
-      <p>Check the product's Custom badge metafield. Any non-empty metafield value takes priority over all <code>badge:</code> tags. Clear the metafield when tags should be used instead.</p>
-
-      <h3 class="h3">Only two custom badges appear</h3>
-      <p>This is intentional. Revon limits each card to two custom labels to protect image visibility and prevent layout overflow. Move lower-priority information into the product description, image badge, or trust block.</p>
-
-      <h3 class="h3">Text is shortened</h3>
-      <p>Custom card labels are limited to 32 displayed characters. Rewrite the label as a short customer-facing fact instead of increasing the badge size.</p>
-
-      <h3 class="h3">The wrong automatic badge appears</h3>
-      <p>Sold out overrides Sale and New. Sale overrides New. Check product availability, compare-at pricing, the exact <code>new</code> or <code>New</code> tag, and the Sale/New toggles in Product cards.</p>
+      <h3 class="h3">The badge shows the wrong text</h3>
+      <p>The label is everything after the prefix, verbatim. <code>badge: Top Seller</code> (with a space) and <code>badge:Top Seller</code> both work — leading spaces are trimmed.</p>
+      <h3 class="h3">I want different colors per badge</h3>
+      <p>Custom badges intentionally share one color pair so cards stay calm and consistent. The automatic sale badge keeps its own accent color.</p>
 
       <h2 class="h2" id="qa">Badge testing checklist</h2>
       <ul>
-        <li>Test no custom badge, one badge, and two badges.</li>
-        <li>Test metafield values and tag fallback separately.</li>
-        <li>Test a product that has both sources and confirm the metafield wins.</li>
-        <li>Test custom plus Sold out, Sale, and New states.</li>
-        <li>Test the longest permitted wording on narrow mobile cards.</li>
-        <li>Check color contrast and keyboard focus on card links.</li>
-        <li>Check collection, search, featured, and recommendation cards.</li>
-        <li>Check every language and translate customer-facing badge values where required.</li>
+        <li>Add <code>badge:Test</code> to one product and confirm it appears on the collection grid, search results, and any featured rows.</li>
+        <li>Stack two badges on one product and check the layout on a narrow mobile screen.</li>
+        <li>Mark a product's compare-at price higher than its price and confirm the percentage badge.</li>
+        <li>Set a product to sold out and confirm only the Sold out badge shows.</li>
         <li>Verify every badge claim against real product data and policies.</li>
       </ul>
 
