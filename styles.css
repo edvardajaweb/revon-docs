@@ -2103,3 +2103,174 @@ main { flex: 1; }
 .cta-block__heading .display__accent {
   color: rgba(255, 255, 255, 0.92);
 }
+
+/* ── Landing wow v2: cinematic entrance & micro-interactions ────── */
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes hero-rise-deep {
+  from { opacity: 0; transform: translateY(52px); filter: blur(8px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes accent-ink {
+  from { opacity: 0; filter: blur(12px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes watermark-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes watermark-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-28px); }
+}
+
+.hero__eyebrow { animation: hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0s both; }
+.hero__heading { animation: hero-rise-deep 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.hero__lead { animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+.hero__chips { animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both; }
+.hero__actions { animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+.hero__meta { animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both; }
+
+.hero__heading .display__accent {
+  animation: accent-ink 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+
+.hero::after {
+  animation: watermark-in 1.4s ease 0.5s backwards,
+             watermark-drift 36s ease-in-out 1s infinite alternate;
+}
+
+/* Feature chips — the two-second pitch */
+.hero__chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-xl);
+  padding: 0;
+  max-width: 680px;
+}
+
+.hero__chip {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  border: 1px solid var(--color-border-strong);
+  padding: 8px 14px;
+  cursor: default;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+}
+
+.hero__chip:hover {
+  background: var(--color-dark);
+  color: var(--color-warm);
+  border-color: var(--color-dark);
+}
+
+/* Grid cascade — cards rise one after another */
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(32px); }
+}
+
+.preset-grid > .reveal,
+.feature-grid > .reveal {
+  transition: transform var(--duration-normal) var(--ease-out),
+              background var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.preset-grid > .reveal:not(.is-visible),
+.feature-grid > .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: none;
+}
+
+.preset-grid > .reveal.is-visible,
+.feature-grid > .reveal.is-visible {
+  animation: card-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.preset-grid > .reveal.is-visible:nth-child(2),
+.feature-grid > .reveal.is-visible:nth-child(2) { animation-delay: 0.09s; }
+.preset-grid > .reveal.is-visible:nth-child(3),
+.feature-grid > .reveal.is-visible:nth-child(3) { animation-delay: 0.18s; }
+.feature-grid > .reveal.is-visible:nth-child(4) { animation-delay: 0.27s; }
+.feature-grid > .reveal.is-visible:nth-child(5) { animation-delay: 0.36s; }
+.feature-grid > .reveal.is-visible:nth-child(6) { animation-delay: 0.45s; }
+
+/* Feature cards — ink line draws in + lift */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-dark);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.feature-card:hover,
+.feature-card:focus-visible {
+  transform: translateY(-2px);
+}
+
+.feature-card:hover::before,
+.feature-card:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* Preset swatches — stagger-lift with the card */
+.preset-card__swatch { transition: transform var(--duration-fast) var(--ease-out); }
+.preset-card:hover .preset-card__swatch,
+.preset-card:focus-visible .preset-card__swatch { transform: translateY(-3px); }
+.preset-card:hover .preset-card__swatch:nth-child(2),
+.preset-card:focus-visible .preset-card__swatch:nth-child(2) { transition-delay: 40ms; }
+.preset-card:hover .preset-card__swatch:nth-child(3),
+.preset-card:focus-visible .preset-card__swatch:nth-child(3) { transition-delay: 80ms; }
+.preset-card:hover .preset-card__swatch:nth-child(4),
+.preset-card:focus-visible .preset-card__swatch:nth-child(4) { transition-delay: 120ms; }
+
+/* CTA — ghost wordmark on the dark block */
+.cta-block::after {
+  content: 'REVON';
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.16em;
+  z-index: 0;
+  font-size: clamp(120px, 20vw, 300px);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-dark);
+  transform: scaleX(0);
+  transform-origin: left center;
+  z-index: 200;
+  pointer-events: none;
+}
