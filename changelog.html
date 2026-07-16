@@ -14,7 +14,7 @@
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
@@ -60,7 +60,7 @@
   <div class="doc-layout">
     <aside class="doc-sidebar" aria-label="Versions">
       <span class="doc-sidebar__label">Versions</span>
-      <nav class="doc-sidebar__list">
+      <nav class="doc-sidebar__list" aria-label="Page sections">
         <a href="#docs-2026-07-16">Docs 2026-07-16 — Feature docs</a>
         <a href="#docs-2026-07">Docs revision 2026-07</a>
         <a href="#v1-0-0">Revon v1.0.0</a>
@@ -75,7 +75,7 @@
       </nav>
 
       <p class="eyebrow">Release history</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Changelog</h1>
+      <h1 class="h1 doc-page-title">Changelog</h1>
       <p class="lead">Theme versions describe storefront code releases. Documentation revisions describe substantial guide changes that do not alter the installed theme version.</p>
 
       <div class="changelog__entry" id="docs-2026-07-16">

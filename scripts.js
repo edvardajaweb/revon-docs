@@ -14,6 +14,7 @@
   function setDrawer(open) {
     if (!drawer) return;
     if (open) lastFocused = document.activeElement;
+    drawer.inert = !open;
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     document.body.style.overflow = open ? 'hidden' : '';
     if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -30,6 +31,8 @@
 
   if (openBtn) openBtn.addEventListener('click', function () { setDrawer(true); });
   if (closeBtn) closeBtn.addEventListener('click', function () { setDrawer(false); });
+
+  if (drawer) drawer.inert = drawer.getAttribute('aria-hidden') !== 'false';
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && drawer && drawer.getAttribute('aria-hidden') === 'false') {

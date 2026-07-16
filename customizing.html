@@ -14,7 +14,7 @@
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
@@ -60,7 +60,7 @@
   <div class="doc-layout">
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">On this page</span>
-      <nav class="doc-sidebar__list">
+      <nav class="doc-sidebar__list" aria-label="Page sections">
         <a href="#editor">Using the editor</a>
         <a href="#settings">Theme settings</a>
         <a href="#sections">Section library</a>
@@ -86,7 +86,7 @@
       </nav>
 
       <p class="eyebrow">Settings and sections</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Customizing Revon</h1>
+      <h1 class="h1 doc-page-title">Customizing Revon</h1>
       <p class="lead">Revon is configured in Shopify's theme editor. This guide follows the labels you see there, explains what each group controls, and shows where to place the theme's 39 addable section types. No code is required for normal store setup.</p>
 
       <div class="callout">
@@ -239,7 +239,7 @@
         <li><strong>Scroll text:</strong> large text lines with optional eyebrow, description, and button blocks.</li>
         <li><strong>Apps:</strong> a dedicated wrapper for app blocks.</li>
         <li><strong>Custom Liquid:</strong> merchant-managed Liquid or approved embed code.</li>
-        <li><strong>Header:</strong> logo, navigation, localization, search, account, and cart access.</li>
+        <li><strong>Header:</strong> logo, navigation, localization, search, account, cart access, promotional images, and editable mega-menu product cards. Add one or two <strong>Menu product</strong> blocks, enter the matching parent and column titles, then select the products to feature.</li>
         <li><strong>Footer:</strong> menus, newsletter, social links, localization, payment icons, and legal links.</li>
         <li><strong>Main page sections:</strong> product, collection, cart, search, blog, article, page, password, and 404 templates.</li>
         <li><strong>Cart notification:</strong> compact add-to-cart confirmation used when that cart mode is selected.</li>

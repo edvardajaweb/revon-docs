@@ -17,7 +17,7 @@
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -39,7 +39,7 @@
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
@@ -64,7 +64,7 @@
 
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">Categories</span>
-      <nav class="doc-sidebar__list">
+      <nav class="doc-sidebar__list" aria-label="Page sections">
         <a href="#basics">Basics</a>
         <a href="#homepage">Homepage</a>
         <a href="#product">Product page</a>
@@ -82,7 +82,7 @@
       </nav>
 
       <p class="eyebrow">Quick recipes</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Cheat sheet</h1>
+      <h1 class="h1 doc-page-title">Cheat sheet</h1>
       <p class="lead">The most common tasks in Revon, each as a short recipe. Save this page or print it — most things you'll want to do are two or three clicks away.</p>
 
       <h2 class="h2" id="basics">Basics</h2>
@@ -238,6 +238,16 @@
         <li>In Shopify admin, go to <strong>Content → Menus</strong>.</li>
         <li>Click <strong>Main menu</strong> and add or edit items.</li>
         <li>Drag sub-items under a parent to create dropdown navigation, then test desktop and mobile.</li>
+      </ol>
+
+      <h3 class="h3">Feature products in a mega-menu column</h3>
+      <ol>
+        <li>Open <strong>Online Store &rarr; Themes &rarr; Customize</strong>, then select <strong>Header</strong>.</li>
+        <li>Click <strong>Add block &rarr; Menu product</strong>.</li>
+        <li>For <strong>Parent menu title</strong>, enter the top-level navigation label, such as <code>Shop</code>.</li>
+        <li>For <strong>Column title</strong>, enter the second-level label, such as <code>Bestsellers</code>.</li>
+        <li>Select a product. Add a second <strong>Menu product</strong> block with the same titles to show two products.</li>
+        <li>Save and check the desktop mega menu. Revon displays a maximum of two product cards per column.</li>
       </ol>
 
       <h3 class="h3">Show a language or country selector</h3>

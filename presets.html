@@ -17,7 +17,7 @@
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -39,7 +39,7 @@
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
@@ -63,7 +63,7 @@
   <div class="doc-layout">
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">On this page</span>
-      <nav class="doc-sidebar__list">
+      <nav class="doc-sidebar__list" aria-label="Page sections">
         <a href="#understand">How presets work</a>
         <a href="#pure">Pure</a>
         <a href="#atelier">Atelier</a>
@@ -83,7 +83,7 @@
       </nav>
 
       <p class="eyebrow">Three focused install states</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">Pure, Atelier, and Maison</h1>
+      <h1 class="h1 doc-page-title">Pure, Atelier, and Maison</h1>
       <p class="lead">Every Revon preset uses the same reliable commerce foundation and sharp-corner design system. The difference is art direction: each preset supplies its own global style, homepage, product page, About page, header, footer, and industry-focused starting content.</p>
 
       <h2 class="h2" id="understand">How presets work</h2>
@@ -109,11 +109,11 @@
       </ul>
 
       <h3 class="h3">Color schemes</h3>
-      <div class="swatch-row" aria-label="Pure color palette">
-        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#ffffff" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#ffffff</span><span class="swatch-row__label">Light background</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#171818" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#171818</span><span class="swatch-row__label">Light text</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#f5f5f4" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f5f5f4</span><span class="swatch-row__label">Light surface</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#1c1b18" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#1c1b18</span><span class="swatch-row__label">Dark background</span></div></div>
+      <div class="swatch-row" role="group" aria-label="Pure color palette">
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered swatch-color--white" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#ffffff</span><span class="swatch-row__label">Light background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--pure-ink" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#171818</span><span class="swatch-row__label">Light text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--pure-surface" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f5f5f4</span><span class="swatch-row__label">Light surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--pure-dark" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#1c1b18</span><span class="swatch-row__label">Dark background</span></div></div>
       </div>
 
       <h3 class="h3">Installed homepage</h3>
@@ -135,11 +135,11 @@
       </ul>
 
       <h3 class="h3">Color schemes</h3>
-      <div class="swatch-row" aria-label="Atelier color palette">
-        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f9fb" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f9fb</span><span class="swatch-row__label">Paper background</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#191c1e" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#191c1e</span><span class="swatch-row__label">Graphite text</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#eceef0" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#eceef0</span><span class="swatch-row__label">Pale surface</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#2d3133" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#2d3133</span><span class="swatch-row__label">Dark surface</span></div></div>
+      <div class="swatch-row" role="group" aria-label="Atelier color palette">
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered swatch-color--atelier-paper" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f9fb</span><span class="swatch-row__label">Paper background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--atelier-ink" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#191c1e</span><span class="swatch-row__label">Graphite text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--atelier-surface" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#eceef0</span><span class="swatch-row__label">Pale surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--atelier-dark" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#2d3133</span><span class="swatch-row__label">Dark surface</span></div></div>
       </div>
 
       <h3 class="h3">Installed homepage</h3>
@@ -162,11 +162,11 @@
       </ul>
 
       <h3 class="h3">Color schemes</h3>
-      <div class="swatch-row" aria-label="Maison color palette">
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#e8ece8" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#e8ece8</span><span class="swatch-row__label">Sage background</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#0e1011" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#0e1011</span><span class="swatch-row__label">Charcoal text</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered" style="background:#f7f8f4" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f8f4</span><span class="swatch-row__label">Bone surface</span></div></div>
-        <div class="swatch-row__item"><span class="swatch-row__chip" style="background:#182021" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#182021</span><span class="swatch-row__label">Dark surface</span></div></div>
+      <div class="swatch-row" role="group" aria-label="Maison color palette">
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--maison-surface" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#e8ece8</span><span class="swatch-row__label">Sage background</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--maison-ink" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#0e1011</span><span class="swatch-row__label">Charcoal text</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-row__chip--bordered swatch-color--maison-bone" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#f7f8f4</span><span class="swatch-row__label">Bone surface</span></div></div>
+        <div class="swatch-row__item"><span class="swatch-row__chip swatch-color--maison-dark" aria-hidden="true"></span><div class="swatch-row__meta"><span class="swatch-row__hex">#182021</span><span class="swatch-row__label">Dark surface</span></div></div>
       </div>
 
       <h3 class="h3">Installed homepage</h3>

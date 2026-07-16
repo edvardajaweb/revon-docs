@@ -14,7 +14,7 @@
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand">Revon</a>
     <nav class="site-nav" aria-label="Documentation">
@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer inert>
   <div class="mobile-drawer__head">
     <button class="mobile-drawer__close" type="button" data-mobile-close aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
@@ -60,7 +60,7 @@
   <div class="doc-layout">
     <aside class="doc-sidebar" aria-label="On this page">
       <span class="doc-sidebar__label">On this page</span>
-      <nav class="doc-sidebar__list">
+      <nav class="doc-sidebar__list" aria-label="Page sections">
         <a href="#support">What Revon supports</a>
         <a href="#install">Install an app safely</a>
         <a href="#placements">Supported placements</a>
@@ -82,7 +82,7 @@
       </nav>
 
       <p class="eyebrow">Compatibility without guesswork</p>
-      <h1 class="h1" style="margin-top:var(--space-md)">App integrations</h1>
+      <h1 class="h1 doc-page-title">App integrations</h1>
       <p class="lead">Revon supports Shopify theme app extensions, native selling plans, app blocks, and app embeds. Because every third-party app controls its own code and release cycle, compatibility must be tested on a draft theme before publishing.</p>
 
       <h2 class="h2" id="support">What Revon supports</h2>
