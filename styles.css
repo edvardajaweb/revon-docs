@@ -1906,15 +1906,15 @@ main { flex: 1; }
   line-height: 1;
 }
 
-.preset-card__name--atelier {
+.preset-card__name--quiet-form {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   font-size: clamp(48px, 5.5vw, 64px);
 }
 
-.preset-card__name--maison {
-  font-family: 'Noto Serif', Georgia, serif;
+.preset-card__name--joinery {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   text-transform: none;
   letter-spacing: -0.015em;
@@ -1975,14 +1975,14 @@ main { flex: 1; }
   transform: translateX(4px);
 }
 
-.h2--atelier {
+.h2--quiet-form {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
-.h2--maison {
-  font-family: 'Noto Serif', Georgia, serif;
+.h2--joinery {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   text-transform: none;
   letter-spacing: -0.015em;
@@ -1996,7 +1996,7 @@ main { flex: 1; }
   color: var(--color-muted);
 }
 
-.font-sample--pure {
+.font-sample--revon {
   font-family: var(--font-body);
   font-weight: 800;
   text-transform: uppercase;
@@ -2004,7 +2004,7 @@ main { flex: 1; }
   color: var(--color-dark);
 }
 
-.font-sample--atelier {
+.font-sample--quiet-form {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   font-style: italic;
@@ -2013,8 +2013,8 @@ main { flex: 1; }
   font-size: clamp(32px, 3.6vw, 44px);
 }
 
-.font-sample--maison {
-  font-family: 'Noto Serif', Georgia, serif;
+.font-sample--joinery {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--color-dark);
@@ -2046,19 +2046,19 @@ main { flex: 1; }
 .swatch-row__chip--bordered { border: 1px solid var(--color-border); }
 
 .swatch-color--white { background: #ffffff; }
-.swatch-color--pure-ink { background: #171818; }
-.swatch-color--pure-surface { background: #f5f5f4; }
-.swatch-color--pure-dark { background: #1c1b18; }
-.swatch-color--atelier-paper { background: #f7f9fb; }
-.swatch-color--atelier-ink { background: #191c1e; }
-.swatch-color--atelier-surface { background: #eceef0; }
-.swatch-color--atelier-border { background: #c6c6ce; }
-.swatch-color--atelier-dark { background: #2d3133; }
-.swatch-color--maison-surface { background: #e8ece8; }
-.swatch-color--maison-ink { background: #0e1011; }
-.swatch-color--maison-bone { background: #f7f8f4; }
-.swatch-color--maison-border { background: #bfc8c4; }
-.swatch-color--maison-dark { background: #182021; }
+.swatch-color--revon-ink { background: #171818; }
+.swatch-color--revon-surface { background: #f5f5f4; }
+.swatch-color--revon-dark { background: #1c1b18; }
+.swatch-color--quiet-form-paper { background: #f7f9fb; }
+.swatch-color--quiet-form-ink { background: #191c1e; }
+.swatch-color--quiet-form-surface { background: #eceef0; }
+.swatch-color--quiet-form-border { background: #c6c6ce; }
+.swatch-color--quiet-form-dark { background: #2d3133; }
+.swatch-color--joinery-surface { background: #f4f1ea; }
+.swatch-color--joinery-ink { background: #211d18; }
+.swatch-color--joinery-bone { background: #e9e3d8; }
+.swatch-color--joinery-border { background: #dcd3c4; }
+.swatch-color--joinery-dark { background: #19150f; }
 
 .swatch-row__meta {
   display: flex;
@@ -2345,18 +2345,18 @@ main { flex: 1; }
               background var(--duration-normal) var(--ease-out);
 }
 
-.preset-card--pure { background: #ffffff; }
-.preset-card--atelier { background: #f2f4f7; }
-.preset-card--maison { background: #eef1ea; }
+.preset-card--revon { background: #ffffff; }
+.preset-card--quiet-form { background: #f2f4f7; }
+.preset-card--joinery { background: #e9e3d8; }
 
 .preset-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px -24px rgba(23, 24, 24, 0.28);
 }
 
-.preset-card--pure:hover { background: #ffffff; }
-.preset-card--atelier:hover { background: #f2f4f7; }
-.preset-card--maison:hover { background: #eef1ea; }
+.preset-card--revon:hover { background: #ffffff; }
+.preset-card--quiet-form:hover { background: #f2f4f7; }
+.preset-card--joinery:hover { background: #e9e3d8; }
 
 /* CTA — display-scale closing line */
 .cta-block__heading {

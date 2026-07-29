@@ -61,6 +61,7 @@
     <aside class="doc-sidebar" aria-label="Versions">
       <span class="doc-sidebar__label">Versions</span>
       <nav class="doc-sidebar__list" aria-label="Page sections">
+        <a href="#docs-2026-07-29">Docs 2026-07-29 — Preset rename</a>
         <a href="#docs-2026-07-16">Docs 2026-07-16 — Feature docs</a>
         <a href="#docs-2026-07">Docs revision 2026-07</a>
         <a href="#v1-0-0">Revon v1.0.0</a>
@@ -77,6 +78,23 @@
       <p class="eyebrow">Release history</p>
       <h1 class="h1 doc-page-title">Changelog</h1>
       <p class="lead">Theme versions describe storefront code releases. Documentation revisions describe substantial guide changes that do not alter the installed theme version.</p>
+
+      <div class="changelog__entry" id="docs-2026-07-29">
+          <div class="changelog__meta">
+            <div class="changelog__version">Docs 2026-07-29</div>
+            <div class="changelog__date">July 29, 2026</div>
+          </div>
+          <div class="changelog__body">
+            <p class="eyebrow">Preset rename</p>
+            <ul>
+              <li>Finished the preset rename across every preset-facing surface: <strong>Pure &rarr; Revon</strong>, <strong>Atelier &rarr; Quiet Form</strong>, <strong>Maison &rarr; Joinery</strong>.</li>
+              <li>Corrected the preset guide's Joinery entry: it now describes the preset's actual warm bone-and-espresso palette (not the earlier sage-toned description) and its actual installed homepage section order.</li>
+              <li>Fixed the Joinery preset name and heading samples on this site rendering in the old Maison typeface instead of the documented Cormorant heading font.</li>
+              <li>Corrected the addable-section count referenced throughout the site to 49, matching the current theme.</li>
+              <li>Added Quiet Form and Joinery as theme choices on the support form.</li>
+            </ul>
+          </div>
+        </div>
 
       <div class="changelog__entry" id="docs-2026-07-16">
           <div class="changelog__meta">
@@ -105,10 +123,10 @@
         <div class="changelog__body">
           <p class="eyebrow">Documentation alignment</p>
           <ul>
-            <li>Rebuilt the preset guide from the current Pure, Atelier, and Maison listing files.</li>
+            <li>Rebuilt the preset guide from the current Revon, Quiet Form, and Joinery listing files.</li>
             <li>Documented the exact 1440px preset default and 1000-1600px merchant control.</li>
-            <li>Added the complete 39-section merchant reference and current product block list.</li>
-            <li>Clarified that all three presets use sharp corners.</li>
+            <li>Added the complete 49-section merchant reference and current product block list.</li>
+            <li>Documented the global image, control, and field radius settings, including Joinery's restrained 4px defaults.</li>
             <li>Separated preset installation from Theme style changes.</li>
             <li>Replaced broad app compatibility claims with exact app-block placement and testing guidance.</li>
             <li>Clarified gift-wrap cart attributes and informational shipping-progress behavior.</li>
@@ -129,9 +147,9 @@
 
           <h3 class="h3">Three preset install states</h3>
           <ul>
-            <li><strong>Pure:</strong> default clinical preset for beauty, wellness, personal care, supplements, and fragrance.</li>
-            <li><strong>Atelier:</strong> editorial preset for fashion, jewelry, accessories, and leather goods.</li>
-            <li><strong>Maison:</strong> spatial preset for furniture, home goods, lighting, ceramics, and interiors.</li>
+            <li><strong>Revon:</strong> default clinical preset for beauty, wellness, personal care, supplements, and fragrance.</li>
+            <li><strong>Quiet Form:</strong> editorial preset for fashion, jewelry, accessories, and leather goods.</li>
+            <li><strong>Joinery:</strong> spatial preset for furniture, home goods, lighting, ceramics, and interiors.</li>
             <li>Each preset includes its own homepage, product, About, header, and footer install state.</li>
           </ul>
 
@@ -147,7 +165,7 @@
 
           <h3 class="h3">Section and template system</h3>
           <ul>
-            <li>39 addable section types across commerce, editorial, proof, engagement, and utility categories.</li>
+            <li>49 addable section types across commerce, editorial, proof, engagement, and utility categories.</li>
             <li>JSON templates for home, product, collection, cart, search, pages, blogs, articles, password, and 404 routes.</li>
             <li>Reusable header and footer section groups.</li>
             <li>Custom Liquid, app blocks, and a dedicated Apps section.</li>
